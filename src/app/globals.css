@@ -43,6 +43,8 @@ html[data-text="lg"] {
 }
 
 body {
+  /* Slide-in animations start off-canvas; clip (unlike hidden) keeps sticky headers working */
+  overflow-x: clip;
   background: var(--color-cream);
   color: var(--color-ink);
   font-family: var(--font-sans);

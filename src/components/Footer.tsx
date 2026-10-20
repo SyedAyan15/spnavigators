@@ -48,10 +48,10 @@ export function Footer() {
         {cols.map((c) => (
           <div key={c.title}>
             <h2 className="font-display text-lg font-semibold text-white">{c.title}</h2>
-            <ul className="mt-5 space-y-3 text-sm">
+            <ul className="mt-4 space-y-1 text-sm">
               {c.links.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="group inline-flex items-center gap-2 transition hover:text-gold-light">
+                  <Link href={l.href} className="group inline-flex items-center gap-2 py-2 transition hover:text-gold-light">
                     <span className="h-px w-3 bg-gold transition-all group-hover:w-6" />
                     {l.label}
                   </Link>
@@ -102,7 +102,7 @@ export function Footer() {
           © <Year /> {site.legalName}. ABN {site.abn} · ACN {site.acn}
         </p>
         <p>
-          <Link href="/privacy-policy" className="hover:text-white">
+          <Link href="/privacy-policy" className="inline-block py-2 hover:text-white">
             Privacy Policy
           </Link>{" "}
           · <span>{site.url.replace("https://", "")}</span>

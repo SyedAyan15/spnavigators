@@ -44,7 +44,7 @@ export default function AboutPage() {
         <ButtonLink href="/contact">Get in touch</ButtonLink>
       </PageHero>
 
-      <section className="bg-white py-24 sm:py-32">
+      <section className="bg-white py-16 sm:py-24 lg:py-32">
         <div className="container-x grid items-center gap-16 lg:grid-cols-2">
           <div>
             <SectionHeading
@@ -85,7 +85,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <Stagger className="grid gap-6 md:grid-cols-3">
             {pillars.map((p, i) => (
@@ -101,7 +101,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-sand/60 py-24 sm:py-32">
+      <section className="bg-sand/60 py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="The story behind our logo"
@@ -120,7 +120,7 @@ export default function AboutPage() {
 
       <Marquee items={["Respect", "Dignity", "Inclusion", "Honesty", "Hope", "Collaboration"]} />
 
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x grid items-center gap-14 lg:grid-cols-[1fr_1.2fr]">
           <Reveal className="relative aspect-[4/3] overflow-hidden rounded-[2.5rem]">
             <Image src="/images/tree-hand.jpg" alt="A carved wooden hand supporting the branch of a large tree" fill sizes="(min-width:1024px) 40vw, 95vw" className="object-cover" />

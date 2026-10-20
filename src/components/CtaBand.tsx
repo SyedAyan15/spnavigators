@@ -12,7 +12,7 @@ export function CtaBand({
   text?: string;
 }) {
   return (
-    <section className="container-x py-20 sm:py-28">
+    <section className="container-x py-14 sm:py-20 lg:py-28">
       <Reveal>
         <div className="relative isolate overflow-hidden rounded-[2.5rem] bg-navy px-6 py-16 sm:px-14 sm:py-20">
           <Parallax className="absolute inset-0 -z-10 scale-125 opacity-60" speed={0.12}>

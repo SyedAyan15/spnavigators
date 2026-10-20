@@ -62,7 +62,7 @@ export default function HowItWorksPage() {
         </ButtonLink>
       </PageHero>
 
-      <section className="bg-sand/60 py-24 sm:py-32">
+      <section className="bg-sand/60 py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="Six simple steps"
@@ -78,7 +78,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="Before we meet"
@@ -95,7 +95,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="bg-white py-24 sm:py-32">
+      <section className="bg-white py-16 sm:py-24 lg:py-32">
         <div className="container-x grid items-center gap-14 lg:grid-cols-2">
           <div>
             <SectionHeading
@@ -127,7 +127,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="Your rights"

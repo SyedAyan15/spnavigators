@@ -162,7 +162,7 @@ export default function SupportCoordinationPage() {
       <Marquee dark items={["Understand your plan", "Choose your providers", "Coordinate your supports", "Build your independence", "Prepare for reassessment"]} />
 
       {/* What is SC */}
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x grid items-center gap-16 lg:grid-cols-2">
           <div>
             <SectionHeading
@@ -211,7 +211,7 @@ export default function SupportCoordinationPage() {
       </section>
 
       {/* How we help */}
-      <section className="bg-sand/60 py-24 sm:py-32">
+      <section className="bg-sand/60 py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="How a Support Coordinator can help"
@@ -229,7 +229,7 @@ export default function SupportCoordinationPage() {
       </section>
 
       {/* Levels */}
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="Levels of Support Coordination"
@@ -250,7 +250,7 @@ export default function SupportCoordinationPage() {
       </section>
 
       {/* Is it right for me */}
-      <section className="relative overflow-hidden bg-white py-24 sm:py-32">
+      <section className="relative overflow-hidden bg-white py-16 sm:py-24 lg:py-32">
         <div className="container-x grid items-center gap-16 lg:grid-cols-2">
           <div className="relative order-2 lg:order-1">
             <div className="relative aspect-square overflow-hidden rounded-full">
@@ -295,7 +295,7 @@ export default function SupportCoordinationPage() {
       </section>
 
       {/* Process */}
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="What to expect"
@@ -328,7 +328,7 @@ export default function SupportCoordinationPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x grid gap-14 lg:grid-cols-[1fr_1.5fr]">
           <SectionHeading
             align="left"

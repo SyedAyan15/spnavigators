@@ -144,7 +144,7 @@ export default function RecoveryCoachingPage() {
       <Marquee dark items={["Person-led", "Trauma-informed", "Strengths-based", "Recovery-oriented", "Non-judgemental", "Hope-focused"]} />
 
       {/* What is it */}
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x grid items-center gap-16 lg:grid-cols-2">
           <div className="relative">
             <Parallax className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem]" speed={0.06}>
@@ -193,7 +193,7 @@ export default function RecoveryCoachingPage() {
       </section>
 
       {/* Wheel */}
-      <section className="bg-sand/60 py-24 sm:py-32">
+      <section className="bg-sand/60 py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="Every part of your life"
@@ -211,7 +211,7 @@ export default function RecoveryCoachingPage() {
       </section>
 
       {/* How we help */}
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="How a Recovery Coach can help"
@@ -260,7 +260,7 @@ export default function RecoveryCoachingPage() {
       </section>
 
       {/* Who it's for */}
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x grid gap-14 lg:grid-cols-2">
           <div>
             <SectionHeading
@@ -301,7 +301,7 @@ export default function RecoveryCoachingPage() {
       </section>
 
       {/* Process */}
-      <section className="bg-white py-24 sm:py-32">
+      <section className="bg-white py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="Getting started"
@@ -318,7 +318,7 @@ export default function RecoveryCoachingPage() {
       </section>
 
       {/* Compare */}
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="Know the difference"
@@ -360,7 +360,7 @@ export default function RecoveryCoachingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x grid gap-14 lg:grid-cols-[1fr_1.5fr]">
           <div>
             <SectionHeading

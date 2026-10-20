@@ -54,7 +54,7 @@ export default function ResourcesPage() {
         crumbs={[{ name: "NDIS Resources", path: "/ndis-resources" }]}
       />
 
-      <section id="understanding-your-plan" className="bg-white py-24 sm:py-32">
+      <section id="understanding-your-plan" className="bg-white py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="Guide 1"
@@ -88,7 +88,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section id="plan-reassessment" className="py-24 sm:py-32">
+      <section id="plan-reassessment" className="py-16 sm:py-24 lg:py-32">
         <div className="container-x grid items-center gap-14 lg:grid-cols-2">
           <div>
             <SectionHeading
@@ -116,7 +116,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section id="glossary" className="bg-sand/60 py-24 sm:py-32">
+      <section id="glossary" className="bg-sand/60 py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             align="left"
@@ -134,7 +134,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section id="helpful-links" className="py-24 sm:py-32">
+      <section id="helpful-links" className="py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="Helpful services"

@@ -32,6 +32,8 @@
 }
 
 html {
+  /* Mobile browsers ignore body-only clipping, so clip the root too */
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
   -webkit-tap-highlight-color: transparent;

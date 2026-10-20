@@ -117,7 +117,7 @@ export default function Home() {
       />
 
       {/* Services */}
-      <section id="services" className="scroll-mt-28 py-24 sm:py-32">
+      <section id="services" className="scroll-mt-28 py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="Our specialised services"
@@ -177,7 +177,7 @@ export default function Home() {
       </section>
 
       {/* Intro / about */}
-      <section className="relative overflow-hidden bg-white py-24 sm:py-32">
+      <section className="relative overflow-hidden bg-white py-16 sm:py-24 lg:py-32">
         <div className="container-x grid items-center gap-16 lg:grid-cols-2">
           <div className="relative">
             <Parallax className="relative aspect-[5/6] overflow-hidden rounded-[2.5rem]" speed={0.06}>
@@ -250,7 +250,7 @@ export default function Home() {
       </section>
 
       {/* Support finder */}
-      <section className="relative overflow-hidden py-24 sm:py-32">
+      <section className="relative overflow-hidden py-16 sm:py-24 lg:py-32">
         <div className="pointer-events-none absolute top-20 -right-40 h-[30rem] w-[30rem] rounded-full bg-sage-light/40 blur-3xl" />
         <div className="container-x relative grid items-center gap-14 lg:grid-cols-[1fr_1.15fr]">
           <div>
@@ -277,7 +277,7 @@ export default function Home() {
       </section>
 
       {/* Journey */}
-      <section className="bg-sand/60 py-24 sm:py-32">
+      <section className="bg-sand/60 py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="How we work together"
@@ -298,7 +298,7 @@ export default function Home() {
       </section>
 
       {/* Values */}
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="Why choose Support Plan Navigators"
@@ -331,7 +331,7 @@ export default function Home() {
       </section>
 
       {/* Goals carousel */}
-      <section className="overflow-hidden bg-white py-24 sm:py-32">
+      <section className="overflow-hidden bg-white py-16 sm:py-24 lg:py-32">
         <div className="container-x mb-14 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <SectionHeading
             align="left"
@@ -351,7 +351,7 @@ export default function Home() {
       </section>
 
       {/* Compare */}
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="Know the difference"
@@ -404,7 +404,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 sm:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <JsonLd data={faqJsonLd(faqs)} />
         <div className="container-x grid gap-14 lg:grid-cols-[1fr_1.5fr]">
           <div>

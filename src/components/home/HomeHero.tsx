@@ -3,7 +3,7 @@
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import { Check, Phone, Sparkles } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { site } from "@/lib/site";
 import { Magnetic } from "../motion";
 import { ButtonLink } from "../ui";
@@ -13,9 +13,19 @@ const words = ["confidence", "clarity", "real support", "hope"];
 const steps = ["Plan understood", "Supports connected", "Goals in motion"];
 const ease = [0.22, 1, 0.36, 1] as const;
 
+// Scroll parallax is reserved for wider screens; on phones it pushes the card over the photo.
+const smQuery = "(min-width: 640px)";
+const subscribeSm = (cb: () => void) => {
+  const mq = window.matchMedia(smQuery);
+  mq.addEventListener("change", cb);
+  return () => mq.removeEventListener("change", cb);
+};
+const useIsSm = () => useSyncExternalStore(subscribeSm, () => window.matchMedia(smQuery).matches, () => true);
+
 export function HomeHero() {
   const [i, setI] = useState(0);
   const [done, setDone] = useState(0);
+  const isSm = useIsSm();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
@@ -32,12 +42,12 @@ export function HomeHero() {
   }, []);
 
   return (
-    <section ref={ref} className="relative overflow-hidden pt-6 pb-24 sm:pt-10 lg:pb-32">
+    <section ref={ref} className="relative overflow-hidden pt-6 pb-14 sm:pt-10 sm:pb-24 lg:pb-32">
       <div className="pointer-events-none absolute -top-32 right-[-10%] h-[42rem] w-[42rem] rounded-full bg-gold-light/35 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 -left-40 h-[32rem] w-[32rem] rounded-full bg-teal-light/30 blur-3xl" />
       <WindingRoad className="pointer-events-none absolute -bottom-10 left-0 w-full max-w-5xl opacity-[0.13]" />
 
-      <div className="container-x relative grid items-center gap-16 lg:grid-cols-[1.1fr_1fr]">
+      <div className="container-x relative grid items-center gap-8 sm:gap-16 lg:grid-cols-[1.1fr_1fr]">
         <div>
           <motion.span
             className="eyebrow"
@@ -127,13 +137,13 @@ export function HomeHero() {
           </motion.a>
         </div>
 
-        <div className="relative mx-auto w-full max-w-xl">
+        <div className="relative mx-auto w-full max-w-[22rem] pb-6 sm:max-w-xl sm:pt-0 sm:pb-0">
           <motion.div
-            style={{ y: imgY }}
+            style={isSm ? { y: imgY } : undefined}
             initial={{ opacity: 0, scale: 0.92, borderRadius: "50%" }}
             animate={{ opacity: 1, scale: 1, borderRadius: "999px 999px 48px 48px" }}
             transition={{ duration: 1.2, delay: 0.2, ease }}
-            className="relative ml-auto aspect-[4/5] w-[82%] overflow-hidden shadow-[0_40px_100px_-30px_rgba(14,42,77,0.55)]"
+            className="relative ml-auto aspect-[5/6] w-[80%] overflow-hidden sm:aspect-[4/5] sm:w-[82%] shadow-[0_40px_100px_-30px_rgba(14,42,77,0.55)]"
           >
             <Image
               src="/images/hero-friends-park.jpg"
@@ -150,7 +160,7 @@ export function HomeHero() {
             initial={{ opacity: 0, scale: 0.6, rotate: -12 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ duration: 1, delay: 0.7, type: "spring", bounce: 0.35 }}
-            className="absolute top-[38%] left-0 aspect-square w-[42%] overflow-hidden rounded-full border-[6px] border-cream shadow-2xl"
+            className="absolute top-[40%] left-0 aspect-square w-[38%] overflow-hidden rounded-full border-4 sm:border-[6px] sm:w-[42%] border-cream shadow-2xl"
           >
             <Image
               src="/images/family-support.jpg"
@@ -162,22 +172,22 @@ export function HomeHero() {
           </motion.div>
 
           <motion.div
-            style={{ y: cardY }}
+            style={isSm ? { y: cardY } : undefined}
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 1, ease }}
-            className="absolute -right-2 bottom-10 w-60 rounded-3xl bg-white/95 p-5 shadow-2xl ring-1 ring-navy/5 backdrop-blur sm:-right-6"
+            className="absolute right-0 -bottom-4 w-48 rounded-2xl bg-white/95 p-3.5 shadow-2xl ring-1 ring-navy/5 backdrop-blur sm:-right-6 sm:bottom-10 sm:w-60 sm:rounded-3xl sm:p-5"
           >
-            <p className="text-xs font-bold tracking-[0.16em] text-muted uppercase">Your journey</p>
-            <ul className="mt-3 space-y-2.5">
+            <p className="text-[0.65rem] font-bold tracking-[0.16em] text-muted uppercase sm:text-xs">Your journey</p>
+            <ul className="mt-2 space-y-1.5 sm:mt-3 sm:space-y-2.5">
               {steps.map((s, idx) => {
                 const on = idx < done;
                 return (
-                  <li key={s} className="flex items-center gap-3 text-sm font-semibold text-navy">
+                  <li key={s} className="flex items-center gap-2 text-xs font-semibold whitespace-nowrap text-navy sm:gap-3 sm:text-sm">
                     <motion.span
                       animate={{ backgroundColor: on ? "#5d8b6c" : "#f3ece0", scale: on ? [1, 1.25, 1] : 1 }}
                       transition={{ duration: 0.4 }}
-                      className="grid h-6 w-6 place-items-center rounded-full"
+                      className="grid h-5 w-5 shrink-0 place-items-center rounded-full sm:h-6 sm:w-6"
                     >
                       <Check className={`h-3.5 w-3.5 transition ${on ? "text-white" : "text-transparent"}`} aria-hidden />
                     </motion.span>
@@ -192,7 +202,7 @@ export function HomeHero() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 1.1, type: "spring" }}
-            className="absolute -top-4 left-[8%] h-32 w-32 sm:h-36 sm:w-36"
+            className="absolute top-0 left-[4%] h-20 w-20 sm:-top-4 sm:left-[8%] sm:h-36 sm:w-36"
             aria-hidden
           >
             <svg viewBox="0 0 200 200" className="h-full w-full animate-spin-slow">
@@ -205,12 +215,12 @@ export function HomeHero() {
               </text>
             </svg>
             <span className="absolute inset-0 grid place-items-center">
-              <Image src="/logo-mark.png" alt="" width={84} height={43} className="h-auto w-16 brightness-110" />
+              <Image src="/logo-mark.png" alt="" width={84} height={43} className="h-auto w-10 brightness-110 sm:w-16" />
             </span>
           </motion.div>
 
-          <Leaf className="absolute -right-4 top-6 h-24 w-14" color="var(--color-sage)" delay={1.2} />
-          <Leaf className="absolute right-8 -top-2 h-16 w-10" color="var(--color-gold)" delay={1.4} />
+          <Leaf className="absolute -right-1 top-8 h-14 w-9 sm:-right-4 sm:top-6 sm:h-24 sm:w-14" color="var(--color-sage)" delay={1.2} />
+          <Leaf className="absolute right-7 top-2 h-10 w-6 sm:right-8 sm:-top-2 sm:h-16 sm:w-10" color="var(--color-gold)" delay={1.4} />
         </div>
       </div>
     </section>

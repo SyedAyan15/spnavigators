@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Support Plan Navigators — www.spnavigators.com.au
 
-## Getting Started
+Marketing website for **Support Plan Navigators Pty Ltd** (ABN 28 703 292 559): NDIS Support Coordination and Psychosocial Recovery Coaching.
 
-First, run the development server:
+Built with Next.js 16 (App Router, Cache Components), Tailwind CSS v4, framer-motion and lucide-react.
+
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build && npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The contact and referral forms post to `/api/contact`, which emails the submission using [Resend](https://resend.com).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | Required | Purpose |
+| --- | --- | --- |
+| `RESEND_API_KEY` | Yes, in production | Resend API key. Without it, dev logs submissions to the console and production returns a friendly error with the phone and email. |
+| `CONTACT_TO_EMAIL` | No | Inbox that receives submissions (default `admin@spnav.com.au`). |
+| `CONTACT_FROM_EMAIL` | No | Sender address (default `noreply@spnavigators.com.au`). The domain must be verified in Resend. |
 
-## Learn More
+## Pages
 
-To learn more about Next.js, take a look at the following resources:
+| Route | Purpose / main keywords |
+| --- | --- |
+| `/` | NDIS support coordination, psychosocial recovery coaching |
+| `/support-coordination` | NDIS support coordinator, independent support coordination, levels |
+| `/psychosocial-recovery-coaching` | psychosocial recovery coach, psychosocial disability, recovery plan |
+| `/how-it-works` | getting started, service agreements, funding |
+| `/about` | company story, values, logo story, company details |
+| `/ndis-resources` | understanding your NDIS plan, plan reassessment checklist, glossary |
+| `/faqs` | searchable FAQs (FAQPage schema) |
+| `/contact`, `/make-a-referral` | contact form and 4-step referral form |
+| `/privacy-policy` | privacy policy |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+SEO: per-page metadata and canonicals, Open Graph image, `sitemap.xml`, `robots.txt`, web manifest, and JSON-LD for Organization/LocalBusiness, Service, FAQPage and BreadcrumbList.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Where to edit
 
-## Deploy on Vercel
+- Business details (phone, email, ABN, nav): `src/lib/site.ts`
+- FAQ page content: `src/lib/faqs.ts`
+- Brand colours and fonts: `src/app/globals.css` (`@theme`) and `src/app/layout.tsx`
+- Page copy: `src/app/**/page.tsx`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Images
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All photos in `public/images` are from [Unsplash](https://unsplash.com) under the free Unsplash License (commercial use allowed, no attribution required). Photographers: Elevate, Nathan Anderson, Vitaly Gariev, Priscilla Du Preez, Age Cymru, Centre for Ageing Better, Annie Spratt, arty, Kylli Kittus, Dan Meyers, Zachary Kyra-Derksen, Toa Heftiba, Land O'Lakes Inc., Christina @ wocintechchat.com, Samsung UK, Kelly Sikkema, Matt Palmer and Neil Thomas.
+
+Replace them with real photos of your team and clients (with consent) whenever you can.

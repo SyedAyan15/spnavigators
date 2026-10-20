@@ -1,0 +1,218 @@
+"use client";
+
+import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
+import { Check, Phone, Sparkles } from "lucide-react";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import { site } from "@/lib/site";
+import { Magnetic } from "../motion";
+import { ButtonLink } from "../ui";
+import { Leaf, WindingRoad } from "../WindingRoad";
+
+const words = ["confidence", "clarity", "real support", "hope"];
+const steps = ["Plan understood", "Supports connected", "Goals in motion"];
+const ease = [0.22, 1, 0.36, 1] as const;
+
+export function HomeHero() {
+  const [i, setI] = useState(0);
+  const [done, setDone] = useState(0);
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
+  const cardY = useTransform(scrollYProgress, [0, 1], ["0%", "-40%"]);
+
+  useEffect(() => {
+    const t = setInterval(() => setI((v) => (v + 1) % words.length), 2600);
+    return () => clearInterval(t);
+  }, []);
+
+  useEffect(() => {
+    const t = setInterval(() => setDone((v) => (v >= steps.length ? 0 : v + 1)), 1300);
+    return () => clearInterval(t);
+  }, []);
+
+  return (
+    <section ref={ref} className="relative overflow-hidden pt-6 pb-24 sm:pt-10 lg:pb-32">
+      <div className="pointer-events-none absolute -top-32 right-[-10%] h-[42rem] w-[42rem] rounded-full bg-gold-light/35 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 -left-40 h-[32rem] w-[32rem] rounded-full bg-teal-light/30 blur-3xl" />
+      <WindingRoad className="pointer-events-none absolute -bottom-10 left-0 w-full max-w-5xl opacity-[0.13]" />
+
+      <div className="container-x relative grid items-center gap-16 lg:grid-cols-[1.1fr_1fr]">
+        <div>
+          <motion.span
+            className="eyebrow"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease }}
+          >
+            <Sparkles className="h-3.5 w-3.5 text-gold" aria-hidden />
+            Independent NDIS provider
+          </motion.span>
+
+          <h1 className="mt-6">
+            <motion.span
+              className="block text-base font-bold tracking-wide text-teal sm:text-lg"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1, ease }}
+            >
+              NDIS Support Coordination &amp; Psychosocial Recovery Coaching
+            </motion.span>
+            <motion.span
+              className="mt-4 block font-display text-[2.7rem] leading-[1.04] font-semibold tracking-tight text-navy sm:text-6xl xl:text-[4.6rem]"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.2, ease }}
+            >
+              Navigate your NDIS plan with{" "}
+              <span className="relative grid h-[1.12em]">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={words[i]}
+                    className="col-start-1 row-start-1 italic text-teal"
+                    initial={{ y: "60%", opacity: 0, filter: "blur(8px)" }}
+                    animate={{ y: "0%", opacity: 1, filter: "blur(0px)" }}
+                    exit={{ y: "-60%", opacity: 0, filter: "blur(8px)" }}
+                    transition={{ duration: 0.55, ease }}
+                  >
+                    {words[i]}.
+                  </motion.span>
+                </AnimatePresence>
+              </span>
+            </motion.span>
+          </h1>
+
+          <motion.p
+            className="mt-7 max-w-xl text-lg leading-relaxed text-muted sm:text-xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.45, ease }}
+          >
+            We help NDIS participants, families and carers turn a plan on paper into real supports, real
+            connections and real progress, with a dedicated navigator who listens first and explains everything in
+            plain language.
+          </motion.p>
+
+          <motion.div
+            className="mt-9 flex flex-wrap items-center gap-4"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6, ease }}
+          >
+            <Magnetic>
+              <ButtonLink href="/contact">Book a free chat</ButtonLink>
+            </Magnetic>
+            <Magnetic>
+              <ButtonLink href="#services" variant="outline">
+                Explore our services
+              </ButtonLink>
+            </Magnetic>
+          </motion.div>
+
+          <motion.a
+            href={site.phoneHref}
+            className="group mt-8 inline-flex items-center gap-3 text-navy"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.9 }}
+          >
+            <span className="relative grid h-12 w-12 place-items-center rounded-full bg-gold text-navy">
+              <span className="absolute inset-0 animate-ping rounded-full bg-gold/50" />
+              <Phone className="relative h-5 w-5" aria-hidden />
+            </span>
+            <span className="text-sm leading-tight">
+              <span className="block text-muted">Prefer to talk? Call us</span>
+              <span className="text-lg font-bold group-hover:text-teal">{site.phone}</span>
+            </span>
+          </motion.a>
+        </div>
+
+        <div className="relative mx-auto w-full max-w-xl">
+          <motion.div
+            style={{ y: imgY }}
+            initial={{ opacity: 0, scale: 0.92, borderRadius: "50%" }}
+            animate={{ opacity: 1, scale: 1, borderRadius: "999px 999px 48px 48px" }}
+            transition={{ duration: 1.2, delay: 0.2, ease }}
+            className="relative ml-auto aspect-[4/5] w-[82%] overflow-hidden shadow-[0_40px_100px_-30px_rgba(14,42,77,0.55)]"
+          >
+            <Image
+              src="/images/hero-friends-park.jpg"
+              alt="Friends, including a man using a wheelchair, laughing together at an outdoor table"
+              fill
+              priority
+              sizes="(min-width: 1024px) 40vw, 80vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.6, rotate: -12 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 1, delay: 0.7, type: "spring", bounce: 0.35 }}
+            className="absolute top-[38%] left-0 aspect-square w-[42%] overflow-hidden rounded-full border-[6px] border-cream shadow-2xl"
+          >
+            <Image
+              src="/images/family-support.jpg"
+              alt="A young man with family members smiling together"
+              fill
+              sizes="20vw"
+              className="object-cover"
+            />
+          </motion.div>
+
+          <motion.div
+            style={{ y: cardY }}
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, delay: 1, ease }}
+            className="absolute -right-2 bottom-10 w-60 rounded-3xl bg-white/95 p-5 shadow-2xl ring-1 ring-navy/5 backdrop-blur sm:-right-6"
+          >
+            <p className="text-xs font-bold tracking-[0.16em] text-muted uppercase">Your journey</p>
+            <ul className="mt-3 space-y-2.5">
+              {steps.map((s, idx) => {
+                const on = idx < done;
+                return (
+                  <li key={s} className="flex items-center gap-3 text-sm font-semibold text-navy">
+                    <motion.span
+                      animate={{ backgroundColor: on ? "#5d8b6c" : "#f3ece0", scale: on ? [1, 1.25, 1] : 1 }}
+                      transition={{ duration: 0.4 }}
+                      className="grid h-6 w-6 place-items-center rounded-full"
+                    >
+                      <Check className={`h-3.5 w-3.5 transition ${on ? "text-white" : "text-transparent"}`} aria-hidden />
+                    </motion.span>
+                    <span className={on ? "" : "text-muted"}>{s}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 1.1, type: "spring" }}
+            className="absolute -top-4 left-[8%] h-32 w-32 sm:h-36 sm:w-36"
+            aria-hidden
+          >
+            <svg viewBox="0 0 200 200" className="h-full w-full animate-spin-slow">
+              <defs>
+                <path id="seal" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" />
+              </defs>
+              <circle cx="100" cy="100" r="98" fill="#0e2a4d" />
+              <text fill="#f9cd78" fontSize="17" fontWeight="700" letterSpacing="4.2">
+                <textPath href="#seal">CONNECTING PLANS • TO POSSIBILITIES •</textPath>
+              </text>
+            </svg>
+            <span className="absolute inset-0 grid place-items-center">
+              <Image src="/logo-mark.png" alt="" width={84} height={43} className="h-auto w-16 brightness-110" />
+            </span>
+          </motion.div>
+
+          <Leaf className="absolute -right-4 top-6 h-24 w-14" color="var(--color-sage)" delay={1.2} />
+          <Leaf className="absolute right-8 -top-2 h-16 w-10" color="var(--color-gold)" delay={1.4} />
+        </div>
+      </div>
+    </section>
+  );
+}

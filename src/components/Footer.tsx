@@ -1,4 +1,4 @@
-import { Mail, Phone, Siren } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import { healthAdvice, site, supportLines, telHref } from "@/lib/site";
 import { Logo } from "./Logo";
@@ -94,12 +94,6 @@ export function Footer() {
               <h2 className="font-display text-xl font-semibold text-white">Mental health &amp; crisis support</h2>
               <p className="mt-1 text-sm text-white/70">We’re not a crisis service. If you need support right now, please contact:</p>
             </div>
-            <a
-              href="tel:000"
-              className="inline-flex items-center gap-2 self-start rounded-full bg-earth px-5 py-2.5 text-sm font-bold text-white sm:self-auto"
-            >
-              <Siren className="h-4 w-4" aria-hidden /> Emergency: call 000
-            </a>
           </div>
           <ul className="mt-6 grid gap-x-8 gap-y-3 text-sm sm:grid-cols-2 lg:grid-cols-3">
             {supportLines.map((l) => (

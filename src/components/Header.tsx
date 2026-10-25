@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
-import { ArrowRight, ChevronDown, Mail, Menu, X } from "lucide-react";
+import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -53,32 +53,6 @@ export function Header() {
         Skip to content
       </a>
 
-      <div className="bg-navy-deep text-white/85">
-        <div className="container-x flex h-11 items-center justify-center gap-6 md:justify-between">
-          <a href={`mailto:${site.email}`} className="hidden items-center gap-1.5 text-[0.8rem] hover:text-white md:inline-flex">
-            <Mail className="h-3.5 w-3.5 text-gold" aria-hidden /> {site.email}
-          </a>
-          <nav aria-label="Quick links">
-            <ul className="flex items-center gap-5 text-[0.72rem] font-semibold tracking-[0.12em] uppercase sm:gap-7 sm:text-[0.78rem]">
-              {[
-                { label: "Complaints & Feedback", href: "/complaints", strong: true },
-                { label: "Contact Us", href: "/contact" },
-                { label: "Intake & Referral", href: "/make-a-referral", wide: true },
-              ].map((l) => (
-                <li key={l.href} className={l.wide ? "hidden sm:block" : ""}>
-                  <Link
-                    href={l.href}
-                    className={`inline-block py-2 transition hover:text-gold-light ${pathname.startsWith(l.href) ? "text-gold-light" : ""} ${l.strong ? "font-extrabold text-white" : ""}`}
-                  >
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </div>
-
       <header
         className={`sticky top-0 z-50 transition-all duration-500 ${
           scrolled ? "bg-white/85 shadow-[0_10px_40px_-20px_rgba(13,49,87,0.35)] backdrop-blur-xl" : "bg-cream/60 backdrop-blur-sm"
@@ -101,7 +75,7 @@ export function Header() {
                       type="button"
                       aria-expanded={menuOpen === item.label}
                       onClick={() => setMenuOpen((v) => (v === item.label ? null : item.label))}
-                      className="inline-flex items-center gap-1 rounded-full px-4 py-2 text-[0.95rem] font-semibold text-navy transition hover:bg-navy/5"
+                      className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-[0.92rem] whitespace-nowrap xl:px-4 xl:text-[0.95rem] font-semibold text-navy transition hover:bg-navy/5"
                     >
                       {item.label}
                       <ChevronDown className={`h-4 w-4 transition-transform ${menuOpen === item.label ? "rotate-180" : ""}`} aria-hidden />
@@ -146,7 +120,7 @@ export function Header() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className={`relative rounded-full px-4 py-2 text-[0.95rem] font-semibold transition hover:bg-navy/5 ${
+                      className={`relative rounded-full px-3 py-2 text-[0.92rem] whitespace-nowrap xl:px-4 xl:text-[0.95rem] font-semibold transition hover:bg-navy/5 ${
                         isActive(item.href) ? "text-teal" : "text-navy"
                       }`}
                     >
@@ -210,7 +184,7 @@ export function Header() {
             </div>
             <nav aria-label="Mobile" className="container-x pt-6 pb-12">
               <ul className="space-y-1">
-                {[{ label: "Home", href: "/" }, ...nav.flatMap((n) => (n.children ? n.children : [n])), { label: "Complaints & Feedback", href: "/complaints" }].map((item, i) => (
+                {[{ label: "Home", href: "/" }, ...nav.flatMap((n) => (n.children ? n.children : [n]))].map((item, i) => (
                   <motion.li
                     key={item.href}
                     initial={{ opacity: 0, x: 40 }}

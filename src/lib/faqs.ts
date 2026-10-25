@@ -30,8 +30,8 @@ export const faqCategories: { name: string; items: FaqItem[] }[] = [
         a: "Support Coordination is a capacity building support that helps you understand and implement your NDIS plan. A Support Coordinator connects you with providers and community services, helps with service agreements, monitors your budget and builds your ability to coordinate your own supports.",
       },
       {
-        q: "What are the levels of Support Coordination?",
-        a: "There are three levels: Support Connection (Level 1), Coordination of Supports (Level 2) and Specialist Support Coordination (Level 3). The NDIA decides which level to fund based on your circumstances and the complexity of your needs.",
+        q: "What level of Support Coordination do you provide?",
+        a: "We provide Level 2 Support Coordination, also called Coordination of Supports. It’s the most common level funded in NDIS plans, and the NDIA decides which level to fund based on your circumstances. Alongside it, we provide Psychosocial Recovery Coaching for participants living with psychosocial disability. Not sure what’s in your plan? We’ll check it with you for free.",
       },
       {
         q: "Can I change my Support Coordinator?",

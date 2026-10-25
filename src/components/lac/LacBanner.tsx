@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import type { ReactNode } from "react";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -25,7 +24,7 @@ function Cloud({ children, tone, className = "", delay = 0 }: { children: ReactN
   );
 }
 
-/** Thought bubble with the little trailing circles that lead back to her head. */
+/** Question bubble with two small trailing circles. */
 function Thought({ text, className, tail, delay }: { text: string; className: string; tail: "left" | "right" | "down"; delay: number }) {
   const tailPos = {
     left: "-bottom-3 left-[18%]",
@@ -86,6 +85,56 @@ function QuestionMark({ className, delay }: { className: string; delay: number }
   );
 }
 
+const swing = (delay: number) => ({
+  initial: { opacity: 0, scale: 0.4 },
+  animate: { opacity: 1, scale: 1, rotate: [0, -2.5, 0, 2, 0] },
+  transition: {
+    opacity: { delay, duration: 0.4 },
+    scale: { delay, type: "spring" as const, bounce: 0.5 },
+    rotate: { delay: delay + 0.6, duration: 5, repeat: Infinity, ease: "easeInOut" as const },
+  },
+  style: { transformOrigin: "150px 0px", transformBox: "view-box" as const },
+});
+
+/** Signpost pointing to the three roles, in place of a person or character. */
+function Signpost() {
+  return (
+    <svg viewBox="0 0 300 420" className="h-auto w-full drop-shadow-[0_20px_30px_rgba(14,42,77,0.18)]" aria-hidden>
+      <ellipse cx="150" cy="408" rx="96" ry="10" fill="#0e2a4d" opacity="0.12" />
+      {/* leaves at the base, echoing the logo */}
+      <path d="M128 404 C 92 390, 82 352, 96 326 C 122 344, 134 372, 128 404 Z" fill="#5d8b6c" />
+      <path d="M172 404 C 210 392, 222 360, 210 330 C 182 346, 168 374, 172 404 Z" fill="#f2a33a" />
+      <path d="M112 404 C 70 404, 50 384, 46 364 C 76 362, 104 378, 112 404 Z" fill="#b4cfa8" />
+      {/* post */}
+      <rect x="139" y="58" width="22" height="350" rx="9" fill="#0e2a4d" />
+      <rect x="143" y="58" width="5" height="350" rx="2.5" fill="#ffffff" opacity="0.12" />
+
+      <motion.g {...swing(0.7)}>
+        <path d="M150 100 H56 L24 132 L56 164 H150 Z" fill="#f9dcd5" stroke="#eab3a8" strokeWidth="2" strokeLinejoin="round" />
+        <text x="92" y="142" textAnchor="middle" fontSize="28" fontWeight="800" fill="#b2453a" className="font-display">LAC</text>
+      </motion.g>
+      <motion.g {...swing(0.9)}>
+        <path d="M150 182 H244 L276 216 L244 250 H150 Z" fill="#d4e8ef" stroke="#a9cbd8" strokeWidth="2" strokeLinejoin="round" />
+        <text x="207" y="211" textAnchor="middle" fontSize="17" fontWeight="800" fill="#0e2a4d" className="font-display">Support</text>
+        <text x="207" y="232" textAnchor="middle" fontSize="17" fontWeight="800" fill="#0e2a4d" className="font-display">Coordinator</text>
+      </motion.g>
+      <motion.g {...swing(1.1)}>
+        <path d="M150 268 H62 L36 292 L62 316 H150 Z" fill="#fde7a6" stroke="#f2c86a" strokeWidth="2" strokeLinejoin="round" />
+        <text x="94" y="297" textAnchor="middle" fontSize="13.5" fontWeight="800" fill="#7a5410" className="font-display">Plan Manager</text>
+      </motion.g>
+
+      {/* nails */}
+      {[132, 216, 292].map((y) => (
+        <circle key={y} cx="150" cy={y} r="4" fill="#f9cd78" />
+      ))}
+      {/* cap */}
+      <circle cx="150" cy="44" r="32" fill="#f2a33a" />
+      <circle cx="150" cy="44" r="32" fill="none" stroke="#ffffff" strokeOpacity="0.5" strokeWidth="3" />
+      <text x="150" y="58" textAnchor="middle" fontSize="40" fontWeight="900" fill="#0e2a4d" className="font-display">?</text>
+    </svg>
+  );
+}
+
 export function LacBanner() {
   return (
     <figure className="relative mx-auto w-full max-w-6xl">
@@ -122,25 +171,17 @@ export function LacBanner() {
           </span>
         </motion.div>
 
-        {/* The participant, thinking */}
+        {/* A signpost: which way to go? */}
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.3, ease }}
-          className="absolute top-[47%] left-1/2 z-10 w-[42%] -translate-x-1/2 sm:top-[43%] sm:w-[24%] lg:top-[40%]"
+          className="absolute top-[46%] left-1/2 z-10 w-[44%] -translate-x-1/2 sm:top-[42%] sm:w-[23%] lg:top-[38%] lg:w-[22%]"
         >
-          <Image
-            src="/images/illustrations/thinking-participant.png"
-            alt="An illustrated woman with her hand on her chin, thinking about which NDIS support she needs"
-            width={614}
-            height={1400}
-            priority
-            sizes="(min-width: 640px) 26vw, 46vw"
-            className="h-auto w-full drop-shadow-[0_20px_30px_rgba(14,42,77,0.2)]"
-          />
+          <Signpost />
         </motion.div>
 
-        {/* Her questions */}
+        {/* The questions people ask */}
         <Thought text="Do I need both?" tail="down" className="top-[31.5%] left-1/2 -translate-x-1/2 sm:top-[26%] lg:top-[25%]" delay={1} />
         <Thought text="How can I choose?" tail="right" className="top-[48%] left-[2%] max-w-[36%] sm:top-[48%] sm:left-[6%] sm:max-w-none lg:top-[52%] lg:left-[14%]" delay={1.2} />
         <Thought text="What is the difference?" tail="left" className="top-[55%] right-[2%] max-w-[36%] sm:top-[46%] sm:right-[3%] sm:max-w-none lg:top-[50%] lg:right-[12%]" delay={1.4} />
@@ -151,8 +192,8 @@ export function LacBanner() {
         <span className="absolute top-[64%] right-[33%] hidden h-2.5 w-2.5 rounded-full bg-[#f9dcd5] sm:block" aria-hidden />
       </div>
       <figcaption className="sr-only">
-        Local Area Coordinator (LAC) versus Support Coordinator: a participant wonders how to choose, whether she needs both,
-        and what the difference is.
+        Local Area Coordinator (LAC) versus Support Coordinator: a signpost points to LAC, Support Coordinator and Plan
+        Manager, surrounded by the questions people ask: how can I choose, do I need both, and what is the difference?
       </figcaption>
     </figure>
   );

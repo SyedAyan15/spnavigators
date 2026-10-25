@@ -27,7 +27,7 @@ The contact and referral forms post to `/api/contact`, which emails the submissi
 | Route | Purpose / main keywords |
 | --- | --- |
 | `/` | NDIS support coordination, psychosocial recovery coaching |
-| `/support-coordination` | NDIS support coordinator, independent support coordination, levels |
+| `/support-coordination` | NDIS support coordinator, support coordination levels |
 | `/psychosocial-recovery-coaching` | psychosocial recovery coach, psychosocial disability, recovery plan |
 | `/how-it-works` | getting started, service agreements, funding |
 | `/about` | company story, values, logo story, company details |

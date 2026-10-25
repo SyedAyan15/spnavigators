@@ -56,7 +56,7 @@ export function HomeHero() {
             transition={{ duration: 0.7, ease }}
           >
             <Sparkles className="h-3.5 w-3.5 text-gold" aria-hidden />
-            Independent NDIS provider
+            Person-centred NDIS support
           </motion.span>
 
           <h1 className="mt-6">

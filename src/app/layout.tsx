@@ -36,7 +36,6 @@ export const metadata: Metadata = {
     "psychosocial recovery coach",
     "psychosocial disability",
     "NDIS plan",
-    "independent support coordination",
     "NDIS participants",
   ],
   authors: [{ name: site.legalName }],

@@ -40,7 +40,7 @@ export function Footer() {
           <Logo light />
           <p className="mt-6 max-w-sm font-display text-xl text-white italic">{site.tagline}</p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed">
-            Independent NDIS Support Coordination and Psychosocial Recovery Coaching that helps you understand your
+            NDIS Support Coordination and Psychosocial Recovery Coaching that helps you understand your
             plan, choose the right supports and move toward the life you want.
           </p>
         </div>

@@ -29,7 +29,7 @@ import { faqJsonLd, type FaqItem } from "@/lib/seo";
 export const metadata: Metadata = {
   title: { absolute: "NDIS Support Coordination & Psychosocial Recovery Coaching | Support Plan Navigators" },
   description:
-    "Independent NDIS Support Coordination and Psychosocial Recovery Coaching across Australia. We help NDIS participants understand their plan, connect with the right providers and build a life they value. Book a free chat.",
+    "NDIS Support Coordination and Psychosocial Recovery Coaching across Australia. We help NDIS participants understand their plan, connect with the right providers and build a life they value. Book a free chat.",
   alternates: { canonical: "/" },
 };
 
@@ -62,7 +62,7 @@ const values = [
   { icon: Sprout, title: "Building your capacity", text: "Good support should grow your independence, not your reliance on us. We teach the ‘why’ along with the ‘how’." },
   { icon: Languages, title: "Plain language, no jargon", text: "NDIS terms can be confusing. We explain your plan, budgets and options clearly, and put important things in writing." },
   { icon: MessageCircleHeart, title: "Responsive & reachable", text: "You’ll have a dedicated navigator who knows your story, returns your calls and keeps you informed." },
-  { icon: BadgeCheck, title: "Independent advice", text: "We focus on two specialised services, so our recommendations are about what suits you, never about filling our own rosters." },
+  { icon: BadgeCheck, title: "Honest advice", text: "We focus on two specialised services, so our recommendations are about what suits you, never about filling our own rosters." },
 ];
 
 const audiences = [

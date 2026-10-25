@@ -10,12 +10,12 @@ import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "About Us | Independent NDIS Support Coordination Provider",
+  title: "About Us | NDIS Support Coordination Provider",
   description:
-    "Support Plan Navigators is an independent Australian provider of NDIS Support Coordination and Psychosocial Recovery Coaching. Learn about our story, our values and our commitment to person-centred support.",
+    "Support Plan Navigators is an Australian provider of NDIS Support Coordination and Psychosocial Recovery Coaching. Learn about our story, our values and our commitment to person-centred support.",
   path: "/about",
   image: "/images/joy-together.jpg",
-  keywords: ["about Support Plan Navigators", "independent NDIS provider", "NDIS support coordination provider Australia"],
+  keywords: ["about Support Plan Navigators", "NDIS support coordination provider Australia"],
 });
 
 const pillars = [
@@ -33,7 +33,7 @@ export default function AboutPage() {
         highlight={["possibilities."]}
         intro={
           <p>
-            We’re an independent Australian provider focused on just two things: NDIS Support Coordination and Psychosocial
+            We’re an Australian provider focused on just two things: NDIS Support Coordination and Psychosocial
             Recovery Coaching. Doing less means we can do it better, for you.
           </p>
         }
@@ -69,7 +69,7 @@ export default function AboutPage() {
               </p>
               <p>
                 That’s why we chose to specialise. By focusing only on Support Coordination and Psychosocial Recovery
-                Coaching, we stay independent, deeply knowledgeable and fully focused on what you need, rather than on
+                Coaching, we stay deeply knowledgeable and fully focused on what you need, rather than on
                 selling other services.
               </p>
             </Reveal>

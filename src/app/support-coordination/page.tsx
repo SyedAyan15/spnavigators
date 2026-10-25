@@ -22,17 +22,16 @@ import { ButtonLink, JsonLd, SectionHeading } from "@/components/ui";
 import { faqJsonLd, pageMetadata, serviceJsonLd, type FaqItem } from "@/lib/seo";
 
 const description =
-  "Independent NDIS Support Coordination that helps you understand your NDIS plan, choose the right providers, set up service agreements and prepare for plan reassessments. Talk to a Support Coordinator today.";
+  "NDIS Support Coordination that helps you understand your NDIS plan, choose the right providers, set up service agreements and prepare for plan reassessments. Talk to a Support Coordinator today.";
 
 export const metadata = pageMetadata({
-  title: "NDIS Support Coordination | Independent Support Coordinators",
+  title: "NDIS Support Coordination | Support Coordinators",
   description,
   path: "/support-coordination",
   image: "/images/planning-session.jpg",
   keywords: [
     "NDIS support coordination",
     "NDIS support coordinator",
-    "independent support coordination",
     "coordination of supports",
     "support connection",
     "NDIS plan implementation",
@@ -101,8 +100,8 @@ const faqs: FaqItem[] = [
     a: "Support Coordination is funded in the Capacity Building – Support Coordination budget of your NDIS plan. It can only be used for Support Coordination, and the NDIA decides whether it is included and at what level. If it is funded, you don’t pay out of pocket.",
   },
   {
-    q: "What is independent Support Coordination?",
-    a: "Independent Support Coordination means your coordinator’s advice isn’t influenced by a wish to sell you other services. We focus on Support Coordination and Psychosocial Recovery Coaching, so our recommendations are always about what suits you best.",
+    q: "How do you choose which providers to recommend?",
+    a: "We recommend providers based on your goals, needs, location and preferences, and we share honest pros and cons so you can choose. We focus on Support Coordination and Psychosocial Recovery Coaching, so our recommendations are always about what suits you best.",
   },
   {
     q: "How many hours of Support Coordination will I get?",
@@ -137,7 +136,7 @@ export default function SupportCoordinationPage() {
         highlight={["work"]}
         intro={
           <p>
-            Independent NDIS Support Coordination that turns your plan into the right supports, the right providers and
+            NDIS Support Coordination that turns your plan into the right supports, the right providers and
             real progress toward your goals, with a Support Coordinator who knows your story.
           </p>
         }

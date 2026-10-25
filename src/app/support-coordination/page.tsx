@@ -52,7 +52,7 @@ const help: Feature[] = [
 
 const levels: TabItem[] = [
   {
-    kicker: "Level 2 · Our core service",
+    kicker: "Core service · Level 2",
     label: "Coordination of Supports",
     title: "Support Coordination: Level 2",
     text: "Coordination of Supports is the most common level of Support Coordination, and the heart of what we do. Your Support Coordinator works alongside you to put your whole plan into action, while building your confidence to manage more of it yourself.",
@@ -68,7 +68,7 @@ const levels: TabItem[] = [
     ],
   },
   {
-    kicker: "Also available",
+    kicker: "Core service",
     label: "Psychosocial Recovery Coaching",
     title: "Psychosocial Recovery Coaching",
     text: "For participants living with psychosocial disability, a Recovery Coach combines coordination of your NDIS supports with one-on-one coaching focused on your mental health recovery.",
@@ -82,20 +82,6 @@ const levels: TabItem[] = [
       { title: "Making your plan work for recovery", text: "Coordinating your NDIS supports so they all point toward your recovery goals." },
     ],
     link: { href: "/psychosocial-recovery-coaching", label: "Learn more about Psychosocial Recovery Coaching" },
-  },
-  {
-    kicker: "Level 1",
-    label: "Support Connection",
-    title: "Support Connection",
-    text: "Short-term help to build your ability to connect with informal, community and funded supports, so you can get the most out of your plan and use it more independently.",
-    points: ["Understanding your plan", "Connecting with providers", "Linking with community activities", "Building confidence to self-manage connections"],
-  },
-  {
-    kicker: "Level 3",
-    label: "Specialist Support Coordination",
-    title: "Specialist Support Coordination",
-    text: "A higher level of support for people whose situations are more complex, for example where there are significant risks, multiple service systems involved or a need for specialised expertise. It is delivered by experienced practitioners, often with a health or allied health background.",
-    points: ["Managing complex barriers", "Reducing complexity in the support environment", "Working across health, justice or housing systems", "Ensuring consistent, high-quality delivery"],
   },
 ];
 
@@ -253,12 +239,12 @@ export default function SupportCoordinationPage() {
                 Level 2 coordination <span className="text-teal italic">and recovery coaching.</span>
               </>
             }
-            intro="We specialise in Level 2 Support Coordination and Psychosocial Recovery Coaching. The NDIA funds Support Coordination at different levels depending on your circumstances, and your plan will show which level you have."
+            intro="Level 2 Support Coordination and Psychosocial Recovery Coaching are our two core services. Explore what each one includes."
           />
           <div className="mt-14">
             <Tabs
               items={levels}
-              note="Not sure which level is in your plan, or whether we can support it? Get in touch and we’ll check your plan with you for free."
+              note="Not sure which support is funded in your plan? Get in touch and we’ll check your plan with you for free."
             />
           </div>
         </div>

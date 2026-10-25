@@ -114,7 +114,7 @@ export function LacBanner() {
           initial={{ scale: 0, rotate: -90 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ delay: 0.5, type: "spring", bounce: 0.5 }}
-          className="absolute top-[21%] left-1/2 z-10 -translate-x-1/2 sm:top-[12%]"
+          className="absolute top-[18%] left-1/2 z-10 -translate-x-1/2 sm:top-[7%]"
         >
           <span className="relative grid h-14 w-14 place-items-center rounded-full bg-[#fde7a6] font-display text-xl font-black text-navy shadow-lg sm:h-20 sm:w-20 sm:text-3xl lg:h-24 lg:w-24 lg:text-4xl">
             <span className="absolute inset-[-10%] animate-spin-slow rounded-full border-4 border-dashed border-gold/50" />
@@ -130,7 +130,7 @@ export function LacBanner() {
           className="absolute top-[47%] left-1/2 z-10 w-[42%] -translate-x-1/2 sm:top-[43%] sm:w-[24%] lg:top-[40%]"
         >
           <Image
-            src="/images/illustrations/thinking-woman.png"
+            src="/images/illustrations/thinking-participant.png"
             alt="An illustrated woman with her hand on her chin, thinking about which NDIS support she needs"
             width={614}
             height={1400}
@@ -141,7 +141,7 @@ export function LacBanner() {
         </motion.div>
 
         {/* Her questions */}
-        <Thought text="Do I need both?" tail="down" className="top-[34%] left-1/2 -translate-x-1/2 sm:top-[30%] lg:top-[33%]" delay={1} />
+        <Thought text="Do I need both?" tail="down" className="top-[31.5%] left-1/2 -translate-x-1/2 sm:top-[26%] lg:top-[25%]" delay={1} />
         <Thought text="How can I choose?" tail="right" className="top-[48%] left-[2%] max-w-[36%] sm:top-[48%] sm:left-[6%] sm:max-w-none lg:top-[52%] lg:left-[14%]" delay={1.2} />
         <Thought text="What is the difference?" tail="left" className="top-[55%] right-[2%] max-w-[36%] sm:top-[46%] sm:right-[3%] sm:max-w-none lg:top-[50%] lg:right-[12%]" delay={1.4} />
 

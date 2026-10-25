@@ -15,7 +15,6 @@ import { Faq } from "@/components/Faq";
 import { Acknowledgement } from "@/components/home/Acknowledgement";
 import { HomeHero } from "@/components/home/HomeHero";
 import { OranaRegion } from "@/components/home/OranaRegion";
-import { SupportFinder } from "@/components/home/SupportFinder";
 import { Counter, Parallax, Reveal, Stagger, StaggerItem, TiltCard } from "@/components/motion";
 import { ButtonLink, JsonLd, SectionHeading } from "@/components/ui";
 import { faqJsonLd, type FaqItem } from "@/lib/seo";
@@ -245,35 +244,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Support finder */}
-      <section className="relative overflow-hidden py-16 sm:py-24 lg:py-32">
-        <div className="pointer-events-none absolute top-20 -right-40 h-[30rem] w-[30rem] rounded-full bg-ochre-light/40 blur-3xl" />
-        <div className="container-x relative grid items-center gap-14 lg:grid-cols-[1fr_1.15fr]">
-          <div>
-            <SectionHeading
-              align="left"
-              eyebrow="Not sure where to start?"
-              title={
-                <>
-                  Find the support that <span className="text-teal italic">fits you.</span>
-                </>
-              }
-              intro="Answer three quick questions and we’ll suggest whether Support Coordination, Psychosocial Recovery Coaching, or a combination might suit you best. It takes less than a minute, and nothing you choose is stored or shared."
-            />
-            <Reveal delay={0.3} className="mt-8 hidden lg:block">
-              <div className="relative aspect-[16/10] overflow-hidden rounded-[2rem]">
-                <Image src="/images/hands-comfort.jpg" alt="Two people holding hands across a table in comfort" fill sizes="40vw" className="object-cover" />
-              </div>
-            </Reveal>
-          </div>
-          <Reveal direction="left">
-            <SupportFinder />
-          </Reveal>
-        </div>
-      </section>
-
       {/* Values */}
-      <section className="bg-white py-16 sm:py-24 lg:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="Why choose Support Plan Navigators"
@@ -306,7 +278,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 sm:py-24 lg:py-32">
+      <section className="bg-white py-16 sm:py-24 lg:py-32">
         <JsonLd data={faqJsonLd(faqs)} />
         <div className="container-x grid gap-14 lg:grid-cols-[1fr_1.5fr]">
           <div>

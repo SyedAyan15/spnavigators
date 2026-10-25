@@ -10,8 +10,6 @@ export const site = {
   email: "admin@spnav.com.au",
   phone: "0439 953 767",
   phoneHref: "tel:+61439953767",
-  abn: "28 703 292 559",
-  acn: "703 292 559",
   country: "Australia",
 } as const;
 

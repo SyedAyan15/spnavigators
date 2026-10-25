@@ -1,6 +1,6 @@
 # Support Plan Navigators â€” www.spnavigators.com.au
 
-Marketing website for **Support Plan Navigators Pty Ltd** (ABN 28 703 292 559): NDIS Support Coordination and Psychosocial Recovery Coaching.
+Marketing website for **Support Plan Navigators Pty Ltd**: NDIS Support Coordination and Psychosocial Recovery Coaching.
 
 Built with Next.js 16 (App Router, Cache Components), Tailwind CSS v4, framer-motion and lucide-react.
 
@@ -40,7 +40,7 @@ SEO: per-page metadata and canonicals, Open Graph image, `sitemap.xml`, `robots.
 
 ## Where to edit
 
-- Business details (phone, email, ABN, nav): `src/lib/site.ts`
+- Business details (phone, email, nav): `src/lib/site.ts`
 - FAQ page content: `src/lib/faqs.ts`
 - Brand colours and fonts: `src/app/globals.css` (`@theme`) and `src/app/layout.tsx`
 - Page copy: `src/app/**/page.tsx`

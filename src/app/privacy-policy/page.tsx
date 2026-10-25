@@ -21,7 +21,7 @@ export default function PrivacyPage() {
         <h1 className="mt-6 font-display text-5xl font-semibold tracking-tight text-navy">Privacy Policy</h1>
         <Reveal className="prose-brand mt-10 text-lg">
           <p>
-            {site.legalName} (ABN {site.abn}) (“we”, “us”) respects your privacy. We handle personal information in line
+            {site.legalName} (“we”, “us”) respects your privacy. We handle personal information in line
             with the <em>Privacy Act 1988</em> (Cth), the Australian Privacy Principles and our obligations as a provider of
             NDIS supports.
           </p>

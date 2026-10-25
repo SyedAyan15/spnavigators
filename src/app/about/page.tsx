@@ -6,7 +6,6 @@ import { Parallax, Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { PageHero } from "@/components/PageHero";
 import { ButtonLink, SectionHeading } from "@/components/ui";
 import { pageMetadata } from "@/lib/seo";
-import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "About Us | NDIS Support Coordination Provider",
@@ -146,25 +145,6 @@ export default function AboutPage() {
             </Reveal>
           </div>
         </div>
-      </section>
-
-      <section className="container-x pb-8">
-        <Reveal className="rounded-[2rem] bg-white p-8 ring-1 ring-navy/5 sm:p-10">
-          <h2 className="font-display text-2xl font-semibold text-navy">Company details</h2>
-          <dl className="mt-6 grid gap-6 text-sm sm:grid-cols-4">
-            {[
-              ["Registered name", site.legalName],
-              ["ABN", site.abn],
-              ["ACN", site.acn],
-              ["Website", "www.spnavigators.com.au"],
-            ].map(([k, v]) => (
-              <div key={k}>
-                <dt className="text-muted">{k}</dt>
-                <dd className="mt-1 font-semibold text-navy">{v}</dd>
-              </div>
-            ))}
-          </dl>
-        </Reveal>
       </section>
 
       <CtaBand />

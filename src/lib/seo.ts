@@ -84,7 +84,6 @@ export const organizationJsonLd = {
   description: site.description,
   email: site.email,
   telephone: "+61 439 953 767",
-  taxID: `ABN ${site.abn}`,
   areaServed: { "@type": "AdministrativeArea", name: "Orana region, New South Wales, Australia" },
   address: { "@type": "PostalAddress", addressRegion: "NSW", addressCountry: "AU" },
   knowsAbout: [

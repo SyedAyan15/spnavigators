@@ -220,7 +220,7 @@ export function HomeHero() {
             </svg>
             <span className="absolute inset-0 grid place-items-center">
               <span className="rounded-full bg-white p-1">
-                <Image src="/logo-mark.png" alt="" width={600} height={581} className="h-auto w-9 sm:w-14" />
+                <Image src="/logo-mark.png" alt="" width={600} height={492} className="h-auto w-9 sm:w-14" />
               </span>
             </span>
           </motion.div>

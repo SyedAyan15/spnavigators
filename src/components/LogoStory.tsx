@@ -5,10 +5,10 @@ import Image from "next/image";
 import { useState } from "react";
 
 const parts = [
-  { key: "circle", label: "A circle of community", color: "#a8261f", text: "Figures joined hand in hand around the circle: participants, families, carers and community, all connected and supporting each other.", x: 50, y: 7 },
-  { key: "dots", label: "Dot artwork", color: "#d4661c", text: "The dot artwork honours the Aboriginal cultures and communities of the Orana region, and our commitment to culturally safe support.", x: 30, y: 36 },
-  { key: "land", label: "Mountains and water", color: "#1f6fb2", text: "The landscape of the Orana, and the journey every participant travels through it, one step at a time.", x: 72, y: 38 },
-  { key: "path", label: "The golden path", color: "#f2a12a", text: "Your plan, turned into a clear way forward. That’s what connecting plans to possibilities is all about.", x: 47, y: 62 },
+  { key: "circle", label: "A circle of community", color: "#a8261f", text: "Figures joined hand in hand around the circle: participants, families, carers and community, all connected and supporting each other.", x: 50, y: 6 },
+  { key: "dots", label: "Dot artwork", color: "#d4661c", text: "The dot artwork honours the Aboriginal cultures and communities of the Orana region, and our commitment to culturally safe support.", x: 33, y: 40 },
+  { key: "land", label: "Mountains and water", color: "#1f6fb2", text: "The landscape of the Orana, and the journey every participant travels through it, one step at a time.", x: 70, y: 38 },
+  { key: "path", label: "The golden path", color: "#f2a12a", text: "Your plan, turned into a clear way forward. That’s what connecting plans to possibilities is all about.", x: 52, y: 68 },
 ];
 
 export function LogoStory() {
@@ -17,7 +17,7 @@ export function LogoStory() {
     <div className="grid items-center gap-12 lg:grid-cols-2">
       <div className="relative mx-auto w-full max-w-xl rounded-[2.5rem] bg-white p-8 shadow-[0_40px_100px_-50px_rgba(13,49,87,0.5)] sm:p-12">
         <div className="relative mx-auto max-w-sm">
-          <Image src="/logo-mark.png" alt="Support Plan Navigators logo mark" width={600} height={581} className="h-auto w-full" />
+          <Image src="/logo-mark.png" alt="Support Plan Navigators logo mark" width={600} height={492} className="h-auto w-full" />
           {parts.map((p, i) => (
             <button
               key={p.key}

@@ -58,7 +58,7 @@ export function Header() {
           scrolled ? "bg-white/85 shadow-[0_10px_40px_-20px_rgba(13,49,87,0.35)] backdrop-blur-xl" : "bg-cream/60 backdrop-blur-sm"
         }`}
       >
-        <div className={`container-x flex items-center justify-between transition-all duration-500 ${scrolled ? "h-[4.5rem]" : "h-[5.5rem]"}`}>
+        <div className={`container-x flex items-center justify-between transition-all duration-500 ${scrolled ? "h-[4.75rem]" : "h-[5.5rem] lg:h-[7.25rem]"}`}>
           <Logo compact={scrolled} />
 
           <nav aria-label="Main" className="hidden lg:block">
@@ -172,7 +172,7 @@ export function Header() {
             aria-label="Menu"
           >
             <div className="container-x flex h-[5.5rem] items-center justify-between">
-              <Logo light compact />
+              <Logo variant="stacked" compact />
               <button
                 type="button"
                 className="grid h-12 w-12 place-items-center rounded-full bg-white/10"

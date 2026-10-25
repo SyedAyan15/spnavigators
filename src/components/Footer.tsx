@@ -39,7 +39,7 @@ export function Footer() {
 
       <div className="container-x relative grid gap-12 pt-28 pb-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
-          <Logo light />
+          <Logo variant="stacked" />
           <p className="mt-6 max-w-sm font-display text-xl text-white italic">{site.tagline}</p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed">
             NDIS Support Coordination and Psychosocial Recovery Coaching that helps you understand your

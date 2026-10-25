@@ -52,25 +52,43 @@ const help: Feature[] = [
 
 const levels: TabItem[] = [
   {
+    kicker: "Level 2 · Our core service",
+    label: "Coordination of Supports",
+    title: "Support Coordination: Level 2",
+    text: "Coordination of Supports is the most common level of Support Coordination, and the heart of what we do. Your Support Coordinator works alongside you to put your whole plan into action, while building your confidence to manage more of it yourself.",
+    points: [
+      { title: "Making sense of your plan", text: "We go through each budget and goal with you, so you know what’s funded and what’s possible." },
+      { title: "Keeping your budget on track", text: "We watch how your funding is being used so it doesn’t run out early or go unused." },
+      { title: "Finding providers who fit", text: "We research options, share honest pros and cons, and connect you with services that suit you." },
+      { title: "Shaping how support works for you", text: "Together we decide when, where and how your supports are delivered around your life." },
+      { title: "Getting everything set up", text: "Service agreements, bookings, and links to health, housing, education and community services." },
+      { title: "Responding when things go wrong", text: "If a provider drops out or life changes suddenly, we act quickly to keep you supported." },
+      { title: "Strengthening your support network", text: "We build the skills of you, your family and the people around you to coordinate supports." },
+      { title: "Evidence for your next plan", text: "We prepare progress reports for the NDIA so your next plan reflects your real needs." },
+    ],
+  },
+  {
+    kicker: "Also available",
+    label: "Psychosocial Recovery Coaching",
+    title: "Psychosocial Recovery Coaching",
+    text: "For participants living with psychosocial disability, a Recovery Coach combines coordination of your NDIS supports with one-on-one coaching focused on your mental health recovery.",
+    points: [
+      { title: "Recovery, as you define it", text: "We start by exploring what a good life looks like for you, and set goals around that." },
+      { title: "A recovery plan that’s yours", text: "Practical steps, routines, early warning signs and what helps, written together with you." },
+      { title: "Steady support through ups and downs", text: "We stay connected and adjust the pace when your mental health needs change." },
+      { title: "Working with your care team", text: "We link in with your GP, psychologist and community mental health services, with your consent." },
+      { title: "Everyday skills and confidence", text: "Building routines, resilience and self-belief one achievable step at a time." },
+      { title: "Family and carers included", text: "We involve the people who matter to you, in the way you choose." },
+      { title: "Making your plan work for recovery", text: "Coordinating your NDIS supports so they all point toward your recovery goals." },
+    ],
+    link: { href: "/psychosocial-recovery-coaching", label: "Learn more about Psychosocial Recovery Coaching" },
+  },
+  {
     kicker: "Level 1",
     label: "Support Connection",
     title: "Support Connection",
     text: "Short-term help to build your ability to connect with informal, community and funded supports, so you can get the most out of your plan and use it more independently.",
     points: ["Understanding your plan", "Connecting with providers", "Linking with community activities", "Building confidence to self-manage connections"],
-  },
-  {
-    kicker: "Level 2",
-    label: "Coordination of Supports",
-    title: "Coordination of Supports",
-    text: "The most common level of Support Coordination. Your Support Coordinator helps you understand and implement the full range of supports in your plan, and builds your capacity to coordinate them yourself.",
-    points: [
-      "Designing and implementing your supports",
-      "Coordinating multiple providers",
-      "Monitoring budgets and service agreements",
-      "Resolving points of crisis",
-      "Building resilience in your support network",
-      "Preparing for plan reassessment",
-    ],
   },
   {
     kicker: "Level 3",
@@ -229,13 +247,13 @@ export default function SupportCoordinationPage() {
       <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
-            eyebrow="Levels of Support Coordination"
+            eyebrow="How we can support you"
             title={
               <>
-                Three levels, <span className="text-teal italic">tailored to your needs.</span>
+                Level 2 coordination <span className="text-teal italic">and recovery coaching.</span>
               </>
             }
-            intro="The NDIA funds Support Coordination at different levels depending on your circumstances. Your plan will show which level you have."
+            intro="We specialise in Level 2 Support Coordination and Psychosocial Recovery Coaching. The NDIA funds Support Coordination at different levels depending on your circumstances, and your plan will show which level you have."
           />
           <div className="mt-14">
             <Tabs

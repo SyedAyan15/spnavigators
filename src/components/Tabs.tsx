@@ -1,10 +1,19 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
-export type TabItem = { label: string; kicker?: string; title: string; text: string; points?: string[] };
+export type TabPoint = string | { title: string; text: string };
+export type TabItem = {
+  label: string;
+  kicker?: string;
+  title: string;
+  text: string;
+  points?: TabPoint[];
+  link?: { href: string; label: string };
+};
 
 /** Vertical tabs on desktop, scrollable pills on mobile. */
 export function Tabs({ items, note }: { items: TabItem[]; note?: string }) {
@@ -44,20 +53,32 @@ export function Tabs({ items, note }: { items: TabItem[]; note?: string }) {
           <h3 className="font-display text-3xl font-semibold text-navy">{t.title}</h3>
           <p className="mt-4 text-lg leading-relaxed text-muted">{t.text}</p>
           {t.points && (
-            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+            <ul className={`mt-6 grid sm:grid-cols-2 ${typeof t.points[0] === "string" ? "gap-3" : "gap-x-8 gap-y-5"}`}>
               {t.points.map((p, i) => (
                 <motion.li
-                  key={p}
+                  key={typeof p === "string" ? p : p.title}
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + i * 0.05 }}
                   className="flex items-start gap-3"
                 >
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-ochre" aria-hidden />
-                  <span className="text-navy">{p}</span>
+                  {typeof p === "string" ? (
+                    <span className="text-navy">{p}</span>
+                  ) : (
+                    <span>
+                      <span className="block font-semibold text-navy">{p.title}</span>
+                      <span className="mt-0.5 block text-sm leading-relaxed text-muted">{p.text}</span>
+                    </span>
+                  )}
                 </motion.li>
               ))}
             </ul>
+          )}
+          {t.link && (
+            <Link href={t.link.href} className="group mt-8 inline-flex items-center gap-2 font-bold text-teal">
+              {t.link.label} <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden />
+            </Link>
           )}
           {note && <p className="mt-8 rounded-2xl bg-cream p-4 text-sm leading-relaxed text-muted">{note}</p>}
         </motion.div>

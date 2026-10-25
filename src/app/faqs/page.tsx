@@ -1,4 +1,5 @@
 import { CtaBand } from "@/components/CtaBand";
+import { PageBanner } from "@/components/PageBanner";
 import { FaqExplorer } from "@/components/FaqExplorer";
 import { Reveal, WordReveal } from "@/components/motion";
 import { JsonLd } from "@/components/ui";
@@ -17,6 +18,7 @@ export const metadata = pageMetadata({
 export default function FaqsPage() {
   return (
     <>
+      <PageBanner title="Frequently Asked Questions" />
       <JsonLd data={faqJsonLd(allFaqs)} />
       <JsonLd data={breadcrumbJsonLd([{ name: "FAQs", path: "/faqs" }])} />
       <section className="relative overflow-hidden pt-16 pb-24 sm:pb-32">

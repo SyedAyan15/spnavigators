@@ -1,4 +1,5 @@
 import { ArrowUpRight, Ear, HeartHandshake, Languages, Mail, MessageSquareText, Phone, Search, ShieldCheck, UserRoundCheck, Wrench } from "lucide-react";
+import { PageBanner } from "@/components/PageBanner";
 import { ComplaintForm } from "@/components/forms/ComplaintForm";
 import { Reveal, Stagger, StaggerItem, WordReveal } from "@/components/motion";
 import { JsonLd, SectionHeading } from "@/components/ui";
@@ -31,6 +32,7 @@ const rights = [
 export default function ComplaintsPage() {
   return (
     <>
+      <PageBanner title="Complaints & Feedback" />
       <JsonLd data={breadcrumbJsonLd([{ name: "Complaints & Feedback", path: "/complaints" }])} />
 
       <section className="relative overflow-hidden pt-12 pb-16 sm:pb-24">

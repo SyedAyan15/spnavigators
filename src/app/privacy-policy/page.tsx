@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/motion";
+import { PageBanner } from "@/components/PageBanner";
 import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -10,6 +11,8 @@ export const metadata = pageMetadata({
 
 export default function PrivacyPage() {
   return (
+    <>
+    <PageBanner title="Privacy Policy" />
     <section className="py-16 sm:py-24">
       <div className="container-x max-w-3xl">
         <span className="eyebrow">
@@ -69,5 +72,6 @@ export default function PrivacyPage() {
         </Reveal>
       </div>
     </section>
+    </>
   );
 }

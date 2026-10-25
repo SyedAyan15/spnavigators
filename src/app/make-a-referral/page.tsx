@@ -1,4 +1,5 @@
 import { CheckCircle2, Phone } from "lucide-react";
+import { PageBanner } from "@/components/PageBanner";
 import { ReferralForm } from "@/components/forms/ReferralForm";
 import { Reveal, Stagger, StaggerItem, WordReveal } from "@/components/motion";
 import { ButtonLink, JsonLd } from "@/components/ui";
@@ -23,6 +24,7 @@ const next = [
 export default function ReferralPage() {
   return (
     <>
+      <PageBanner title="Make a Referral" />
       <JsonLd data={breadcrumbJsonLd([{ name: "Make a Referral", path: "/make-a-referral" }])} />
       <section className="relative overflow-hidden pt-12 pb-24 sm:pb-32">
         <div className="pointer-events-none absolute -top-40 -left-40 h-[36rem] w-[36rem] rounded-full bg-teal-light/25 blur-3xl" />

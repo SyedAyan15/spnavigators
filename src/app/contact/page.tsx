@@ -1,4 +1,5 @@
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { PageBanner } from "@/components/PageBanner";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { Reveal, Stagger, StaggerItem, WordReveal } from "@/components/motion";
 import { JsonLd } from "@/components/ui";
@@ -24,6 +25,7 @@ const cards = [
 export default function ContactPage() {
   return (
     <>
+      <PageBanner title="Contact Us" />
       <JsonLd data={breadcrumbJsonLd([{ name: "Contact", path: "/contact" }])} />
       <section className="relative overflow-hidden pt-12 pb-24 sm:pb-32">
         <div className="pointer-events-none absolute -top-40 -right-40 h-[36rem] w-[36rem] rounded-full bg-gold-light/30 blur-3xl" />

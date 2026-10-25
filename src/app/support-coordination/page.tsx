@@ -146,6 +146,7 @@ export default function SupportCoordinationPage() {
         image="/images/planning-session.jpg"
         imageAlt="A support coordinator reviewing an NDIS plan with two participants"
         crumbs={[{ name: "Support Coordination", path: "/support-coordination" }]}
+        bannerTitle="NDIS Support Coordination"
         badge={
           <>
             <p className="text-xs font-bold tracking-[0.16em] text-teal uppercase">Funded by your NDIS plan</p>

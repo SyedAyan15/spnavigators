@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import { Reveal, WordReveal } from "./motion";
+import { PageBanner } from "./PageBanner";
 import { JsonLd } from "./ui";
 import { Leaf, WindingRoad } from "./WindingRoad";
 
@@ -17,6 +18,7 @@ export function PageHero({
   crumbs,
   children,
   badge,
+  bannerTitle,
 }: {
   eyebrow: string;
   title: string;
@@ -27,8 +29,11 @@ export function PageHero({
   crumbs: { name: string; path: string }[];
   children?: ReactNode;
   badge?: ReactNode;
+  bannerTitle?: string;
 }) {
   return (
+    <>
+    <PageBanner title={bannerTitle ?? crumbs[crumbs.length - 1].name} />
     <section className="relative overflow-hidden pt-8 pb-20 sm:pb-28">
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <div className="pointer-events-none absolute -top-40 -right-40 h-[36rem] w-[36rem] rounded-full bg-gold-light/30 blur-3xl" />
@@ -98,5 +103,6 @@ export function PageHero({
         </div>
       </div>
     </section>
+    </>
   );
 }

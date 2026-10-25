@@ -1,4 +1,5 @@
 import { ChevronRight, MapPinned, MousePointerClick, Route } from "lucide-react";
+import { PageBanner } from "@/components/PageBanner";
 import Image from "next/image";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
@@ -94,6 +95,7 @@ const faqs: FaqItem[] = [
 export default function LacVsScPage() {
   return (
     <>
+      <PageBanner title="LAC vs Support Coordinator" />
       <JsonLd data={breadcrumbJsonLd([{ name: "LAC vs Support Coordinator", path: "/lac-vs-support-coordinator" }])} />
       <JsonLd data={faqJsonLd(faqs)} />
 

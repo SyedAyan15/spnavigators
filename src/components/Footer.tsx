@@ -1,7 +1,6 @@
 import { Mail, Phone, Siren } from "lucide-react";
 import Link from "next/link";
 import { healthAdvice, site, supportLines, telHref } from "@/lib/site";
-import { AboriginalFlag } from "./AboriginalFlag";
 import { Logo } from "./Logo";
 import { Year } from "./Year";
 
@@ -125,22 +124,6 @@ export function Footer() {
               {healthAdvice.number}
             </a>
           </p>
-        </div>
-      </div>
-
-      {/* Acknowledgement of Country */}
-      <div className="container-x relative">
-        <div className="flex flex-col gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 sm:flex-row sm:items-center sm:p-8">
-          <AboriginalFlag className="h-14 w-28 shrink-0 rounded-md shadow-lg ring-1 ring-white/20" />
-          <div className="text-sm leading-relaxed">
-            <h2 className="font-display text-lg font-semibold text-white">Acknowledgement of Country</h2>
-            <p className="mt-2">
-              Support Plan Navigators respectfully acknowledges the Traditional Custodians of the lands across the Orana
-              region where we live, work and travel. We honour their deep and ongoing connection to Country, culture and
-              community, and pay our respects to Elders, past and present. We extend that respect to every Aboriginal and
-              Torres Strait Islander person who walks with us.
-            </p>
-          </div>
         </div>
       </div>
 

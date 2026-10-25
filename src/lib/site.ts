@@ -41,6 +41,13 @@ export const nav: NavItem[] = [
         badge: "RC",
         color: "bg-gold",
       },
+      {
+        label: "LAC vs Support Coordinator",
+        href: "/lac-vs-support-coordinator",
+        description: "Who does what, who to contact, and whether you need both.",
+        badge: "vs",
+        color: "bg-ochre",
+      },
     ],
   },
   { label: "About Us", href: "/about" },

@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
+import { Acknowledgement } from "@/components/home/Acknowledgement";
 import { HomeHero } from "@/components/home/HomeHero";
 import { OranaRegion } from "@/components/home/OranaRegion";
 import { SupportFinder } from "@/components/home/SupportFinder";
@@ -90,6 +91,8 @@ export default function Home() {
     <>
       <HomeHero />
 
+      <Acknowledgement />
+
 
       {/* Services */}
       <section id="services" className="scroll-mt-28 py-16 sm:py-24 lg:py-32">
@@ -148,6 +151,22 @@ export default function Home() {
               </StaggerItem>
             ))}
           </Stagger>
+
+          <Reveal className="mt-8">
+            <Link
+              href="/lac-vs-support-coordinator"
+              className="group flex flex-col items-start gap-4 rounded-[2rem] bg-white p-6 ring-1 ring-navy/5 transition hover:shadow-xl sm:flex-row sm:items-center sm:p-8"
+            >
+              <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-ochre font-display text-xl font-bold text-white italic">vs</span>
+              <span className="flex-1">
+                <span className="block font-display text-xl font-semibold text-navy sm:text-2xl">Local Area Coordinator or Support Coordinator?</span>
+                <span className="mt-1 block text-muted">See who does what, who to contact, and whether you need both.</span>
+              </span>
+              <span className="inline-flex items-center gap-2 font-bold text-teal">
+                Read the guide <ArrowUpRight className="h-5 w-5 transition group-hover:rotate-45" aria-hidden />
+              </span>
+            </Link>
+          </Reveal>
         </div>
       </section>
 

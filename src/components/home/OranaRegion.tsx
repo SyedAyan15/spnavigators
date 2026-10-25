@@ -26,7 +26,7 @@ export function OranaRegion() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-4 font-display text-4xl leading-[1.08] font-semibold sm:text-5xl lg:text-6xl">
-              Proudly serving the <span className="text-gold-light italic">Orana region</span>
+              NDIS Support Coordination Across the <span className="text-gold-light italic">Orana Region</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>

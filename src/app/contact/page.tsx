@@ -74,7 +74,7 @@ export default function ContactPage() {
           </Stagger>
 
           <div className="mt-16 grid gap-10 lg:grid-cols-[1.4fr_1fr]">
-            <Reveal className="rounded-[2.5rem] bg-white p-7 shadow-[0_40px_100px_-50px_rgba(14,42,77,0.5)] ring-1 ring-navy/5 sm:p-12">
+            <Reveal className="rounded-[2.5rem] bg-white p-7 shadow-[0_40px_100px_-50px_rgba(13,49,87,0.5)] ring-1 ring-navy/5 sm:p-12">
               <h2 className="font-display text-3xl font-semibold text-navy">Send us a message</h2>
               <p className="mt-2 mb-8 text-muted">Fields marked * are required.</p>
               <ContactForm />

@@ -57,7 +57,7 @@ export function ComplaintForm() {
           disabled={status.state === "sending"}
           className="group relative inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-navy px-8 py-4 font-bold text-white shadow-xl transition disabled:opacity-60 sm:w-auto"
         >
-          <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-teal to-sage transition-transform duration-500 group-hover:translate-x-0" />
+          <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-teal to-ochre transition-transform duration-500 group-hover:translate-x-0" />
           <span className="relative flex items-center gap-2">
             {status.state === "sending" ? "Sending…" : "Send feedback"}
             <Send className="h-4 w-4" aria-hidden />

@@ -67,7 +67,7 @@ export default function ReferralPage() {
             </Reveal>
           </div>
 
-          <Reveal direction="left" className="rounded-[2.5rem] bg-white p-7 shadow-[0_40px_100px_-50px_rgba(14,42,77,0.5)] ring-1 ring-navy/5 sm:p-12">
+          <Reveal direction="left" className="rounded-[2.5rem] bg-white p-7 shadow-[0_40px_100px_-50px_rgba(13,49,87,0.5)] ring-1 ring-navy/5 sm:p-12">
             <ReferralForm />
           </Reveal>
         </div>

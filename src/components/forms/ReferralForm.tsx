@@ -148,7 +148,7 @@ export function ReferralForm() {
           disabled={status.state === "sending"}
           className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-navy px-8 py-4 font-bold text-white shadow-xl disabled:opacity-60"
         >
-          <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-teal to-sage transition-transform duration-500 group-hover:translate-x-0" />
+          <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-teal to-ochre transition-transform duration-500 group-hover:translate-x-0" />
           <span className="relative flex items-center gap-2">
             {step < stepNames.length - 1 ? (
               <>

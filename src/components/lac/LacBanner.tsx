@@ -39,7 +39,7 @@ function Thought({ text, className, tail, delay }: { text: string; className: st
       className={`absolute z-20 ${className}`}
     >
       <div className="animate-float" style={{ animationDelay: `${delay}s`, animationDuration: "6s" }}>
-        <div className="relative rounded-[50%] bg-[#fdf3dc] px-3 py-2 text-center shadow-[0_15px_30px_-15px_rgba(14,42,77,0.35)] ring-1 ring-gold/25 sm:px-5 sm:py-3 lg:px-7 lg:py-5">
+        <div className="relative rounded-[50%] bg-[#fdf3dc] px-3 py-2 text-center shadow-[0_15px_30px_-15px_rgba(13,49,87,0.35)] ring-1 ring-gold/25 sm:px-5 sm:py-3 lg:px-7 lg:py-5">
           <span className="block font-display text-[0.8rem] leading-tight font-bold text-navy sm:text-base lg:text-xl">{text}</span>
           <span className={`absolute flex items-end gap-1 ${tailPos}`}>
             <span className="h-3 w-3 rounded-full bg-[#fdf3dc] ring-1 ring-gold/25" />
@@ -74,7 +74,7 @@ function Sparks({ className, flip = false }: { className: string; flip?: boolean
 function QuestionMark({ className, delay }: { className: string; delay: number }) {
   return (
     <motion.span
-      className={`absolute font-display font-bold text-[#e98a7a] ${className}`}
+      className={`absolute font-display font-bold text-[#d4661c] ${className}`}
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: [0, -10, 0], rotate: [0, 8, 0] }}
       transition={{ opacity: { delay }, y: { duration: 3.5, repeat: Infinity, delay }, rotate: { duration: 3.5, repeat: Infinity, delay } }}
@@ -99,24 +99,24 @@ const swing = (delay: number) => ({
 /** Signpost pointing to the three roles, in place of a person or character. */
 function Signpost() {
   return (
-    <svg viewBox="0 0 300 420" className="h-auto w-full drop-shadow-[0_20px_30px_rgba(14,42,77,0.18)]" aria-hidden>
-      <ellipse cx="150" cy="408" rx="96" ry="10" fill="#0e2a4d" opacity="0.12" />
+    <svg viewBox="0 0 300 420" className="h-auto w-full drop-shadow-[0_20px_30px_rgba(13,49,87,0.18)]" aria-hidden>
+      <ellipse cx="150" cy="408" rx="96" ry="10" fill="#0d3157" opacity="0.12" />
       {/* leaves at the base, echoing the logo */}
-      <path d="M128 404 C 92 390, 82 352, 96 326 C 122 344, 134 372, 128 404 Z" fill="#5d8b6c" />
-      <path d="M172 404 C 210 392, 222 360, 210 330 C 182 346, 168 374, 172 404 Z" fill="#f2a33a" />
-      <path d="M112 404 C 70 404, 50 384, 46 364 C 76 362, 104 378, 112 404 Z" fill="#b4cfa8" />
+      <path d="M128 404 C 92 390, 82 352, 96 326 C 122 344, 134 372, 128 404 Z" fill="#d4661c" />
+      <path d="M172 404 C 210 392, 222 360, 210 330 C 182 346, 168 374, 172 404 Z" fill="#f2a12a" />
+      <path d="M112 404 C 70 404, 50 384, 46 364 C 76 362, 104 378, 112 404 Z" fill="#f4be8f" />
       {/* post */}
-      <rect x="139" y="58" width="22" height="350" rx="9" fill="#0e2a4d" />
+      <rect x="139" y="58" width="22" height="350" rx="9" fill="#0d3157" />
       <rect x="143" y="58" width="5" height="350" rx="2.5" fill="#ffffff" opacity="0.12" />
 
       <motion.g {...swing(0.7)}>
-        <path d="M150 100 H56 L24 132 L56 164 H150 Z" fill="#f9dcd5" stroke="#eab3a8" strokeWidth="2" strokeLinejoin="round" />
-        <text x="92" y="142" textAnchor="middle" fontSize="28" fontWeight="800" fill="#b2453a" className="font-display">LAC</text>
+        <path d="M150 100 H56 L24 132 L56 164 H150 Z" fill="#fbe1cc" stroke="#f0b98f" strokeWidth="2" strokeLinejoin="round" />
+        <text x="92" y="142" textAnchor="middle" fontSize="28" fontWeight="800" fill="#b4501a" className="font-display">LAC</text>
       </motion.g>
       <motion.g {...swing(0.9)}>
         <path d="M150 182 H244 L276 216 L244 250 H150 Z" fill="#d4e8ef" stroke="#a9cbd8" strokeWidth="2" strokeLinejoin="round" />
-        <text x="207" y="211" textAnchor="middle" fontSize="17" fontWeight="800" fill="#0e2a4d" className="font-display">Support</text>
-        <text x="207" y="232" textAnchor="middle" fontSize="17" fontWeight="800" fill="#0e2a4d" className="font-display">Coordinator</text>
+        <text x="207" y="211" textAnchor="middle" fontSize="17" fontWeight="800" fill="#0d3157" className="font-display">Support</text>
+        <text x="207" y="232" textAnchor="middle" fontSize="17" fontWeight="800" fill="#0d3157" className="font-display">Coordinator</text>
       </motion.g>
       <motion.g {...swing(1.1)}>
         <path d="M150 268 H62 L36 292 L62 316 H150 Z" fill="#fde7a6" stroke="#f2c86a" strokeWidth="2" strokeLinejoin="round" />
@@ -125,12 +125,12 @@ function Signpost() {
 
       {/* nails */}
       {[132, 216, 292].map((y) => (
-        <circle key={y} cx="150" cy={y} r="4" fill="#f9cd78" />
+        <circle key={y} cx="150" cy={y} r="4" fill="#f8c96a" />
       ))}
       {/* cap */}
-      <circle cx="150" cy="44" r="32" fill="#f2a33a" />
+      <circle cx="150" cy="44" r="32" fill="#f2a12a" />
       <circle cx="150" cy="44" r="32" fill="none" stroke="#ffffff" strokeOpacity="0.5" strokeWidth="3" />
-      <text x="150" y="58" textAnchor="middle" fontSize="40" fontWeight="900" fill="#0e2a4d" className="font-display">?</text>
+      <text x="150" y="58" textAnchor="middle" fontSize="40" fontWeight="900" fill="#0d3157" className="font-display">?</text>
     </svg>
   );
 }
@@ -138,18 +138,18 @@ function Signpost() {
 export function LacBanner() {
   return (
     <figure className="relative mx-auto w-full max-w-6xl">
-      <div className="relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-gradient-to-b from-[#fbeee6] via-cream to-[#e9f1ee] shadow-[0_50px_120px_-60px_rgba(14,42,77,0.6)] ring-1 ring-navy/5 sm:aspect-[16/10] sm:rounded-[2.5rem] lg:aspect-[16/8.5]">
+      <div className="relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-gradient-to-b from-[#fbeee6] via-cream to-[#e9f1ee] shadow-[0_50px_120px_-60px_rgba(13,49,87,0.6)] ring-1 ring-navy/5 sm:aspect-[16/10] sm:rounded-[2.5rem] lg:aspect-[16/8.5]">
         {/* Soft background shapes */}
-        <div className="absolute top-[8%] left-[4%] h-[30%] w-[40%] rounded-full bg-[#f8d9d2]/50 blur-3xl" />
+        <div className="absolute top-[8%] left-[4%] h-[30%] w-[40%] rounded-full bg-[#fbe1cc]/50 blur-3xl" />
         <div className="absolute top-[6%] right-[4%] h-[30%] w-[40%] rounded-full bg-teal-light/30 blur-3xl" />
         <div className="absolute bottom-0 left-1/2 h-[45%] w-[60%] -translate-x-1/2 rounded-full bg-gold-light/30 blur-3xl" />
 
         {/* Titles */}
-        <Cloud tone="bg-[#f9dcd5]" className="top-[7%] left-[2%] w-[47%] sm:top-[9%] sm:left-[4%] sm:w-[38%] lg:w-[36%]" delay={0.1}>
-          <span className="block font-display text-lg leading-[1.05] font-bold text-[#b2453a] sm:text-3xl lg:text-5xl">
+        <Cloud tone="bg-[#fbe1cc]" className="top-[7%] left-[2%] w-[47%] sm:top-[9%] sm:left-[4%] sm:w-[38%] lg:w-[36%]" delay={0.1}>
+          <span className="block font-display text-lg leading-[1.05] font-bold text-[#b4501a] sm:text-3xl lg:text-5xl">
             Local Area Coordinator
           </span>
-          <span className="mt-1 block font-display text-base font-bold text-[#b2453a] sm:text-2xl lg:text-3xl">(LAC)</span>
+          <span className="mt-1 block font-display text-base font-bold text-[#b4501a] sm:text-2xl lg:text-3xl">(LAC)</span>
         </Cloud>
         <Cloud tone="bg-[#d4e8ef]" className="top-[9%] right-[2%] w-[45%] sm:top-[9%] sm:right-[4%] sm:w-[36%] lg:w-[34%]" delay={0.25}>
           <span className="block font-display text-lg leading-[1.05] font-bold text-navy sm:text-3xl lg:text-5xl">Support Coordinator</span>
@@ -189,7 +189,7 @@ export function LacBanner() {
         <QuestionMark className="top-[76%] left-[12%] text-4xl sm:top-[72%] sm:left-[24%] sm:text-5xl lg:left-[27%] lg:text-6xl" delay={1.6} />
         <QuestionMark className="top-[80%] right-[12%] text-4xl sm:top-[70%] sm:right-[24%] sm:text-5xl lg:right-[26%] lg:text-6xl" delay={1.9} />
         <span className="absolute top-[58%] left-[33%] hidden h-3 w-3 rounded-full bg-gold-light sm:block" aria-hidden />
-        <span className="absolute top-[64%] right-[33%] hidden h-2.5 w-2.5 rounded-full bg-[#f9dcd5] sm:block" aria-hidden />
+        <span className="absolute top-[64%] right-[33%] hidden h-2.5 w-2.5 rounded-full bg-[#fbe1cc] sm:block" aria-hidden />
       </div>
       <figcaption className="sr-only">
         Local Area Coordinator (LAC) versus Support Coordinator: a signpost points to LAC, Support Coordinator and Plan

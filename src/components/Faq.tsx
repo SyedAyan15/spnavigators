@@ -9,7 +9,7 @@ export function Faq({ items, defaultOpen = 0 }: { items: FaqItem[]; defaultOpen?
   const [open, setOpen] = useState<number | null>(defaultOpen);
   const id = useId();
   return (
-    <div className="divide-y divide-navy/10 rounded-[2rem] bg-white p-2 shadow-[0_30px_80px_-40px_rgba(14,42,77,0.35)] ring-1 ring-navy/5 sm:p-4">
+    <div className="divide-y divide-navy/10 rounded-[2rem] bg-white p-2 shadow-[0_30px_80px_-40px_rgba(13,49,87,0.35)] ring-1 ring-navy/5 sm:p-4">
       {items.map((item, i) => {
         const isOpen = open === i;
         return (
@@ -27,7 +27,7 @@ export function Faq({ items, defaultOpen = 0 }: { items: FaqItem[]; defaultOpen?
                   {item.q}
                 </span>
                 <motion.span
-                  animate={{ rotate: isOpen ? 45 : 0, backgroundColor: isOpen ? "#f2a33a" : "#fbf7ef" }}
+                  animate={{ rotate: isOpen ? 45 : 0, backgroundColor: isOpen ? "#f2a12a" : "#fbf8f2" }}
                   className="grid h-10 w-10 shrink-0 place-items-center rounded-full text-navy"
                 >
                   <Plus className="h-5 w-5" aria-hidden />

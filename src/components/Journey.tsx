@@ -15,7 +15,7 @@ export function Journey({ steps }: { steps: JourneyStep[] }) {
       {/* Track + animated fill */}
       <div className="absolute top-0 bottom-0 left-6 w-1.5 -translate-x-1/2 rounded-full bg-navy/10 md:left-1/2" aria-hidden />
       <motion.div
-        className="absolute top-0 bottom-0 left-6 w-1.5 origin-top -translate-x-1/2 rounded-full bg-gradient-to-b from-teal via-sage to-gold md:left-1/2"
+        className="absolute top-0 bottom-0 left-6 w-1.5 origin-top -translate-x-1/2 rounded-full bg-gradient-to-b from-teal via-ochre to-gold md:left-1/2"
         style={{ scaleY: progress }}
         aria-hidden
       />
@@ -25,8 +25,8 @@ export function Journey({ steps }: { steps: JourneyStep[] }) {
         return (
           <li key={s.title} className="relative grid pb-14 last:pb-0 md:grid-cols-2 md:gap-16">
             <motion.span
-              initial={{ scale: 0.4, backgroundColor: "#fbf7ef" }}
-              whileInView={{ scale: 1, backgroundColor: "#0e2a4d" }}
+              initial={{ scale: 0.4, backgroundColor: "#fbf8f2" }}
+              whileInView={{ scale: 1, backgroundColor: "#0d3157" }}
               viewport={{ once: true, margin: "-35% 0px -35% 0px" }}
               transition={{ type: "spring", bounce: 0.5 }}
               className="absolute top-2 left-6 z-10 grid h-12 w-12 -translate-x-1/2 place-items-center rounded-full font-display text-lg font-bold text-white ring-8 ring-cream md:left-1/2"
@@ -38,7 +38,7 @@ export function Journey({ steps }: { steps: JourneyStep[] }) {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className={`ml-16 rounded-3xl bg-white p-6 shadow-[0_25px_60px_-35px_rgba(14,42,77,0.45)] ring-1 ring-navy/5 sm:p-8 md:ml-0 ${
+              className={`ml-16 rounded-3xl bg-white p-6 shadow-[0_25px_60px_-35px_rgba(13,49,87,0.45)] ring-1 ring-navy/5 sm:p-8 md:ml-0 ${
                 right ? "md:col-start-2" : "md:col-start-1 md:text-right"
               }`}
             >

@@ -53,7 +53,7 @@ const results = {
   both: {
     title: "A combination of both",
     href: "/how-it-works",
-    color: "bg-sage",
+    color: "bg-ochre",
     text: "Some participants have funding for both Support Coordination and Recovery Coaching. When the roles are clearly defined, they complement each other well. We’ll help you work out what your plan allows and avoid any doubling up.",
   },
 };
@@ -84,7 +84,7 @@ export function SupportFinder() {
   };
 
   return (
-    <div className="relative overflow-hidden rounded-[2.5rem] bg-white p-6 shadow-[0_40px_100px_-40px_rgba(14,42,77,0.45)] ring-1 ring-navy/5 sm:p-10">
+    <div className="relative overflow-hidden rounded-[2.5rem] bg-white p-6 shadow-[0_40px_100px_-40px_rgba(13,49,87,0.45)] ring-1 ring-navy/5 sm:p-10">
       <div className="flex items-center justify-between gap-4">
         <span className="inline-flex items-center gap-2 text-sm font-bold text-teal">
           <Compass className="h-5 w-5" aria-hidden /> Support finder
@@ -95,7 +95,7 @@ export function SupportFinder() {
       </div>
       <div className="mt-4 h-2 overflow-hidden rounded-full bg-sand">
         <motion.div
-          className="h-full rounded-full bg-gradient-to-r from-teal via-sage to-gold"
+          className="h-full rounded-full bg-gradient-to-r from-teal via-ochre to-gold"
           animate={{ width: `${(Math.min(step, questions.length) / questions.length) * 100}%` }}
           transition={{ type: "spring", stiffness: 120, damping: 20 }}
         />

@@ -15,7 +15,7 @@ const domains = [
   { icon: Sparkles, label: "Identity & hope", text: "Rediscover your strengths, values and sense of self, and build the hope and confidence to keep moving forward." },
 ];
 
-const colors = ["#1d7a85", "#5d8b6c", "#f2a33a", "#0e2a4d", "#1d7a85", "#5d8b6c", "#f2a33a", "#0e2a4d"];
+const colors = ["#0d6a6e", "#d4661c", "#f2a12a", "#0d3157", "#0d6a6e", "#d4661c", "#f2a12a", "#0d3157"];
 
 export function RecoveryWheel() {
   const [active, setActive] = useState(0);
@@ -84,7 +84,7 @@ export function RecoveryWheel() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.35 }}
-            className="mt-8 rounded-[2rem] bg-white p-8 shadow-[0_40px_90px_-50px_rgba(14,42,77,0.5)] ring-1 ring-navy/5"
+            className="mt-8 rounded-[2rem] bg-white p-8 shadow-[0_40px_90px_-50px_rgba(13,49,87,0.5)] ring-1 ring-navy/5"
             aria-live="polite"
           >
             <p className="text-xs font-bold tracking-[0.18em] text-gold uppercase">How your coach can help</p>

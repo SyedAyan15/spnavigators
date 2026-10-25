@@ -1,25 +1,20 @@
 import {
   ArrowUpRight,
   BadgeCheck,
-  HandHeart,
   HeartHandshake,
   Languages,
   MessageCircleHeart,
   ShieldCheck,
   Sprout,
-  Stethoscope,
-  UserRound,
-  Users,
 } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CompareRoles } from "@/components/CompareRoles";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { HomeHero } from "@/components/home/HomeHero";
+import { OranaRegion } from "@/components/home/OranaRegion";
 import { SupportFinder } from "@/components/home/SupportFinder";
-import { Journey } from "@/components/Journey";
 import { Counter, Parallax, Reveal, Stagger, StaggerItem, TiltCard } from "@/components/motion";
 import { ButtonLink, JsonLd, SectionHeading } from "@/components/ui";
 import { faqJsonLd, type FaqItem } from "@/lib/seo";
@@ -61,21 +56,6 @@ const values = [
   { icon: Languages, title: "Plain language, no jargon", text: "NDIS terms can be confusing. We explain your plan, budgets and options clearly, and put important things in writing." },
   { icon: MessageCircleHeart, title: "Responsive & reachable", text: "You’ll have a dedicated navigator who knows your story, returns your calls and keeps you informed." },
   { icon: BadgeCheck, title: "Honest advice", text: "We focus on two specialised services, so our recommendations are about what suits you, never about filling our own rosters." },
-];
-
-const audiences = [
-  { icon: UserRound, title: "NDIS participants", text: "Whether you’re new to the NDIS or have had a plan for years, we help you get more out of it." },
-  { icon: Users, title: "Families & carers", text: "We work with the people who matter to you, and share the load so you can focus on being family." },
-  { icon: Stethoscope, title: "Clinicians & allied health", text: "GPs, psychologists, mental health teams and therapists can refer with confidence. We keep you in the loop." },
-  { icon: HandHeart, title: "LACs & community services", text: "We collaborate with Local Area Coordinators, hospitals, housing and community organisations." },
-];
-
-const steps = [
-  { tag: "Step one", title: "A free, no-pressure chat", text: "Call, email or send a referral. We’ll listen to what’s happening for you, answer your questions and check what your NDIS plan includes." },
-  { tag: "Step two", title: "Getting to know you", text: "We meet in a way that suits you, in person, by phone or video, to understand your goals, your strengths, your supports and what hasn’t worked before." },
-  { tag: "Step three", title: "Your plan in action", text: "Together we build a clear action plan or recovery plan, with practical steps, the right providers and a budget that stays on track." },
-  { tag: "Step four", title: "Connect, coordinate, grow", text: "We connect you with supports, help set up service agreements and build your skills and confidence to manage more yourself." },
-  { tag: "Step five", title: "Review & prepare for what’s next", text: "We check in regularly, celebrate progress and gather the evidence you need for your next NDIS plan reassessment." },
 ];
 
 const faqs: FaqItem[] = [
@@ -130,7 +110,7 @@ export default function Home() {
                 <TiltCard className="h-full rounded-[2.5rem]">
                   <Link
                     href={s.href}
-                    className="group flex h-full flex-col overflow-hidden rounded-[2.5rem] bg-white shadow-[0_40px_90px_-45px_rgba(14,42,77,0.5)] ring-1 ring-navy/5"
+                    className="group flex h-full flex-col overflow-hidden rounded-[2.5rem] bg-white shadow-[0_40px_90px_-45px_rgba(13,49,87,0.5)] ring-1 ring-navy/5"
                   >
                     <div className="relative h-72 overflow-hidden sm:h-80">
                       <Image
@@ -170,6 +150,8 @@ export default function Home() {
           </Stagger>
         </div>
       </section>
+
+      <OranaRegion />
 
       {/* Intro / about */}
       <section className="relative overflow-hidden bg-white py-16 sm:py-24 lg:py-32">
@@ -246,7 +228,7 @@ export default function Home() {
 
       {/* Support finder */}
       <section className="relative overflow-hidden py-16 sm:py-24 lg:py-32">
-        <div className="pointer-events-none absolute top-20 -right-40 h-[30rem] w-[30rem] rounded-full bg-sage-light/40 blur-3xl" />
+        <div className="pointer-events-none absolute top-20 -right-40 h-[30rem] w-[30rem] rounded-full bg-ochre-light/40 blur-3xl" />
         <div className="container-x relative grid items-center gap-14 lg:grid-cols-[1fr_1.15fr]">
           <div>
             <SectionHeading
@@ -271,29 +253,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Journey */}
-      <section className="bg-sand/60 py-16 sm:py-24 lg:py-32">
-        <div className="container-x">
-          <SectionHeading
-            eyebrow="How we work together"
-            title={
-              <>
-                Your path from plan <span className="text-teal italic">to possibility.</span>
-              </>
-            }
-            intro="No two journeys are the same, but every one starts with listening. Here’s what working with us usually looks like."
-          />
-          <div className="mt-16">
-            <Journey steps={steps} />
-          </div>
-          <Reveal className="mt-14 text-center">
-            <ButtonLink href="/how-it-works">See the full process</ButtonLink>
-          </Reveal>
-        </div>
-      </section>
-
       {/* Values */}
-      <section className="py-16 sm:py-24 lg:py-32">
+      <section className="bg-white py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="Why choose Support Plan Navigators"
@@ -307,11 +268,11 @@ export default function Home() {
           <Stagger className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((v, i) => (
               <StaggerItem key={v.title}>
-                <div className="group relative h-full overflow-hidden rounded-[2rem] bg-white p-8 ring-1 ring-navy/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_80px_-40px_rgba(14,42,77,0.45)]">
+                <div className="group relative h-full overflow-hidden rounded-[2rem] bg-white p-8 ring-1 ring-navy/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_80px_-40px_rgba(13,49,87,0.45)]">
                   <span className="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-gold-light/0 transition-all duration-700 group-hover:scale-150 group-hover:bg-gold-light/30" />
                   <span
                     className={`relative grid h-14 w-14 place-items-center rounded-2xl text-white transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110 ${
-                      ["bg-teal", "bg-navy", "bg-sage", "bg-gold", "bg-teal", "bg-navy"][i]
+                      ["bg-teal", "bg-navy", "bg-ochre", "bg-gold", "bg-teal", "bg-navy"][i]
                     }`}
                   >
                     <v.icon className="h-7 w-7" aria-hidden />
@@ -322,59 +283,6 @@ export default function Home() {
               </StaggerItem>
             ))}
           </Stagger>
-        </div>
-      </section>
-
-      {/* Compare */}
-      <section className="bg-white py-16 sm:py-24 lg:py-32">
-        <div className="container-x">
-          <SectionHeading
-            eyebrow="Know the difference"
-            title={
-              <>
-                Support Coordinator or <span className="text-teal italic">Recovery Coach?</span>
-              </>
-            }
-            intro="Both roles help you use your NDIS plan, but they focus on different things. Tap to compare."
-          />
-          <div className="mt-14">
-            <CompareRoles />
-          </div>
-        </div>
-      </section>
-
-      {/* Who we support */}
-      <section className="relative overflow-hidden bg-navy py-24 text-white sm:py-32">
-        <div className="pointer-events-none absolute -top-40 left-1/3 h-[30rem] w-[30rem] rounded-full bg-teal/30 blur-3xl" />
-        <div className="container-x relative">
-          <SectionHeading
-            light
-            eyebrow="Who we support"
-            title={
-              <>
-                Here for participants, and <span className="text-gold-light italic">everyone in their corner.</span>
-              </>
-            }
-          />
-          <Stagger className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {audiences.map((a) => (
-              <StaggerItem key={a.title}>
-                <div className="h-full rounded-[2rem] bg-white/5 p-8 ring-1 ring-white/10 backdrop-blur transition hover:bg-white/10">
-                  <a.icon className="h-10 w-10 text-gold" aria-hidden />
-                  <h3 className="mt-6 font-display text-2xl font-semibold">{a.title}</h3>
-                  <p className="mt-3 leading-relaxed text-white/70">{a.text}</p>
-                </div>
-              </StaggerItem>
-            ))}
-          </Stagger>
-          <Reveal className="mt-12 flex flex-wrap justify-center gap-4">
-            <ButtonLink href="/make-a-referral" variant="gold">
-              Make a referral
-            </ButtonLink>
-            <ButtonLink href="/contact" variant="light">
-              Talk to our team
-            </ButtonLink>
-          </Reveal>
         </div>
       </section>
 

@@ -73,7 +73,7 @@ export function CompareRoles() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -16 }}
           transition={{ duration: 0.4 }}
-          className="mt-10 grid gap-8 rounded-[2.5rem] bg-white p-8 shadow-[0_40px_100px_-50px_rgba(14,42,77,0.5)] ring-1 ring-navy/5 sm:p-12 md:grid-cols-[1fr_1.2fr]"
+          className="mt-10 grid gap-8 rounded-[2.5rem] bg-white p-8 shadow-[0_40px_100px_-50px_rgba(13,49,87,0.5)] ring-1 ring-navy/5 sm:p-12 md:grid-cols-[1fr_1.2fr]"
         >
           <div>
             <p className="text-xs font-bold tracking-[0.18em] text-gold uppercase">Main focus</p>

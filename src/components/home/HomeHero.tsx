@@ -147,7 +147,7 @@ export function HomeHero() {
             initial={{ opacity: 0, scale: 0.92, borderRadius: "50%" }}
             animate={{ opacity: 1, scale: 1, borderRadius: "999px 999px 48px 48px" }}
             transition={{ duration: 1.2, delay: 0.2, ease }}
-            className="relative ml-auto aspect-[5/6] w-[80%] overflow-hidden sm:aspect-[4/5] sm:w-[82%] shadow-[0_40px_100px_-30px_rgba(14,42,77,0.55)]"
+            className="relative ml-auto aspect-[5/6] w-[80%] overflow-hidden sm:aspect-[4/5] sm:w-[82%] shadow-[0_40px_100px_-30px_rgba(13,49,87,0.55)]"
           >
             <Image
               src="/images/hero-friends-park.jpg"
@@ -189,7 +189,7 @@ export function HomeHero() {
                 return (
                   <li key={s} className="flex items-center gap-2 text-xs font-semibold whitespace-nowrap text-navy sm:gap-3 sm:text-sm">
                     <motion.span
-                      animate={{ backgroundColor: on ? "#5d8b6c" : "#f3ece0", scale: on ? [1, 1.25, 1] : 1 }}
+                      animate={{ backgroundColor: on ? "#d4661c" : "#f4ece0", scale: on ? [1, 1.25, 1] : 1 }}
                       transition={{ duration: 0.4 }}
                       className="grid h-5 w-5 shrink-0 place-items-center rounded-full sm:h-6 sm:w-6"
                     >
@@ -213,17 +213,19 @@ export function HomeHero() {
               <defs>
                 <path id="seal" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" />
               </defs>
-              <circle cx="100" cy="100" r="98" fill="#0e2a4d" />
-              <text fill="#f9cd78" fontSize="17" fontWeight="700" letterSpacing="4.2">
+              <circle cx="100" cy="100" r="98" fill="#0d3157" />
+              <text fill="#f8c96a" fontSize="17" fontWeight="700" letterSpacing="4.2">
                 <textPath href="#seal">CONNECTING PLANS • TO POSSIBILITIES •</textPath>
               </text>
             </svg>
             <span className="absolute inset-0 grid place-items-center">
-              <Image src="/logo-mark.png" alt="" width={84} height={43} className="h-auto w-10 brightness-110 sm:w-16" />
+              <span className="rounded-full bg-white p-1">
+                <Image src="/logo-mark.png" alt="" width={600} height={581} className="h-auto w-9 sm:w-14" />
+              </span>
             </span>
           </motion.div>
 
-          <Leaf className="absolute -right-1 top-8 h-14 w-9 sm:-right-4 sm:top-6 sm:h-24 sm:w-14" color="var(--color-sage)" delay={1.2} />
+          <Leaf className="absolute -right-1 top-8 h-14 w-9 sm:-right-4 sm:top-6 sm:h-24 sm:w-14" color="var(--color-ochre)" delay={1.2} />
           <Leaf className="absolute right-7 top-2 h-10 w-6 sm:right-8 sm:-top-2 sm:h-16 sm:w-10" color="var(--color-gold)" delay={1.4} />
         </div>
       </div>

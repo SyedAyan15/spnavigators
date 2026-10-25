@@ -1,18 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy: #0e2a4d;
-  --color-navy-deep: #08192f;
-  --color-teal: #1d7a85;
-  --color-teal-light: #6cb8b6;
-  --color-sage: #5d8b6c;
-  --color-sage-light: #b4cfa8;
-  --color-gold: #f2a33a;
-  --color-gold-light: #f9cd78;
-  --color-cream: #fbf7ef;
-  --color-sand: #f3ece0;
-  --color-ink: #1b2635;
-  --color-muted: #55627a;
+  /* Palette taken from the Support Plan Navigators logo */
+  --color-navy: #0d3157;
+  --color-navy-deep: #08213b;
+  --color-teal: #0d6a6e;
+  --color-teal-light: #66bdb9;
+  --color-ochre: #d4661c;
+  --color-ochre-light: #f4be8f;
+  --color-gold: #f2a12a;
+  --color-gold-light: #f8c96a;
+  --color-sky: #1f6fb2;
+  --color-sky-light: #8fcdf0;
+  --color-earth: #a8261f;
+  --color-cream: #fbf8f2;
+  --color-sand: #f4ece0;
+  --color-ink: #172638;
+  --color-muted: #546179;
 
   --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-heading), ui-serif, Georgia, serif;

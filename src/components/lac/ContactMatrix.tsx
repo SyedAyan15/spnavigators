@@ -21,7 +21,7 @@ import { useState } from "react";
 type Who = "lac" | "sc" | "pm";
 
 const roles: { key: Who; short: string; label: string; sub: string; color: string; tint: string }[] = [
-  { key: "lac", short: "LAC", label: "Local Area Coordinator", sub: "Free NDIS guidance", color: "bg-sage", tint: "bg-sage/10" },
+  { key: "lac", short: "LAC", label: "Local Area Coordinator", sub: "Free NDIS guidance", color: "bg-ochre", tint: "bg-ochre/10" },
   { key: "sc", short: "SC", label: "Support Coordinator", sub: "Organises your supports", color: "bg-teal", tint: "bg-teal/10" },
   { key: "pm", short: "PM", label: "Plan Manager", sub: "Pays invoices, tracks funds", color: "bg-gold", tint: "bg-gold/15" },
 ];
@@ -43,7 +43,7 @@ export function ContactMatrix() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <div className="overflow-hidden rounded-[2rem] bg-white shadow-[0_40px_100px_-50px_rgba(14,42,77,0.5)] ring-1 ring-navy/5">
+    <div className="overflow-hidden rounded-[2rem] bg-white shadow-[0_40px_100px_-50px_rgba(13,49,87,0.5)] ring-1 ring-navy/5">
       {/* Column headers */}
       <div className="grid grid-cols-[1fr_repeat(3,2.4rem)] items-end gap-1 border-b border-navy/10 bg-cream/70 p-3 sm:grid-cols-[1fr_repeat(3,9.5rem)] sm:gap-3 sm:p-5">
         <p className="pb-1 font-display text-base font-semibold text-navy sm:text-xl">Your situation</p>

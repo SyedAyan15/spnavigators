@@ -13,7 +13,7 @@ const styles: Record<Variant, string> = {
 };
 
 const sweep: Record<Variant, string> = {
-  primary: "from-teal to-sage",
+  primary: "from-teal to-ochre",
   gold: "from-gold-light to-gold",
   outline: "from-white to-sand",
   light: "from-cream to-gold-light",

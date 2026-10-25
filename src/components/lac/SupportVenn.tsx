@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 
 const circles = [
-  { cx: 150, cy: 140, fill: "#5d8b6c", label: "LAC", sub: "NDIA partner", lx: 105, ly: 105 },
-  { cx: 250, cy: 140, fill: "#1d7a85", label: "Support", sub: "Coordinator", lx: 295, ly: 105 },
-  { cx: 200, cy: 225, fill: "#f2a33a", label: "Plan", sub: "Manager", lx: 200, ly: 290 },
+  { cx: 150, cy: 140, fill: "#d4661c", label: "LAC", sub: "NDIA partner", lx: 105, ly: 105 },
+  { cx: 250, cy: 140, fill: "#0d6a6e", label: "Support", sub: "Coordinator", lx: 295, ly: 105 },
+  { cx: 200, cy: 225, fill: "#f2a12a", label: "Plan", sub: "Manager", lx: 200, ly: 290 },
 ];
 
 /** Three overlapping roles, with the participant where they meet. */
@@ -52,8 +52,8 @@ export function SupportVenn() {
         transition={{ delay: 1.5, type: "spring", bounce: 0.5 }}
         style={{ transformOrigin: "200px 172px" }}
       >
-        <circle cx="200" cy="172" r="30" fill="#0e2a4d" />
-        <text x="200" y="178" textAnchor="middle" fill="#f9cd78" fontSize="16" fontWeight="700" className="font-display">
+        <circle cx="200" cy="172" r="30" fill="#0d3157" />
+        <text x="200" y="178" textAnchor="middle" fill="#f8c96a" fontSize="16" fontWeight="700" className="font-display">
           You
         </text>
       </motion.g>

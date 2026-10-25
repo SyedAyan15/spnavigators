@@ -37,7 +37,7 @@ export function WindingRoad({ className = "" }: { className?: string }) {
       />
       <motion.path
         d="M-20 300 C 90 270, 140 180, 240 170 S 380 190, 420 110"
-        stroke="var(--color-sage-light)"
+        stroke="var(--color-ochre-light)"
         strokeWidth="6"
         strokeLinecap="round"
         initial={{ pathLength: 0 }}
@@ -48,7 +48,7 @@ export function WindingRoad({ className = "" }: { className?: string }) {
   );
 }
 
-export function Leaf({ className = "", color = "var(--color-sage)", delay = 0 }: { className?: string; color?: string; delay?: number }) {
+export function Leaf({ className = "", color = "var(--color-ochre)", delay = 0 }: { className?: string; color?: string; delay?: number }) {
   return (
     <motion.svg
       viewBox="0 0 60 100"

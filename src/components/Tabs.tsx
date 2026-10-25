@@ -39,7 +39,7 @@ export function Tabs({ items, note }: { items: TabItem[]; note?: string }) {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -30 }}
           transition={{ duration: 0.35 }}
-          className="rounded-[2rem] bg-white p-8 shadow-[0_40px_90px_-50px_rgba(14,42,77,0.5)] ring-1 ring-navy/5 sm:p-10"
+          className="rounded-[2rem] bg-white p-8 shadow-[0_40px_90px_-50px_rgba(13,49,87,0.5)] ring-1 ring-navy/5 sm:p-10"
         >
           <h3 className="font-display text-3xl font-semibold text-navy">{t.title}</h3>
           <p className="mt-4 text-lg leading-relaxed text-muted">{t.text}</p>
@@ -53,7 +53,7 @@ export function Tabs({ items, note }: { items: TabItem[]; note?: string }) {
                   transition={{ delay: 0.1 + i * 0.05 }}
                   className="flex items-start gap-3"
                 >
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-sage" aria-hidden />
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-ochre" aria-hidden />
                   <span className="text-navy">{p}</span>
                 </motion.li>
               ))}

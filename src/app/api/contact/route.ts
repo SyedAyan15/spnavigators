@@ -50,7 +50,7 @@ export async function POST(request: Request) {
   const rows = Object.entries(fields)
     .map(([k, v]) => `<tr><td style="padding:6px 12px;font-weight:600;vertical-align:top">${escape(k)}</td><td style="padding:6px 12px;white-space:pre-wrap">${escape(v)}</td></tr>`)
     .join("");
-  const html = `<h2 style="font-family:Georgia,serif;color:#0e2a4d">${escape(subject)}</h2><table>${rows}</table>`;
+  const html = `<h2 style="font-family:Georgia,serif;color:#0d3157">${escape(subject)}</h2><table>${rows}</table>`;
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {

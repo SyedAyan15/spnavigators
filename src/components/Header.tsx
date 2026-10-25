@@ -71,7 +71,7 @@ export function Header() {
 
       <header
         className={`sticky top-0 z-50 transition-all duration-500 ${
-          scrolled ? "bg-white/85 shadow-[0_10px_40px_-20px_rgba(14,42,77,0.35)] backdrop-blur-xl" : "bg-cream/60 backdrop-blur-sm"
+          scrolled ? "bg-white/85 shadow-[0_10px_40px_-20px_rgba(13,49,87,0.35)] backdrop-blur-xl" : "bg-cream/60 backdrop-blur-sm"
         }`}
       >
         <div className={`container-x flex items-center justify-between transition-all duration-500 ${scrolled ? "h-[4.5rem]" : "h-[5.5rem]"}`}>
@@ -156,7 +156,7 @@ export function Header() {
               href="/make-a-referral"
               className="group relative hidden overflow-hidden rounded-full bg-navy px-6 py-3 text-sm font-bold text-white shadow-lg shadow-navy/20 transition hover:shadow-xl sm:inline-flex"
             >
-              <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-teal to-sage transition-transform duration-500 group-hover:translate-x-0" />
+              <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-teal to-ochre transition-transform duration-500 group-hover:translate-x-0" />
               <span className="relative flex items-center gap-2">
                 Make a Referral <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden />
               </span>
@@ -172,7 +172,7 @@ export function Header() {
             </button>
           </div>
         </div>
-        <motion.div className="absolute bottom-0 left-0 h-[3px] w-full origin-left bg-gradient-to-r from-teal via-sage to-gold" style={{ scaleX: progress }} />
+        <motion.div className="absolute bottom-0 left-0 h-[3px] w-full origin-left bg-gradient-to-r from-teal via-ochre to-gold" style={{ scaleX: progress }} />
       </header>
 
       <AnimatePresence>

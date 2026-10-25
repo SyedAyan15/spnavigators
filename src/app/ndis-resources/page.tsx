@@ -20,7 +20,7 @@ export const metadata = pageMetadata({
 const budgets = [
   { name: "Core", color: "bg-teal", text: "Everyday supports: help with daily life, consumables, transport and social and community participation. Usually the most flexible budget." },
   { name: "Capacity Building", color: "bg-gold", text: "Supports that build your skills and independence over time, including Support Coordination, recovery coaching, therapies and employment support." },
-  { name: "Capital", color: "bg-sage", text: "One-off investments like assistive technology, equipment, home or vehicle modifications and Specialist Disability Accommodation." },
+  { name: "Capital", color: "bg-ochre", text: "One-off investments like assistive technology, equipment, home or vehicle modifications and Specialist Disability Accommodation." },
 ];
 
 const prep = [
@@ -105,7 +105,7 @@ export default function ResourcesPage() {
             <Stagger as="ul" className="mt-8 grid gap-3">
               {prep.map((p) => (
                 <StaggerItem as="li" key={p} className="flex items-start gap-3 rounded-2xl bg-white p-4 ring-1 ring-navy/5">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-sage" aria-hidden />
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-ochre" aria-hidden />
                   <span className="text-navy">{p}</span>
                 </StaggerItem>
               ))}

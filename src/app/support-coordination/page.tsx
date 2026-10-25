@@ -310,8 +310,8 @@ export default function SupportCoordinationPage() {
 
       {/* NDIS changes */}
       <section className="container-x pb-8">
-        <Reveal className="grid gap-8 rounded-[2.5rem] bg-sage/15 p-8 ring-1 ring-sage/30 sm:p-12 lg:grid-cols-[auto_1fr] lg:items-center">
-          <span className="grid h-20 w-20 place-items-center rounded-3xl bg-sage text-3xl text-white">!</span>
+        <Reveal className="grid gap-8 rounded-[2.5rem] bg-ochre/15 p-8 ring-1 ring-ochre/30 sm:p-12 lg:grid-cols-[auto_1fr] lg:items-center">
+          <span className="grid h-20 w-20 place-items-center rounded-3xl bg-ochre text-3xl text-white">!</span>
           <div>
             <h2 className="font-display text-2xl font-semibold text-navy sm:text-3xl">The NDIS is changing. We’ll keep you informed.</h2>
             <p className="mt-3 leading-relaxed text-muted">

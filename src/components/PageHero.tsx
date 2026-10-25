@@ -87,7 +87,7 @@ export function PageHero({
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-transparent" />
             </div>
-            <Leaf className="absolute -top-6 right-6 h-24 w-14" color="var(--color-sage)" delay={0.8} />
+            <Leaf className="absolute -top-6 right-6 h-24 w-14" color="var(--color-ochre)" delay={0.8} />
             <Leaf className="absolute top-10 -right-2 h-16 w-10 rotate-12" color="var(--color-gold)" delay={1} />
             {badge && (
               <div className="absolute -bottom-6 left-0 max-w-[16rem] rounded-2xl bg-white p-5 shadow-2xl ring-1 ring-navy/5 sm:-left-6">

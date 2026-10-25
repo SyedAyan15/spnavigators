@@ -100,7 +100,7 @@ export default function LacVsScPage() {
       {/* Hero */}
       <section className="relative overflow-hidden pt-8 pb-16 sm:pb-24">
         <div className="pointer-events-none absolute -top-40 -right-40 h-[36rem] w-[36rem] rounded-full bg-gold-light/30 blur-3xl" />
-        <div className="pointer-events-none absolute top-60 -left-40 h-[28rem] w-[28rem] rounded-full bg-sage-light/30 blur-3xl" />
+        <div className="pointer-events-none absolute top-60 -left-40 h-[28rem] w-[28rem] rounded-full bg-ochre-light/30 blur-3xl" />
         <WindingRoad className="pointer-events-none absolute bottom-0 left-0 w-[70%] max-w-3xl opacity-[0.1]" />
         <div className="container-x relative">
           <nav aria-label="Breadcrumb" className="mb-8">
@@ -167,9 +167,9 @@ export default function LacVsScPage() {
           />
           <Stagger className="mt-14 grid gap-6 lg:grid-cols-2">
             <StaggerItem>
-              <div className="relative h-full overflow-hidden rounded-[2rem] bg-sage/10 p-8 ring-1 ring-sage/25 sm:p-10">
-                <MapPinned className="absolute -right-6 -bottom-6 h-40 w-40 text-sage/10" aria-hidden />
-                <span className="grid h-14 w-14 place-items-center rounded-2xl bg-sage text-white">
+              <div className="relative h-full overflow-hidden rounded-[2rem] bg-ochre/10 p-8 ring-1 ring-ochre/25 sm:p-10">
+                <MapPinned className="absolute -right-6 -bottom-6 h-40 w-40 text-ochre/10" aria-hidden />
+                <span className="grid h-14 w-14 place-items-center rounded-2xl bg-ochre text-white">
                   <MapPinned className="h-7 w-7" aria-hidden />
                 </span>
                 <h2 className="mt-6 font-display text-3xl font-semibold text-navy">Local Area Coordinator (LAC)</h2>
@@ -181,7 +181,7 @@ export default function LacVsScPage() {
                 <ul className="mt-6 space-y-2 text-navy">
                   {["Free, funded by the NDIA", "Help applying for the NDIS", "Explains your plan", "Plan reassessments & NDIA decisions"].map((p) => (
                     <li key={p} className="flex items-center gap-3 font-medium">
-                      <span className="h-2 w-2 rounded-full bg-sage" /> {p}
+                      <span className="h-2 w-2 rounded-full bg-ochre" /> {p}
                     </li>
                   ))}
                 </ul>
@@ -250,11 +250,11 @@ export default function LacVsScPage() {
               </>
             }
           />
-          <div className="mx-auto mt-14 max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-[0_40px_100px_-50px_rgba(14,42,77,0.5)] ring-1 ring-navy/5">
+          <div className="mx-auto mt-14 max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-[0_40px_100px_-50px_rgba(13,49,87,0.5)] ring-1 ring-navy/5">
             <div className="hidden grid-cols-[12rem_1fr_1fr] bg-navy text-white md:grid">
               <span className="p-5" />
               <span className="flex items-center gap-2 p-5 font-display text-lg font-semibold">
-                <span className="h-3 w-3 rounded-full bg-sage" /> Local Area Coordinator
+                <span className="h-3 w-3 rounded-full bg-ochre" /> Local Area Coordinator
               </span>
               <span className="flex items-center gap-2 p-5 font-display text-lg font-semibold">
                 <span className="h-3 w-3 rounded-full bg-teal-light" /> Support Coordinator
@@ -265,7 +265,7 @@ export default function LacVsScPage() {
                 <StaggerItem key={c.label} className="grid border-b border-navy/5 last:border-0 md:grid-cols-[12rem_1fr_1fr]">
                   <p className="bg-cream/70 px-5 pt-5 pb-2 font-display text-lg font-semibold text-navy md:py-5">{c.label}</p>
                   <div className="px-5 py-3 md:py-5">
-                    <p className="mb-1 text-xs font-bold tracking-[0.14em] text-sage uppercase md:hidden">LAC</p>
+                    <p className="mb-1 text-xs font-bold tracking-[0.14em] text-ochre uppercase md:hidden">LAC</p>
                     <p className="leading-relaxed text-muted">{c.lac}</p>
                   </div>
                   <div className="bg-teal/5 px-5 py-3 pb-5 md:py-5">
@@ -313,7 +313,7 @@ export default function LacVsScPage() {
             </Reveal>
           </div>
           <Reveal direction="left" className="relative">
-            <div className="rounded-[2.5rem] bg-white p-6 shadow-[0_40px_100px_-50px_rgba(14,42,77,0.5)] ring-1 ring-navy/5 sm:p-10">
+            <div className="rounded-[2.5rem] bg-white p-6 shadow-[0_40px_100px_-50px_rgba(13,49,87,0.5)] ring-1 ring-navy/5 sm:p-10">
               <SupportVenn />
             </div>
             <div className="absolute -bottom-8 -left-2 hidden h-36 w-36 overflow-hidden rounded-full border-[6px] border-cream shadow-xl sm:block">

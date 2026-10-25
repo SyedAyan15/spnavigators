@@ -118,13 +118,13 @@ export default function ComplaintsPage() {
             <Stagger as="ul" className="mt-8 grid gap-3">
               {rights.map((r) => (
                 <StaggerItem as="li" key={r.text} className="flex items-start gap-4 rounded-2xl bg-white p-5 ring-1 ring-navy/5">
-                  <r.icon className="mt-0.5 h-6 w-6 shrink-0 text-sage" aria-hidden />
+                  <r.icon className="mt-0.5 h-6 w-6 shrink-0 text-ochre" aria-hidden />
                   <span className="text-navy">{r.text}</span>
                 </StaggerItem>
               ))}
             </Stagger>
           </div>
-          <Reveal direction="left" className="rounded-[2.5rem] bg-white p-7 shadow-[0_40px_100px_-50px_rgba(14,42,77,0.5)] ring-1 ring-navy/5 sm:p-10">
+          <Reveal direction="left" className="rounded-[2.5rem] bg-white p-7 shadow-[0_40px_100px_-50px_rgba(13,49,87,0.5)] ring-1 ring-navy/5 sm:p-10">
             <h2 className="font-display text-3xl font-semibold text-navy">Share your feedback</h2>
             <p className="mt-2 mb-8 text-muted">Fields marked * are required.</p>
             <ComplaintForm />

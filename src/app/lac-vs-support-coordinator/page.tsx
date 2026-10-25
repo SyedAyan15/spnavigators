@@ -4,7 +4,7 @@ import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { ContactMatrix } from "@/components/lac/ContactMatrix";
-import { LacVisual } from "@/components/lac/LacVisual";
+import { LacBanner } from "@/components/lac/LacBanner";
 import { SupportVenn } from "@/components/lac/SupportVenn";
 import { Reveal, Stagger, StaggerItem, WordReveal } from "@/components/motion";
 import { ButtonLink, JsonLd, SectionHeading } from "@/components/ui";
@@ -125,31 +125,31 @@ export default function LacVsScPage() {
             </ol>
           </nav>
 
-          <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.05fr]">
-            <div>
-              <Reveal>
-                <span className="eyebrow">
-                  <span className="h-1.5 w-1.5 rounded-full bg-gold" /> NDIS roles explained
-                </span>
-              </Reveal>
-              <h1 className="mt-6 font-display text-[2.5rem] leading-[1.05] font-semibold tracking-tight text-navy sm:text-6xl">
-                <WordReveal text="LAC vs Support Coordinator: what’s the difference?" highlight={["difference?"]} delay={0.1} />
-              </h1>
-              <Reveal delay={0.5}>
-                <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted sm:text-xl">
-                  Local Area Coordinators and Support Coordinators both help NDIS participants, but they do different jobs.
-                  Here’s a simple guide to who does what, who to contact, and whether you need both.
-                </p>
-              </Reveal>
-              <Reveal delay={0.65} className="mt-8 flex flex-wrap gap-4">
-                <ButtonLink href="#who-to-contact">Who should I contact?</ButtonLink>
-                <ButtonLink href="/contact" variant="outline">
-                  Ask us a question
-                </ButtonLink>
-              </Reveal>
-            </div>
-            <LacVisual />
+          <div className="mx-auto max-w-4xl text-center">
+            <Reveal>
+              <span className="eyebrow">
+                <span className="h-1.5 w-1.5 rounded-full bg-gold" /> NDIS roles explained
+              </span>
+            </Reveal>
+            <h1 className="mt-6 font-display text-[2.5rem] leading-[1.05] font-semibold tracking-tight text-navy sm:text-6xl">
+              <WordReveal text="LAC vs Support Coordinator: what’s the difference?" highlight={["difference?"]} delay={0.1} />
+            </h1>
+            <Reveal delay={0.5}>
+              <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
+                Local Area Coordinators and Support Coordinators both help NDIS participants, but they do different jobs.
+                Here’s a simple guide to who does what, who to contact, and whether you need both.
+              </p>
+            </Reveal>
+            <Reveal delay={0.65} className="mt-8 flex flex-wrap justify-center gap-4">
+              <ButtonLink href="#who-to-contact">Who should I contact?</ButtonLink>
+              <ButtonLink href="/contact" variant="outline">
+                Ask us a question
+              </ButtonLink>
+            </Reveal>
           </div>
+          <Reveal delay={0.3} className="mt-12 sm:mt-16">
+            <LacBanner />
+          </Reveal>
         </div>
       </section>
 

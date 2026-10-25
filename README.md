@@ -1,4 +1,4 @@
-# Support Plan Navigators — www.spnavigators.com.au
+﻿# Support Plan Navigators â€” www.spnavigators.com.au
 
 Marketing website for **Support Plan Navigators Pty Ltd** (ABN 28 703 292 559): NDIS Support Coordination and Psychosocial Recovery Coaching.
 
@@ -47,6 +47,6 @@ SEO: per-page metadata and canonicals, Open Graph image, `sitemap.xml`, `robots.
 
 ## Images
 
-All photos in `public/images` are from [Unsplash](https://unsplash.com) under the free Unsplash License (commercial use allowed, no attribution required). Photographers: Elevate, Nathan Anderson, Vitaly Gariev, Priscilla Du Preez, Age Cymru, Centre for Ageing Better, Annie Spratt, arty, Kylli Kittus, Dan Meyers, Zachary Kyra-Derksen, Toa Heftiba, Land O'Lakes Inc., Christina @ wocintechchat.com, Samsung UK, Kelly Sikkema, Matt Palmer and Neil Thomas.
+All photos in `public/images` are from [Unsplash](https://unsplash.com) under the free Unsplash License (commercial use allowed, no attribution required). Photographers: Elevate, Nathan Anderson, Vitaly Gariev, Priscilla Du Preez, Age Cymru, Centre for Ageing Better, Annie Spratt, arty, Kylli Kittus, Dan Meyers, Zachary Kyra-Derksen, Toa Heftiba, Land O'Lakes Inc., Christina @ wocintechchat.com, Samsung UK, Kelly Sikkema, Matt Palmer and Neil Thomas. The thinking-woman illustration in `public/images/illustrations` is by Alghozy (@artgho) on Unsplash, with its background removed.
 
 Replace them with real photos of your team and clients (with consent) whenever you can.

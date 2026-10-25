@@ -8,6 +8,7 @@ import { site } from "@/lib/site";
 import { Magnetic } from "../motion";
 import { ButtonLink } from "../ui";
 import { Leaf, WindingRoad } from "../WindingRoad";
+import { RiverDivider } from "./RiverDivider";
 
 const words = ["confidence", "clarity", "real support", "hope"];
 const steps = ["Plan understood", "Supports connected", "Goals in motion"];
@@ -42,7 +43,7 @@ export function HomeHero() {
   }, []);
 
   return (
-    <section ref={ref} className="relative overflow-hidden pt-6 pb-14 sm:pt-10 sm:pb-24 lg:pb-32">
+    <section ref={ref} className="relative overflow-hidden pt-6 pb-24 sm:pt-10 sm:pb-36 lg:pb-48">
       <div className="pointer-events-none absolute -top-32 right-[-10%] h-[42rem] w-[42rem] rounded-full bg-gold-light/35 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 -left-40 h-[32rem] w-[32rem] rounded-full bg-teal-light/30 blur-3xl" />
       <WindingRoad className="pointer-events-none absolute -bottom-10 left-0 w-full max-w-5xl opacity-[0.13]" />
@@ -229,6 +230,8 @@ export function HomeHero() {
           <Leaf className="absolute right-7 top-2 h-10 w-6 sm:right-8 sm:-top-2 sm:h-16 sm:w-10" color="var(--color-gold)" delay={1.4} />
         </div>
       </div>
+
+      <RiverDivider />
     </section>
   );
 }

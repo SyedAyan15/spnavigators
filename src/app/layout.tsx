@@ -59,14 +59,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-AU" className={`${heading.variable} ${body.variable} antialiased`} suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `try{if(localStorage.getItem("spn-text")==="lg")document.documentElement.dataset.text="lg"}catch(e){}`,
-          }}
-        />
-      </head>
+    <html lang="en-AU" className={`${heading.variable} ${body.variable} antialiased`}>
       <body className="flex min-h-screen flex-col">
         <JsonLd data={organizationJsonLd} />
         <MotionProvider>

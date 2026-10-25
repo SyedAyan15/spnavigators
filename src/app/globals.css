@@ -34,11 +34,6 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Larger text option, toggled from the header for readability */
-html[data-text="lg"] {
-  font-size: 112.5%;
-}
-
 body {
   /* Slide-in animations start off-canvas; clip (unlike hidden) keeps sticky headers working */
   overflow-x: clip;

@@ -1,45 +1,12 @@
 "use client";
 
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
-import { ArrowRight, ChevronDown, Mail, Menu, Phone, Type, X } from "lucide-react";
+import { ArrowRight, ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
 import { nav, site } from "@/lib/site";
 import { Logo } from "./Logo";
-
-// Text size lives on <html data-text>, set before paint by the script in the root layout.
-const textListeners = new Set<() => void>();
-const subscribeText = (cb: () => void) => {
-  textListeners.add(cb);
-  return () => {
-    textListeners.delete(cb);
-  };
-};
-const isLargeText = () => document.documentElement.dataset.text === "lg";
-
-function TextSizeToggle() {
-  const large = useSyncExternalStore(subscribeText, isLargeText, () => false);
-  const toggle = () => {
-    const next = !isLargeText();
-    document.documentElement.dataset.text = next ? "lg" : "";
-    try {
-      localStorage.setItem("spn-text", next ? "lg" : "");
-    } catch {}
-    textListeners.forEach((l) => l());
-  };
-  return (
-    <button
-      type="button"
-      onClick={toggle}
-      aria-pressed={large}
-      className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 transition hover:bg-white/10"
-    >
-      <Type className="h-3.5 w-3.5" aria-hidden />
-      {large ? "Standard text" : "Larger text"}
-    </button>
-  );
-}
 
 export function Header() {
   const pathname = usePathname();
@@ -98,7 +65,6 @@ export function Header() {
             <a href={`mailto:${site.email}`} className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 hover:bg-white/10">
               <Mail className="h-3.5 w-3.5 text-gold" aria-hidden /> {site.email}
             </a>
-            <TextSizeToggle />
           </div>
         </div>
       </div>
@@ -262,9 +228,6 @@ export function Header() {
                 <a href={site.phoneHref} className="py-2 text-center text-sm text-white/75 hover:text-white">
                   or call {site.phone}
                 </a>
-                <div className="mt-2 flex justify-center text-sm text-white/80">
-                  <TextSizeToggle />
-                </div>
               </div>
             </nav>
           </motion.div>

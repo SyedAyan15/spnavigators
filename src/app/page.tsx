@@ -1,12 +1,4 @@
-import {
-  ArrowUpRight,
-  BadgeCheck,
-  HeartHandshake,
-  Languages,
-  MessageCircleHeart,
-  ShieldCheck,
-  Sprout,
-} from "lucide-react";
+import { ArrowRight, ArrowUpRight, CircleCheckBig, Compass, Heart, MapPin, Users } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -49,13 +41,17 @@ const services = [
   },
 ];
 
-const values = [
-  { icon: HeartHandshake, title: "Person-centred, always", text: "Your goals lead. We work at your pace, respect your choices and make sure you have choice and control at every step." },
-  { icon: ShieldCheck, title: "Trauma-informed & safe", text: "We create a safe, non-judgemental space and recognise how past experiences can shape the way support feels." },
-  { icon: Sprout, title: "Building your capacity", text: "Good support should grow your independence, not your reliance on us. We teach the ‘why’ along with the ‘how’." },
-  { icon: Languages, title: "Plain language, no jargon", text: "NDIS terms can be confusing. We explain your plan, budgets and options clearly, and put important things in writing." },
-  { icon: MessageCircleHeart, title: "Responsive & reachable", text: "You’ll have a dedicated navigator who knows your story, returns your calls and keeps you informed." },
-  { icon: BadgeCheck, title: "Honest advice", text: "We focus on two specialised services, so our recommendations are about what suits you, never about filling our own rosters." },
+const whatWeDo = [
+  { icon: Compass, title: "Plan Implementation", text: "We help you understand your NDIS plan and put it into action, identifying the right supports and services to meet your goals." },
+  { icon: Users, title: "Connecting with Providers", text: "We find and connect you with quality local providers who understand your needs and your community." },
+  { icon: CircleCheckBig, title: "Goal Review & Planning", text: "Together we regularly review your progress toward your goals and prepare for your NDIS plan reviews with confidence." },
+  { icon: Heart, title: "Navigating the NDIS", text: "The NDIS can feel overwhelming. We simplify the process, advocate for your rights and make sure you receive the support you’re entitled to." },
+];
+
+const whyChoose = [
+  { icon: MapPin, title: "Local Knowledge", text: "Born and raised in the Orana region, our founder knows the local services, providers and community networks that can make a real difference." },
+  { icon: Heart, title: "Culturally Safe Practice", text: "We’re committed to providing culturally safe, respectful and inclusive support for Aboriginal and Torres Strait Islander participants and all community members." },
+  { icon: Users, title: "Personalised Support", text: "You are not a case number. We take the time to understand your story, your goals and your family, and we’re with you every step of the way." },
 ];
 
 const faqs: FaqItem[] = [
@@ -167,6 +163,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* What we do */}
+      <section className="bg-white py-16 sm:py-24 lg:py-32">
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="What we do"
+            title={
+              <>
+                Support Coordination <span className="text-teal italic">services.</span>
+              </>
+            }
+            intro="As your Support Coordinator, we work with you to understand your goals and connect you with the right services and providers."
+          />
+          <Stagger className="mx-auto mt-14 grid max-w-5xl gap-6 sm:grid-cols-2">
+            {whatWeDo.map((w) => (
+              <StaggerItem key={w.title}>
+                <div className="group h-full rounded-[2rem] bg-cream p-8 ring-1 ring-gold/25 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_30px_70px_-40px_rgba(13,49,87,0.45)]">
+                  <span className="grid h-14 w-14 place-items-center rounded-2xl bg-white text-teal shadow-sm transition-colors duration-300 group-hover:bg-teal group-hover:text-white">
+                    <w.icon className="h-6 w-6" aria-hidden />
+                  </span>
+                  <h3 className="mt-6 font-display text-2xl font-semibold text-navy">{w.title}</h3>
+                  <p className="mt-3 leading-relaxed text-muted">{w.text}</p>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
       <OranaRegion />
 
       {/* Intro / about */}
@@ -197,46 +221,31 @@ export default function Home() {
           <div>
             <SectionHeading
               align="left"
-              eyebrow="It all starts with you"
+              eyebrow="About Support Plan Navigators"
               title={
                 <>
-                  Your plan is about your life, <span className="text-teal italic">not paperwork.</span>
+                  A local guide <span className="text-teal italic">you can trust.</span>
                 </>
               }
             />
             <Reveal delay={0.2}>
               <div className="prose-brand mt-6 text-lg">
                 <p>
-                  The NDIS can open real doors, but working out how to use your plan can feel overwhelming. Who do you call?
-                  Which providers are any good? What happens when something goes wrong? And what does “capacity building”
-                  even mean?
+                  Support Plan Navigators is led by a dedicated support coordinator with deep roots in the Orana region. We
+                  understand the unique needs of our community, from Dubbo to the surrounding towns and Aboriginal communities
+                  across the region.
                 </p>
                 <p>
-                  At Support Plan Navigators, we sit beside you and help you find the way. We take the time to understand
-                  what matters to you, explain your options honestly, and connect you with supports that fit your life,
-                  your culture and your goals. Then we stay with you, adjusting as life changes.
+                  Our mission is simple: to walk alongside you and your family, helping you make the most of your NDIS plan.
+                  Whether you’re new to the NDIS or looking for more personalised support, we’re here to help you navigate
+                  every step.
                 </p>
               </div>
             </Reveal>
-            <Stagger className="mt-8 grid grid-cols-3 gap-4">
-              {[
-                { n: 2, s: "", l: "specialised NDIS services" },
-                { n: 1, s: ":1", l: "dedicated navigator for you" },
-                { n: 3, s: "", l: "ways to meet: in person, phone or video" },
-              ].map((c) => (
-                <StaggerItem key={c.l} className="rounded-3xl bg-cream p-5">
-                  <p className="font-display text-4xl font-semibold text-navy">
-                    <Counter to={c.n} suffix={c.s} />
-                  </p>
-                  <p className="mt-1 text-sm leading-snug text-muted">{c.l}</p>
-                </StaggerItem>
-              ))}
-            </Stagger>
-            <Reveal delay={0.3} className="mt-10 flex flex-wrap gap-4">
-              <ButtonLink href="/about">About us</ButtonLink>
-              <ButtonLink href="/how-it-works" variant="outline">
-                How it works
-              </ButtonLink>
+            <Reveal delay={0.3} className="mt-8">
+              <Link href="/about" className="group inline-flex items-center gap-2 text-lg font-bold text-teal">
+                Learn more <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" aria-hidden />
+              </Link>
             </Reveal>
           </div>
         </div>
@@ -244,33 +253,25 @@ export default function Home() {
 
       <Acknowledgement />
 
-      {/* Values */}
-      <section className="py-16 sm:py-24 lg:py-32">
+      {/* Why choose us */}
+      <section className="bg-sand/70 py-16 sm:py-24 lg:py-28">
         <div className="container-x">
           <SectionHeading
-            eyebrow="Why choose Support Plan Navigators"
+            eyebrow="Why choose us"
             title={
               <>
-                Support that feels <span className="text-teal italic">human.</span>
+                Support that feels <span className="text-teal italic">like home.</span>
               </>
             }
-            intro="The right Support Coordinator or Recovery Coach can change how the NDIS feels. Here’s what you can expect from us every single time."
           />
-          <Stagger className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {values.map((v, i) => (
-              <StaggerItem key={v.title}>
-                <div className="group relative h-full overflow-hidden rounded-[2rem] bg-white p-8 ring-1 ring-navy/5 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_80px_-40px_rgba(13,49,87,0.45)]">
-                  <span className="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-gold-light/0 transition-all duration-700 group-hover:scale-150 group-hover:bg-gold-light/30" />
-                  <span
-                    className={`relative grid h-14 w-14 place-items-center rounded-2xl text-white transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110 ${
-                      ["bg-teal", "bg-navy", "bg-ochre", "bg-gold", "bg-teal", "bg-navy"][i]
-                    }`}
-                  >
-                    <v.icon className="h-7 w-7" aria-hidden />
-                  </span>
-                  <h3 className="relative mt-6 font-display text-2xl font-semibold text-navy">{v.title}</h3>
-                  <p className="relative mt-3 leading-relaxed text-muted">{v.text}</p>
-                </div>
+          <Stagger className="mt-14 grid gap-12 md:grid-cols-3 md:gap-8">
+            {whyChoose.map((w) => (
+              <StaggerItem key={w.title} className="text-center">
+                <span className="mx-auto grid h-20 w-20 place-items-center rounded-full bg-ochre/15 text-ochre transition-transform duration-500 hover:scale-110">
+                  <w.icon className="h-8 w-8" aria-hidden />
+                </span>
+                <h3 className="mt-6 font-display text-2xl font-semibold text-navy">{w.title}</h3>
+                <p className="mx-auto mt-3 max-w-sm leading-relaxed text-muted">{w.text}</p>
               </StaggerItem>
             ))}
           </Stagger>

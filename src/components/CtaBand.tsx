@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import { site } from "@/lib/site";
 import { Magnetic, Parallax, Reveal } from "./motion";
@@ -34,10 +34,13 @@ export function CtaBand({
                 </ButtonLink>
               </Magnetic>
               <Magnetic>
-                <ButtonLink href={site.phoneHref} variant="light" icon={false}>
-                  <Phone className="h-4 w-4" aria-hidden /> {site.phone}
+                <ButtonLink href={`mailto:${site.email}`} variant="light" icon={false}>
+                  <Mail className="h-4 w-4" aria-hidden /> Email us
                 </ButtonLink>
               </Magnetic>
+              <a href={site.phoneHref} className="inline-flex items-center gap-2 py-2 text-sm font-semibold text-white/75 hover:text-white">
+                <Phone className="h-4 w-4 text-gold" aria-hidden /> or call {site.phone}
+              </a>
             </div>
           </div>
         </div>

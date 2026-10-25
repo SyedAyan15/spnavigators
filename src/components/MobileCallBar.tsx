@@ -1,8 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { MessageCircle, Phone } from "lucide-react";
-import Link from "next/link";
+import { Mail, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
 
@@ -22,14 +21,22 @@ export function MobileCallBar() {
           animate={{ y: 0 }}
           exit={{ y: 100 }}
           transition={{ type: "spring", damping: 22 }}
-          className="fixed inset-x-3 bottom-3 z-40 grid grid-cols-2 gap-2 rounded-full bg-navy/95 p-1.5 shadow-2xl backdrop-blur md:hidden"
+          className="fixed inset-x-3 bottom-3 z-40 flex items-center gap-2 rounded-full bg-navy/95 p-1.5 shadow-2xl backdrop-blur md:hidden"
         >
-          <a href={site.phoneHref} className="flex items-center justify-center gap-2 rounded-full py-3 text-sm font-bold text-white">
-            <Phone className="h-4 w-4 text-gold" aria-hidden /> Call us
+          {/* Email is the main action; calling stays available as a secondary button. */}
+          <a
+            href={`mailto:${site.email}?subject=${encodeURIComponent("Enquiry from the website")}`}
+            className="flex flex-1 items-center justify-center gap-2 rounded-full bg-gold py-3.5 text-sm font-bold text-navy"
+          >
+            <Mail className="h-4 w-4" aria-hidden /> Email us
           </a>
-          <Link href="/contact" className="flex items-center justify-center gap-2 rounded-full bg-gold py-3 text-sm font-bold text-navy">
-            <MessageCircle className="h-4 w-4" aria-hidden /> Free chat
-          </Link>
+          <a
+            href={site.phoneHref}
+            aria-label={`Call ${site.phone}`}
+            className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-white/10 text-gold"
+          >
+            <Phone className="h-5 w-5" aria-hidden />
+          </a>
         </motion.div>
       )}
     </AnimatePresence>

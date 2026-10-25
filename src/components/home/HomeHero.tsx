@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
-import { Check, Phone, Sparkles } from "lucide-react";
+import { Check, Mail, Phone, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { site } from "@/lib/site";
@@ -119,22 +119,26 @@ export function HomeHero() {
             </Magnetic>
           </motion.div>
 
-          <motion.a
-            href={site.phoneHref}
-            className="group mt-8 inline-flex items-center gap-3 text-navy"
+          <motion.div
+            className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9 }}
           >
-            <span className="relative grid h-12 w-12 place-items-center rounded-full bg-gold text-navy">
-              <span className="absolute inset-0 animate-ping rounded-full bg-gold/50" />
-              <Phone className="relative h-5 w-5" aria-hidden />
-            </span>
-            <span className="text-sm leading-tight">
-              <span className="block text-muted">Prefer to talk? Call us</span>
-              <span className="text-lg font-bold group-hover:text-teal">{site.phone}</span>
-            </span>
-          </motion.a>
+            <a href={`mailto:${site.email}`} className="group inline-flex items-center gap-3 text-navy">
+              <span className="relative grid h-12 w-12 shrink-0 place-items-center rounded-full bg-gold text-navy">
+                <span className="absolute inset-0 animate-ping rounded-full bg-gold/50" />
+                <Mail className="relative h-5 w-5" aria-hidden />
+              </span>
+              <span className="text-sm leading-tight">
+                <span className="block text-muted">Prefer email? Write to us</span>
+                <span className="text-base font-bold break-all group-hover:text-teal sm:text-lg">{site.email}</span>
+              </span>
+            </a>
+            <a href={site.phoneHref} className="inline-flex items-center gap-2 text-sm font-semibold text-muted hover:text-navy">
+              <Phone className="h-4 w-4 text-teal" aria-hidden /> or call {site.phone}
+            </a>
+          </motion.div>
         </div>
 
         <div className="relative mx-auto w-full max-w-[22rem] pb-6 sm:max-w-xl sm:pt-0 sm:pb-0">

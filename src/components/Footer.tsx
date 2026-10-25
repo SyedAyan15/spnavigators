@@ -100,7 +100,7 @@ export function Footer() {
 
       <div className="container-x relative flex flex-col gap-3 py-8 text-xs text-white/55 md:flex-row md:items-center md:justify-between">
         <p>
-          © <Year /> {site.legalName}. ABN {site.abn} · ACN {site.acn}
+          © <Year /> {site.legalName}
         </p>
         <p>
           <Link href="/privacy-policy" className="inline-block py-2 hover:text-white">

@@ -89,7 +89,7 @@ export function Header() {
       <div className="hidden bg-navy text-[0.8rem] text-white/85 md:block">
         <div className="container-x flex h-10 items-center justify-between">
           <p className="tracking-wide">
-            NDIS Support Coordination &amp; Psychosocial Recovery Coaching across Australia
+            NDIS Support Coordination &amp; Psychosocial Recovery Coaching across the Orana region
           </p>
           <div className="flex items-center gap-2">
             <a href={site.phoneHref} className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 hover:bg-white/10">

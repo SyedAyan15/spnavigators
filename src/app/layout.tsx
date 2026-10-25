@@ -37,6 +37,8 @@ export const metadata: Metadata = {
     "psychosocial disability",
     "NDIS plan",
     "NDIS participants",
+    "NDIS support coordination Orana",
+    "psychosocial recovery coach Orana region",
   ],
   authors: [{ name: site.legalName }],
   openGraph: {

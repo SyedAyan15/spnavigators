@@ -65,7 +65,7 @@ export function serviceJsonLd({ name, description, path, serviceType }: { name: 
     description,
     serviceType,
     url: `${site.url}${path}`,
-    areaServed: { "@type": "Country", name: "Australia" },
+    areaServed: { "@type": "AdministrativeArea", name: "Orana region, New South Wales, Australia" },
     audience: { "@type": "Audience", audienceType: "NDIS participants, families, carers and referrers" },
     provider: { "@id": `${site.url}/#organization` },
   };
@@ -85,8 +85,8 @@ export const organizationJsonLd = {
   email: site.email,
   telephone: "+61 439 953 767",
   taxID: `ABN ${site.abn}`,
-  areaServed: { "@type": "Country", name: "Australia" },
-  address: { "@type": "PostalAddress", addressCountry: "AU" },
+  areaServed: { "@type": "AdministrativeArea", name: "Orana region, New South Wales, Australia" },
+  address: { "@type": "PostalAddress", addressRegion: "NSW", addressCountry: "AU" },
   knowsAbout: [
     "NDIS Support Coordination",
     "Psychosocial Recovery Coaching",

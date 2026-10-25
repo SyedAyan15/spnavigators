@@ -18,7 +18,7 @@ export const metadata = pageMetadata({
 const cards = [
   { icon: Phone, title: "Call us", value: site.phone, href: site.phoneHref, note: "Talk to a real person" },
   { icon: Mail, title: "Email us", value: site.email, href: `mailto:${site.email}`, note: "We reply promptly" },
-  { icon: MapPin, title: "Where we work", value: "Australia-wide", note: "Phone & video support, with in-person sessions where available" },
+  { icon: MapPin, title: "Where we work", value: "Orana region, NSW", note: "Face-to-face, phone and video support across the Orana" },
   { icon: Clock, title: "Response time", value: "Within 1 business day", note: "Our aim for every new enquiry" },
 ];
 

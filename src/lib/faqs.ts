@@ -18,7 +18,7 @@ export const faqCategories: { name: string; items: FaqItem[] }[] = [
       },
       {
         q: "Where do you provide services?",
-        a: "We support NDIS participants across Australia by phone and video, with in-person sessions where available. Talk to us about your location and how you prefer to meet.",
+        a: "We support NDIS participants across the Orana region of NSW, with face-to-face, phone and video sessions. Talk to us about your location and how you prefer to meet.",
       },
     ],
   },

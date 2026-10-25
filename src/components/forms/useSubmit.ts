@@ -4,7 +4,7 @@ import { useState, type FormEvent } from "react";
 
 export type Status = { state: "idle" | "sending" | "sent" | "error"; message?: string };
 
-export function useSubmit(kind: "contact" | "referral") {
+export function useSubmit(kind: "contact" | "referral" | "complaint") {
   const [status, setStatus] = useState<Status>({ state: "idle" });
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {

@@ -43,28 +43,7 @@ export const nav: NavItem[] = [
       },
     ],
   },
-  { label: "How It Works", href: "/how-it-works" },
   { label: "About Us", href: "/about" },
-  {
-    label: "Resources",
-    href: "/ndis-resources",
-    children: [
-      {
-        label: "NDIS Resources",
-        href: "/ndis-resources",
-        description: "Plain-language guides, a glossary and trusted support services.",
-        badge: "NR",
-        color: "bg-sage",
-      },
-      {
-        label: "LAC vs Support Coordinator",
-        href: "/lac-vs-support-coordinator",
-        description: "Who does what, who to contact, and whether you need both.",
-        badge: "vs",
-        color: "bg-navy",
-      },
-    ],
-  },
-  { label: "FAQs", href: "/faqs" },
+  { label: "Complaints", href: "/complaints" },
   { label: "Contact", href: "/contact" },
 ];

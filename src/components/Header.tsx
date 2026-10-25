@@ -256,8 +256,11 @@ export function Header() {
                 <Link href="/make-a-referral" onNavigate={close} className="rounded-full bg-gold px-6 py-4 text-center font-bold text-navy">
                   Make a Referral
                 </Link>
-                <a href={site.phoneHref} className="rounded-full bg-white/10 px-6 py-4 text-center font-semibold">
-                  Call {site.phone}
+                <a href={`mailto:${site.email}`} className="rounded-full bg-white/10 px-6 py-4 text-center font-semibold">
+                  Email us
+                </a>
+                <a href={site.phoneHref} className="py-2 text-center text-sm text-white/75 hover:text-white">
+                  or call {site.phone}
                 </a>
                 <div className="mt-2 flex justify-center text-sm text-white/80">
                   <TextSizeToggle />

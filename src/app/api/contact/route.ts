@@ -1,7 +1,7 @@
 import { site } from "@/lib/site";
 
 type Payload = {
-  kind?: "contact" | "referral";
+  kind?: "contact" | "referral" | "complaint";
   fields?: Record<string, unknown>;
   company?: string; // honeypot
 };
@@ -20,7 +20,7 @@ export async function POST(request: Request) {
   // Bots fill the hidden field; pretend success so they move on.
   if (body.company) return Response.json({ ok: true });
 
-  const kind = body.kind === "referral" ? "referral" : "contact";
+  const kind = body.kind === "referral" || body.kind === "complaint" ? body.kind : "contact";
   const fields = Object.fromEntries(
     Object.entries(body.fields ?? {})
       .filter(([, v]) => typeof v === "string" && v.trim() !== "")
@@ -29,14 +29,24 @@ export async function POST(request: Request) {
 
   const email = fields.email ?? fields.referrerEmail ?? fields.participantEmail;
   const name = fields.name ?? fields.referrerName ?? fields.participantName;
-  if (!name || (!email && !fields.phone && !fields.referrerPhone && !fields.participantPhone)) {
+  // Complaints may be anonymous, so only the description is required.
+  if (kind === "complaint") {
+    if (!fields.details) {
+      return Response.json({ ok: false, error: "Please tell us what happened." }, { status: 422 });
+    }
+  } else if (!name || (!email && !fields.phone && !fields.referrerPhone && !fields.participantPhone)) {
     return Response.json({ ok: false, error: "Please include a name and a way to contact you." }, { status: 422 });
   }
   if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return Response.json({ ok: false, error: "Please check the email address." }, { status: 422 });
   }
 
-  const subject = kind === "referral" ? `New referral: ${fields.participantName ?? name}` : `Website enquiry from ${name}`;
+  const subject =
+    kind === "referral"
+      ? `New referral: ${fields.participantName ?? name}`
+      : kind === "complaint"
+        ? `Feedback / complaint${name ? ` from ${name}` : " (anonymous)"}`
+        : `Website enquiry from ${name}`;
   const rows = Object.entries(fields)
     .map(([k, v]) => `<tr><td style="padding:6px 12px;font-weight:600;vertical-align:top">${escape(k)}</td><td style="padding:6px 12px;white-space:pre-wrap">${escape(v)}</td></tr>`)
     .join("");

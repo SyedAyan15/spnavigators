@@ -11,6 +11,7 @@ const routes: { path: string; priority: number; changeFrequency: "weekly" | "mon
   { path: "/lac-vs-support-coordinator", priority: 0.85, changeFrequency: "monthly" },
   { path: "/faqs", priority: 0.8, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.8, changeFrequency: "yearly" },
+  { path: "/complaints", priority: 0.6, changeFrequency: "yearly" },
   { path: "/make-a-referral", priority: 0.8, changeFrequency: "yearly" },
   { path: "/privacy-policy", priority: 0.3, changeFrequency: "yearly" },
 ];

@@ -20,7 +20,6 @@ import { Faq } from "@/components/Faq";
 import { HomeHero } from "@/components/home/HomeHero";
 import { SupportFinder } from "@/components/home/SupportFinder";
 import { Journey } from "@/components/Journey";
-import { Marquee } from "@/components/Marquee";
 import { Counter, Parallax, Reveal, Stagger, StaggerItem, TiltCard } from "@/components/motion";
 import { ButtonLink, JsonLd, SectionHeading } from "@/components/ui";
 import { faqJsonLd, type FaqItem } from "@/lib/seo";
@@ -111,9 +110,6 @@ export default function Home() {
     <>
       <HomeHero />
 
-      <Marquee
-        items={["Person-centred", "Trauma-informed", "Choice & control", "Recovery-oriented", "Strengths-based", "Plain language", "Culturally safe", "Goal focused"]}
-      />
 
       {/* Services */}
       <section id="services" className="scroll-mt-28 py-16 sm:py-24 lg:py-32">

@@ -14,7 +14,6 @@ import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { FeatureGrid, type Feature } from "@/components/FeatureGrid";
 import { Journey } from "@/components/Journey";
-import { Marquee } from "@/components/Marquee";
 import { Parallax, Reveal } from "@/components/motion";
 import { PageHero } from "@/components/PageHero";
 import { Tabs, type TabItem } from "@/components/Tabs";
@@ -158,7 +157,6 @@ export default function SupportCoordinationPage() {
         </ButtonLink>
       </PageHero>
 
-      <Marquee dark items={["Understand your plan", "Choose your providers", "Coordinate your supports", "Build your independence", "Prepare for reassessment"]} />
 
       {/* What is SC */}
       <section className="py-16 sm:py-24 lg:py-32">

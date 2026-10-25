@@ -2,7 +2,6 @@ import { Compass, Eye, Heart, Rainbow } from "lucide-react";
 import Image from "next/image";
 import { CtaBand } from "@/components/CtaBand";
 import { LogoStory } from "@/components/LogoStory";
-import { Marquee } from "@/components/Marquee";
 import { Parallax, Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { PageHero } from "@/components/PageHero";
 import { ButtonLink, SectionHeading } from "@/components/ui";
@@ -118,7 +117,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <Marquee items={["Respect", "Dignity", "Inclusion", "Honesty", "Hope", "Collaboration"]} />
 
       <section className="py-16 sm:py-24 lg:py-32">
         <div className="container-x grid items-center gap-14 lg:grid-cols-[1fr_1.2fr]">

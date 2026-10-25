@@ -14,7 +14,6 @@ import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { FeatureGrid, type Feature } from "@/components/FeatureGrid";
 import { Journey } from "@/components/Journey";
-import { Marquee } from "@/components/Marquee";
 import { Parallax, Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { PageHero } from "@/components/PageHero";
 import { RecoveryWheel } from "@/components/RecoveryWheel";
@@ -141,7 +140,6 @@ export default function RecoveryCoachingPage() {
         </ButtonLink>
       </PageHero>
 
-      <Marquee dark items={["Person-led", "Trauma-informed", "Strengths-based", "Recovery-oriented", "Non-judgemental", "Hope-focused"]} />
 
       {/* What is it */}
       <section className="py-16 sm:py-24 lg:py-32">

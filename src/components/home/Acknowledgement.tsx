@@ -17,7 +17,7 @@ export function Acknowledgement() {
           </h2>
         </Reveal>
         <Reveal delay={0.25}>
-          <p className="mx-auto mt-4 max-w-4xl font-display text-lg leading-relaxed text-white/85 italic sm:text-2xl">
+          <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg">
             Support Plan Navigators respectfully acknowledges the Traditional Custodians of the lands across the Orana region
             where we live, work and travel. We honour their deep and ongoing connection to Country, culture and community,
             and pay our respects to Elders, past and present. We extend that respect to every Aboriginal and Torres Strait

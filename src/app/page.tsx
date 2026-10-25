@@ -90,8 +90,6 @@ export default function Home() {
     <>
       <HomeHero />
 
-      <Acknowledgement />
-
 
       {/* Services */}
       <section id="services" className="scroll-mt-28 py-16 sm:py-24 lg:py-32">
@@ -243,6 +241,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Acknowledgement />
 
       {/* Values */}
       <section className="py-16 sm:py-24 lg:py-32">

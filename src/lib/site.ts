@@ -1,3 +1,5 @@
+import { HandHeart, Route, type LucideIcon } from "lucide-react";
+
 export const site = {
   name: "Support Plan Navigators",
   legalName: "Support Plan Navigators Pty Ltd",
@@ -17,7 +19,8 @@ export type NavItem = {
   label: string;
   href: string;
   description?: string;
-  badge?: string;
+  icon?: LucideIcon;
+  /** Classes for the icon tile; it fills with colour on hover. */
   color?: string;
   children?: NavItem[];
 };
@@ -31,15 +34,15 @@ export const nav: NavItem[] = [
         label: "NDIS Support Coordination",
         href: "/support-coordination",
         description: "Turn your NDIS plan into real supports, real providers and real progress.",
-        badge: "SC",
-        color: "bg-teal",
+        icon: Route,
+        color: "bg-teal/10 text-teal group-hover:bg-teal group-hover:text-white",
       },
       {
         label: "Psychosocial Recovery Coaching",
         href: "/psychosocial-recovery-coaching",
         description: "One-on-one coaching for people living with psychosocial disability.",
-        badge: "RC",
-        color: "bg-gold",
+        icon: HandHeart,
+        color: "bg-ochre/10 text-ochre group-hover:bg-ochre group-hover:text-white",
       },
     ],
   },

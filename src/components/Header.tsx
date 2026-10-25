@@ -97,11 +97,13 @@ export function Header() {
                                 onNavigate={close}
                                 className="group flex items-start gap-4 rounded-2xl p-4 transition hover:bg-cream"
                               >
-                                <span
-                                  className={`mt-1 grid h-11 w-11 shrink-0 place-items-center rounded-xl text-sm font-bold text-white ${c.color ?? "bg-teal"}`}
-                                >
-                                  {c.badge}
-                                </span>
+                                {c.icon && (
+                                  <span
+                                    className={`mt-0.5 grid h-12 w-12 shrink-0 place-items-center rounded-2xl transition-all duration-300 group-hover:scale-105 ${c.color ?? "bg-teal/10 text-teal"}`}
+                                  >
+                                    <c.icon className="h-6 w-6" aria-hidden />
+                                  </span>
+                                )}
                                 <span>
                                   <span className="flex items-center gap-2 font-display text-lg font-semibold text-navy">
                                     {c.label}

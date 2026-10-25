@@ -1,4 +1,4 @@
-﻿# Support Plan Navigators â€” www.spnavigators.com.au
+# Support Plan Navigators â€” www.spnavigators.com.au
 
 Marketing website for **Support Plan Navigators Pty Ltd** (ABN 28 703 292 559): NDIS Support Coordination and Psychosocial Recovery Coaching.
 

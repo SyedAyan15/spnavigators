@@ -17,7 +17,6 @@ import Link from "next/link";
 import { CompareRoles } from "@/components/CompareRoles";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
-import { GoalsCarousel } from "@/components/home/GoalsCarousel";
 import { HomeHero } from "@/components/home/HomeHero";
 import { SupportFinder } from "@/components/home/SupportFinder";
 import { Journey } from "@/components/Journey";
@@ -46,8 +45,8 @@ const services = [
   },
   {
     href: "/psychosocial-recovery-coaching",
-    img: "/images/cafe-chat.jpg",
-    alt: "A recovery coach and a participant laughing together over coffee at an outdoor cafe",
+    img: "/images/coaching-meeting.jpg",
+    alt: "A recovery coach and a participant talking together in a bright, relaxed room",
     eyebrow: "Psychosocial Disability",
     title: "Psychosocial Recovery Coaching",
     text: "Recovery on your terms. A dedicated coach works alongside you to set meaningful goals, build skills and routines, and connect with mental health and community supports that help you thrive.",
@@ -330,28 +329,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Goals carousel */}
-      <section className="overflow-hidden bg-white py-16 sm:py-24 lg:py-32">
-        <div className="container-x mb-14 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-          <SectionHeading
-            align="left"
-            eyebrow="Real lives, real possibilities"
-            title={
-              <>
-                Goals that matter <span className="text-teal italic">to you.</span>
-              </>
-            }
-          />
-          <Reveal delay={0.2} className="max-w-md text-lg leading-relaxed text-muted">
-            Your NDIS goals are personal. Big or small, we help you take practical steps toward the things that make life
-            feel like yours.
-          </Reveal>
-        </div>
-        <GoalsCarousel />
-      </section>
-
       {/* Compare */}
-      <section className="py-16 sm:py-24 lg:py-32">
+      <section className="bg-white py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading
             eyebrow="Know the difference"

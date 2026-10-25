@@ -28,7 +28,7 @@ export const metadata = pageMetadata({
   title: "NDIS Psychosocial Recovery Coaching | Recovery Coach",
   description,
   path: "/psychosocial-recovery-coaching",
-  image: "/images/home-conversation.jpg",
+  image: "/images/embrace.jpg",
   keywords: [
     "psychosocial recovery coaching",
     "NDIS psychosocial recovery coach",
@@ -125,8 +125,8 @@ export default function RecoveryCoachingPage() {
             dedicated coach walks alongside you to build skills, confidence and connection, at your pace.
           </p>
         }
-        image="/images/home-conversation.jpg"
-        imageAlt="A recovery coach and a participant laughing together on a sofa at home"
+        image="/images/embrace.jpg"
+        imageAlt="Two women sharing a warm, supportive hug on a city street"
         crumbs={[{ name: "Psychosocial Recovery Coaching", path: "/psychosocial-recovery-coaching" }]}
         badge={
           <>
@@ -290,10 +290,10 @@ export default function RecoveryCoachingPage() {
           <Reveal direction="left" className="relative">
             <div className="grid grid-cols-2 gap-4">
               <div className="relative mt-12 aspect-[3/4] overflow-hidden rounded-[2rem]">
-                <Image src="/images/embrace.jpg" alt="Two women sharing a warm hug on a city street" fill sizes="25vw" className="object-cover" />
+                <Image src="/images/hands-comfort.jpg" alt="Two people holding hands across a table for comfort" fill sizes="25vw" className="object-cover" />
               </div>
               <div className="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
-                <Image src="/images/cafe-chat.jpg" alt="Two friends laughing together at a cafe" fill sizes="25vw" className="object-cover" />
+                <Image src="/images/support-worker-laugh.jpg" alt="A support worker and an older woman sharing a laugh" fill sizes="25vw" className="object-cover" />
               </div>
             </div>
           </Reveal>

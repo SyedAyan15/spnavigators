@@ -19,6 +19,7 @@ const cols = [
     links: [
       { label: "About Us", href: "/about" },
       { label: "NDIS Resources", href: "/ndis-resources" },
+      { label: "LAC vs Support Coordinator", href: "/lac-vs-support-coordinator" },
       { label: "FAQs", href: "/faqs" },
       { label: "Contact Us", href: "/contact" },
       { label: "Privacy Policy", href: "/privacy-policy" },

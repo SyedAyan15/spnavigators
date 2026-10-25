@@ -45,7 +45,7 @@ export function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState<string | null>(null);
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 25 });
 
@@ -61,7 +61,7 @@ export function Header() {
   if (pathname !== lastPath) {
     setLastPath(pathname);
     setOpen(false);
-    setServicesOpen(false);
+    setMenuOpen(null);
   }
 
   useEffect(() => {
@@ -74,7 +74,7 @@ export function Header() {
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
   const close = () => {
     setOpen(false);
-    setServicesOpen(false);
+    setMenuOpen(null);
   };
 
   return (
@@ -118,20 +118,20 @@ export function Header() {
                   <li
                     key={item.label}
                     className="relative"
-                    onMouseEnter={() => setServicesOpen(true)}
-                    onMouseLeave={() => setServicesOpen(false)}
+                    onMouseEnter={() => setMenuOpen(item.label)}
+                    onMouseLeave={() => setMenuOpen(null)}
                   >
                     <button
                       type="button"
-                      aria-expanded={servicesOpen}
-                      onClick={() => setServicesOpen((v) => !v)}
+                      aria-expanded={menuOpen === item.label}
+                      onClick={() => setMenuOpen((v) => (v === item.label ? null : item.label))}
                       className="inline-flex items-center gap-1 rounded-full px-4 py-2 text-[0.95rem] font-semibold text-navy transition hover:bg-navy/5"
                     >
                       {item.label}
-                      <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} aria-hidden />
+                      <ChevronDown className={`h-4 w-4 transition-transform ${menuOpen === item.label ? "rotate-180" : ""}`} aria-hidden />
                     </button>
                     <AnimatePresence>
-                      {servicesOpen && (
+                      {menuOpen === item.label && (
                         <motion.div
                           initial={{ opacity: 0, y: 12, scale: 0.97 }}
                           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -140,7 +140,7 @@ export function Header() {
                           className="absolute top-full left-1/2 w-[34rem] -translate-x-1/2 pt-3"
                         >
                           <div className="grid gap-2 rounded-3xl bg-white p-3 shadow-2xl ring-1 ring-navy/5">
-                            {item.children.map((c, i) => (
+                            {item.children.map((c) => (
                               <Link
                                 key={c.href}
                                 href={c.href}
@@ -148,9 +148,9 @@ export function Header() {
                                 className="group flex items-start gap-4 rounded-2xl p-4 transition hover:bg-cream"
                               >
                                 <span
-                                  className={`mt-1 grid h-11 w-11 shrink-0 place-items-center rounded-xl text-white ${i === 0 ? "bg-teal" : "bg-gold"}`}
+                                  className={`mt-1 grid h-11 w-11 shrink-0 place-items-center rounded-xl text-sm font-bold text-white ${c.color ?? "bg-teal"}`}
                                 >
-                                  {i === 0 ? "SC" : "RC"}
+                                  {c.badge}
                                 </span>
                                 <span>
                                   <span className="flex items-center gap-2 font-display text-lg font-semibold text-navy">

@@ -1,5 +1,6 @@
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { Glossary } from "@/components/Glossary";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
@@ -114,6 +115,23 @@ export default function ResourcesPage() {
             <Image src="/images/planning-session.jpg" alt="A participant preparing paperwork with support" fill sizes="(min-width:1024px) 45vw, 95vw" className="object-cover" />
           </Reveal>
         </div>
+      </section>
+
+      <section className="container-x pb-16 sm:pb-24">
+        <Reveal>
+          <Link
+            href="/lac-vs-support-coordinator"
+            className="group grid items-center gap-6 rounded-[2.5rem] bg-navy p-8 text-white transition hover:shadow-2xl sm:grid-cols-[auto_1fr_auto] sm:p-10"
+          >
+            <span className="grid h-16 w-16 place-items-center rounded-full bg-gold font-display text-2xl font-bold text-navy italic">vs</span>
+            <span>
+              <span className="text-xs font-bold tracking-[0.18em] text-gold-light uppercase">Guide 3</span>
+              <span className="mt-1 block font-display text-2xl font-semibold sm:text-3xl">LAC vs Support Coordinator: what’s the difference?</span>
+              <span className="mt-2 block text-white/75">Who does what, who to contact for common situations, and whether you need both.</span>
+            </span>
+            <ArrowUpRight className="h-8 w-8 text-gold transition group-hover:rotate-45" aria-hidden />
+          </Link>
+        </Reveal>
       </section>
 
       <section id="glossary" className="bg-sand/60 py-16 sm:py-24 lg:py-32">

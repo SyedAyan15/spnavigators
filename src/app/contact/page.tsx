@@ -1,5 +1,4 @@
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
-import Image from "next/image";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { Reveal, Stagger, StaggerItem, WordReveal } from "@/components/motion";
 import { JsonLd } from "@/components/ui";
@@ -73,21 +72,11 @@ export default function ContactPage() {
             })}
           </Stagger>
 
-          <div className="mt-16 grid gap-10 lg:grid-cols-[1.4fr_1fr]">
+          <div className="mx-auto mt-16 max-w-4xl">
             <Reveal className="rounded-[2.5rem] bg-white p-7 shadow-[0_40px_100px_-50px_rgba(13,49,87,0.5)] ring-1 ring-navy/5 sm:p-12">
               <h2 className="font-display text-3xl font-semibold text-navy">Send us a message</h2>
               <p className="mt-2 mb-8 text-muted">Fields marked * are required.</p>
               <ContactForm />
-            </Reveal>
-            <Reveal direction="left" delay={0.2} className="relative hidden min-h-[30rem] overflow-hidden rounded-[2.5rem] lg:block">
-              <Image src="/images/coaching-meeting.jpg" alt="Two women having a friendly conversation in a bright office" fill sizes="35vw" className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-10 text-white">
-                <p className="font-display text-2xl leading-snug italic">“The first conversation is simply about listening. No forms, no pressure.”</p>
-                <p className="mt-6 text-sm text-white/75">
-                  In crisis? Call 000, or Lifeline on 13 11 14 (24/7). We are not a crisis service.
-                </p>
-              </div>
             </Reveal>
           </div>
         </div>

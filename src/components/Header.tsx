@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
-import { ArrowRight, ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
+import { ArrowRight, ChevronDown, Mail, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -53,19 +53,29 @@ export function Header() {
         Skip to content
       </a>
 
-      <div className="hidden bg-navy text-[0.8rem] text-white/85 md:block">
-        <div className="container-x flex h-10 items-center justify-between">
-          <p className="tracking-wide">
-            NDIS Support Coordination &amp; Psychosocial Recovery Coaching across the Orana region
-          </p>
-          <div className="flex items-center gap-2">
-            <a href={site.phoneHref} className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 hover:bg-white/10">
-              <Phone className="h-3.5 w-3.5 text-gold" aria-hidden /> {site.phone}
-            </a>
-            <a href={`mailto:${site.email}`} className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 hover:bg-white/10">
-              <Mail className="h-3.5 w-3.5 text-gold" aria-hidden /> {site.email}
-            </a>
-          </div>
+      <div className="bg-navy-deep text-white/85">
+        <div className="container-x flex h-11 items-center justify-center gap-6 md:justify-between">
+          <a href={`mailto:${site.email}`} className="hidden items-center gap-1.5 text-[0.8rem] hover:text-white md:inline-flex">
+            <Mail className="h-3.5 w-3.5 text-gold" aria-hidden /> {site.email}
+          </a>
+          <nav aria-label="Quick links">
+            <ul className="flex items-center gap-5 text-[0.72rem] font-semibold tracking-[0.12em] uppercase sm:gap-7 sm:text-[0.78rem]">
+              {[
+                { label: "Complaints & Feedback", href: "/complaints", strong: true },
+                { label: "Contact Us", href: "/contact" },
+                { label: "Intake & Referral", href: "/make-a-referral", wide: true },
+              ].map((l) => (
+                <li key={l.href} className={l.wide ? "hidden sm:block" : ""}>
+                  <Link
+                    href={l.href}
+                    className={`inline-block py-2 transition hover:text-gold-light ${pathname.startsWith(l.href) ? "text-gold-light" : ""} ${l.strong ? "font-extrabold text-white" : ""}`}
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </div>
 
@@ -200,7 +210,7 @@ export function Header() {
             </div>
             <nav aria-label="Mobile" className="container-x pt-6 pb-12">
               <ul className="space-y-1">
-                {[{ label: "Home", href: "/" }, ...nav.flatMap((n) => (n.children ? n.children : [n]))].map((item, i) => (
+                {[{ label: "Home", href: "/" }, ...nav.flatMap((n) => (n.children ? n.children : [n])), { label: "Complaints & Feedback", href: "/complaints" }].map((item, i) => (
                   <motion.li
                     key={item.href}
                     initial={{ opacity: 0, x: 40 }}

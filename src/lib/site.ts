@@ -44,6 +44,20 @@ export const nav: NavItem[] = [
     ],
   },
   { label: "About Us", href: "/about" },
-  { label: "Complaints", href: "/complaints" },
   { label: "Contact", href: "/contact" },
 ];
+
+/** Mental health and crisis lines shown in the footer. Numbers checked October 2026; NSW services chosen for the Orana. */
+export const supportLines: { name: string; number: string; url: string; note?: string }[] = [
+  { name: "Lifeline", number: "13 11 14", url: "https://www.lifeline.org.au", note: "24/7 crisis support" },
+  { name: "13YARN", number: "13 92 76", url: "https://www.13yarn.org.au", note: "24/7, run by Aboriginal & Torres Strait Islander people" },
+  { name: "Beyond Blue", number: "1300 22 4636", url: "https://www.beyondblue.org.au" },
+  { name: "NSW Mental Health Line", number: "1800 011 511", url: "https://www.health.nsw.gov.au/mentalhealth/Pages/Mental-Health-Line.aspx", note: "24/7" },
+  { name: "MensLine Australia", number: "1300 78 99 78", url: "https://mensline.org.au" },
+  { name: "Kids Helpline", number: "1800 55 1800", url: "https://kidshelpline.com.au", note: "ages 5–25" },
+  { name: "Open Arms", number: "1800 011 046", url: "https://www.openarms.gov.au", note: "veterans & families" },
+];
+
+export const healthAdvice = { name: "healthdirect", number: "1800 022 222", url: "https://www.healthdirect.gov.au" };
+
+export const telHref = (n: string) => `tel:${n.replace(/\s/g, "")}`;

@@ -1,6 +1,7 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, Siren } from "lucide-react";
 import Link from "next/link";
-import { site } from "@/lib/site";
+import { healthAdvice, site, supportLines, telHref } from "@/lib/site";
+import { AboriginalFlag } from "./AboriginalFlag";
 import { Logo } from "./Logo";
 import { Year } from "./Year";
 
@@ -83,19 +84,63 @@ export function Footer() {
               </a>
             </li>
           </ul>
-          <p className="mt-6 text-xs leading-relaxed text-white/60">
-            If you are in crisis or need urgent help, call 000. For 24/7 crisis support call Lifeline on 13 11 14.
+        </div>
+      </div>
+
+      {/* Mental health and crisis support */}
+      <div className="container-x relative pb-10">
+        <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 sm:p-8">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h2 className="font-display text-xl font-semibold text-white">Mental health &amp; crisis support</h2>
+              <p className="mt-1 text-sm text-white/70">We’re not a crisis service. If you need support right now, please contact:</p>
+            </div>
+            <a
+              href="tel:000"
+              className="inline-flex items-center gap-2 self-start rounded-full bg-earth px-5 py-2.5 text-sm font-bold text-white sm:self-auto"
+            >
+              <Siren className="h-4 w-4" aria-hidden /> Emergency: call 000
+            </a>
+          </div>
+          <ul className="mt-6 grid gap-x-8 gap-y-3 text-sm sm:grid-cols-2 lg:grid-cols-3">
+            {supportLines.map((l) => (
+              <li key={l.name} className="flex flex-wrap items-baseline gap-x-2">
+                <a href={l.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-teal-light underline decoration-teal-light/40 underline-offset-4 hover:decoration-teal-light">
+                  {l.name}
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+                <a href={telHref(l.number)} className="font-semibold text-white hover:text-gold-light">
+                  {l.number}
+                </a>
+                {l.note && <span className="text-xs text-white/55">{l.note}</span>}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 border-t border-white/10 pt-5 text-sm">
+            <span className="font-semibold text-white">24-hour health advice:</span>{" "}
+            <a href={healthAdvice.url} target="_blank" rel="noopener noreferrer" className="text-teal-light underline underline-offset-4">
+              {healthAdvice.name}
+            </a>{" "}
+            <a href={telHref(healthAdvice.number)} className="font-semibold text-white hover:text-gold-light">
+              {healthAdvice.number}
+            </a>
           </p>
         </div>
       </div>
 
+      {/* Acknowledgement of Country */}
       <div className="container-x relative">
-        <div className="rounded-3xl bg-white/5 p-6 text-sm leading-relaxed ring-1 ring-white/10 sm:p-8">
-          <p>
-            <strong className="font-semibold text-white">Acknowledgement of Country.</strong> Support Plan Navigators
-            acknowledges the Traditional Custodians of the lands on which we live and work, and pays respect to Elders
-            past and present. We welcome people of all cultures, abilities, genders, sexualities and backgrounds.
-          </p>
+        <div className="flex flex-col gap-6 rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 sm:flex-row sm:items-center sm:p-8">
+          <AboriginalFlag className="h-14 w-28 shrink-0 rounded-md shadow-lg ring-1 ring-white/20" />
+          <div className="text-sm leading-relaxed">
+            <h2 className="font-display text-lg font-semibold text-white">Acknowledgement of Country</h2>
+            <p className="mt-2">
+              Support Plan Navigators respectfully acknowledges the Traditional Custodians of the lands across the Orana
+              region where we live, work and travel. We honour their deep and ongoing connection to Country, culture and
+              community, and pay our respects to Elders, past and present. We extend that respect to every Aboriginal and
+              Torres Strait Islander person who walks with us.
+            </p>
+          </div>
         </div>
       </div>
 

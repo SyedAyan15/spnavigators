@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
-import { Check, Mail, Phone, Sparkles } from "lucide-react";
+import { Check, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { site } from "@/lib/site";
@@ -51,25 +51,26 @@ export function HomeHero() {
       <div className="container-x relative grid items-center gap-8 sm:gap-16 lg:grid-cols-[1.1fr_1fr]">
         <div>
           <motion.span
-            className="eyebrow"
+            className="eyebrow tracking-[0.08em] sm:tracking-[0.18em]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease }}
           >
-            <Sparkles className="h-3.5 w-3.5 text-gold" aria-hidden />
-            Person-centred NDIS support
+            <MapPin className="h-3.5 w-3.5 text-gold" aria-hidden />
+            Dubbo &amp; the Orana Region, NSW
           </motion.span>
 
-          <h1 className="mt-6">
-            <motion.span
-              className="block text-base font-bold tracking-wide text-teal sm:text-lg"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1, ease }}
-            >
-              NDIS Support Coordination &amp; Psychosocial Recovery Coaching
-            </motion.span>
-            <motion.span
+          {/* The h1 carries the searchable phrase; the large marketing line below is a paragraph. */}
+          <motion.h1
+            className="mt-6 block text-base font-bold tracking-wide text-teal sm:text-lg"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1, ease }}
+          >
+            NDIS Support Coordination &amp; Psychosocial Recovery Coaching in Dubbo &amp; the Orana Region
+          </motion.h1>
+          <div>
+            <motion.p
               className="mt-4 block font-display text-[2.7rem] leading-[1.04] font-semibold tracking-tight text-navy sm:text-6xl xl:text-[4.6rem]"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -90,8 +91,8 @@ export function HomeHero() {
                   </motion.span>
                 </AnimatePresence>
               </span>
-            </motion.span>
-          </h1>
+            </motion.p>
+          </div>
 
           <motion.p
             className="mt-7 max-w-xl text-lg leading-relaxed text-muted sm:text-xl"
@@ -99,7 +100,7 @@ export function HomeHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.45, ease }}
           >
-            We help NDIS participants, families and carers turn a plan on paper into real supports, real
+            We help NDIS participants, families and carers across Dubbo and the Orana region turn a plan on paper into real supports, real
             connections and real progress, with a dedicated navigator who listens first and explains everything in
             plain language.
           </motion.p>

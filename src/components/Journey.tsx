@@ -25,7 +25,7 @@ export function Journey({ steps }: { steps: JourneyStep[] }) {
         return (
           <li key={s.title} className="relative grid pb-14 last:pb-0 md:grid-cols-2 md:gap-16">
             <motion.span
-              initial={{ scale: 0.4, backgroundColor: "#fbf8f2" }}
+              initial={{ scale: 0.4, backgroundColor: "#f5f9fc" }}
               whileInView={{ scale: 1, backgroundColor: "#0d3157" }}
               viewport={{ once: true, margin: "-35% 0px -35% 0px" }}
               transition={{ type: "spring", bounce: 0.5 }}

@@ -68,7 +68,7 @@ export function ContactMatrix() {
                 aria-expanded={open}
                 onClick={() => setActive(open ? null : i)}
                 className={`grid w-full grid-cols-[1fr_repeat(3,2.4rem)] items-center gap-1 px-3 py-3 text-left transition sm:grid-cols-[1fr_repeat(3,9.5rem)] sm:gap-3 sm:px-5 sm:py-4 ${
-                  open ? "bg-gold-light/20" : "hover:bg-cream/70"
+                  open ? "bg-sky-light/25" : "hover:bg-cream/70"
                 }`}
               >
                 <span className="flex items-center gap-3">
@@ -109,7 +109,7 @@ export function ContactMatrix() {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                    className="overflow-hidden bg-gold-light/20"
+                    className="overflow-hidden bg-sky-light/25"
                   >
                     <p className="mx-3 mb-4 rounded-2xl bg-white p-4 text-sm leading-relaxed text-muted ring-1 ring-navy/5 sm:mx-5 sm:text-base">
                       <strong className="text-navy">Who to contact: </strong>

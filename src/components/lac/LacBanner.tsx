@@ -39,11 +39,11 @@ function Thought({ text, className, tail, delay }: { text: string; className: st
       className={`absolute z-20 ${className}`}
     >
       <div className="animate-float" style={{ animationDelay: `${delay}s`, animationDuration: "6s" }}>
-        <div className="relative rounded-[50%] bg-[#fdf3dc] px-3 py-2 text-center shadow-[0_15px_30px_-15px_rgba(13,49,87,0.35)] ring-1 ring-gold/25 sm:px-5 sm:py-3 lg:px-7 lg:py-5">
+        <div className="relative rounded-[50%] bg-white px-3 py-2 text-center shadow-[0_15px_30px_-15px_rgba(13,49,87,0.35)] ring-1 ring-sky/25 sm:px-5 sm:py-3 lg:px-7 lg:py-5">
           <span className="block font-display text-[0.8rem] leading-tight font-bold text-navy sm:text-base lg:text-xl">{text}</span>
           <span className={`absolute flex items-end gap-1 ${tailPos}`}>
-            <span className="h-3 w-3 rounded-full bg-[#fdf3dc] ring-1 ring-gold/25" />
-            <span className="h-2 w-2 rounded-full bg-[#fdf3dc] ring-1 ring-gold/25" />
+            <span className="h-3 w-3 rounded-full bg-white ring-1 ring-sky/25" />
+            <span className="h-2 w-2 rounded-full bg-white ring-1 ring-sky/25" />
           </span>
         </div>
       </div>
@@ -138,11 +138,11 @@ function Signpost() {
 export function LacBanner() {
   return (
     <figure className="relative mx-auto w-full max-w-6xl">
-      <div className="relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-gradient-to-b from-[#fbeee6] via-cream to-[#e9f1ee] shadow-[0_50px_120px_-60px_rgba(13,49,87,0.6)] ring-1 ring-navy/5 sm:aspect-[16/10] sm:rounded-[2.5rem] lg:aspect-[16/8.5]">
+      <div className="relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-gradient-to-b from-[#e3f1fa] via-cream to-[#e1f1ef] shadow-[0_50px_120px_-60px_rgba(13,49,87,0.6)] ring-1 ring-navy/5 sm:aspect-[16/10] sm:rounded-[2.5rem] lg:aspect-[16/8.5]">
         {/* Soft background shapes */}
         <div className="absolute top-[8%] left-[4%] h-[30%] w-[40%] rounded-full bg-[#fbe1cc]/50 blur-3xl" />
         <div className="absolute top-[6%] right-[4%] h-[30%] w-[40%] rounded-full bg-teal-light/30 blur-3xl" />
-        <div className="absolute bottom-0 left-1/2 h-[45%] w-[60%] -translate-x-1/2 rounded-full bg-gold-light/30 blur-3xl" />
+        <div className="absolute bottom-0 left-1/2 h-[45%] w-[60%] -translate-x-1/2 rounded-full bg-sky-light/30 blur-3xl" />
 
         {/* Titles */}
         <Cloud tone="bg-[#fbe1cc]" className="top-[7%] left-[2%] w-[47%] sm:top-[9%] sm:left-[4%] sm:w-[38%] lg:w-[36%]" delay={0.1}>

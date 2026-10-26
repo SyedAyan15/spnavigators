@@ -13,8 +13,9 @@
   --color-sky: #1f6fb2;
   --color-sky-light: #8fcdf0;
   --color-earth: #a8261f;
-  --color-cream: #fbf8f2;
-  --color-sand: #f4ece0;
+  /* Page backgrounds: soft sky tints from the logo's blue (named cream/sand for history) */
+  --color-cream: #f5f9fc;
+  --color-sand: #e6f0f6;
   --color-ink: #172638;
   --color-muted: #546179;
 

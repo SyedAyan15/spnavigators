@@ -44,7 +44,7 @@ export function HomeHero() {
 
   return (
     <section ref={ref} className="relative overflow-hidden pt-6 pb-24 sm:pt-10 sm:pb-36 lg:pb-48">
-      <div className="pointer-events-none absolute -top-32 right-[-10%] h-[42rem] w-[42rem] rounded-full bg-gold-light/35 blur-3xl" />
+      <div className="pointer-events-none absolute -top-32 right-[-10%] h-[42rem] w-[42rem] rounded-full bg-sky-light/30 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 -left-40 h-[32rem] w-[32rem] rounded-full bg-teal-light/30 blur-3xl" />
       <WindingRoad className="pointer-events-none absolute -bottom-10 left-0 w-full max-w-5xl opacity-[0.13]" />
 
@@ -190,7 +190,7 @@ export function HomeHero() {
                 return (
                   <li key={s} className="flex items-center gap-2 text-xs font-semibold whitespace-nowrap text-navy sm:gap-3 sm:text-sm">
                     <motion.span
-                      animate={{ backgroundColor: on ? "#d4661c" : "#f4ece0", scale: on ? [1, 1.25, 1] : 1 }}
+                      animate={{ backgroundColor: on ? "#d4661c" : "#e6f0f6", scale: on ? [1, 1.25, 1] : 1 }}
                       transition={{ duration: 0.4 }}
                       className="grid h-5 w-5 shrink-0 place-items-center rounded-full sm:h-6 sm:w-6"
                     >

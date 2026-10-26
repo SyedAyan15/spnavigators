@@ -178,7 +178,7 @@ export default function Home() {
           <Stagger className="mx-auto mt-14 grid max-w-5xl gap-6 sm:grid-cols-2">
             {whatWeDo.map((w) => (
               <StaggerItem key={w.title}>
-                <div className="group h-full rounded-[2rem] bg-cream p-8 ring-1 ring-gold/25 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_30px_70px_-40px_rgba(13,49,87,0.45)]">
+                <div className="group h-full rounded-[2rem] bg-cream p-8 ring-1 ring-sky/25 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_30px_70px_-40px_rgba(13,49,87,0.45)]">
                   <span className="grid h-14 w-14 place-items-center rounded-2xl bg-white text-teal shadow-sm transition-colors duration-300 group-hover:bg-teal group-hover:text-white">
                     <w.icon className="h-6 w-6" aria-hidden />
                   </span>

@@ -27,7 +27,7 @@ export function Faq({ items, defaultOpen = 0 }: { items: FaqItem[]; defaultOpen?
                   {item.q}
                 </span>
                 <motion.span
-                  animate={{ rotate: isOpen ? 45 : 0, backgroundColor: isOpen ? "#f2a12a" : "#fbf8f2" }}
+                  animate={{ rotate: isOpen ? 45 : 0, backgroundColor: isOpen ? "#f2a12a" : "#f5f9fc" }}
                   className="grid h-10 w-10 shrink-0 place-items-center rounded-full text-navy"
                 >
                   <Plus className="h-5 w-5" aria-hidden />

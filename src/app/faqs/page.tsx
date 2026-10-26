@@ -22,7 +22,7 @@ export default function FaqsPage() {
       <JsonLd data={faqJsonLd(allFaqs)} />
       <JsonLd data={breadcrumbJsonLd([{ name: "FAQs", path: "/faqs" }])} />
       <section className="relative overflow-hidden pt-16 pb-24 sm:pb-32">
-        <div className="pointer-events-none absolute -top-40 left-1/2 h-[36rem] w-[50rem] -translate-x-1/2 rounded-full bg-gold-light/30 blur-3xl" />
+        <div className="pointer-events-none absolute -top-40 left-1/2 h-[36rem] w-[50rem] -translate-x-1/2 rounded-full bg-sky-light/30 blur-3xl" />
         <WindingRoad className="pointer-events-none absolute bottom-0 left-0 w-full max-w-4xl opacity-10" />
         <div className="container-x relative">
           <div className="mx-auto max-w-3xl text-center">

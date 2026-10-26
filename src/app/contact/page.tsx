@@ -28,7 +28,7 @@ export default function ContactPage() {
       <PageBanner title="Contact Us" />
       <JsonLd data={breadcrumbJsonLd([{ name: "Contact", path: "/contact" }])} />
       <section className="relative overflow-hidden pt-12 pb-24 sm:pb-32">
-        <div className="pointer-events-none absolute -top-40 -right-40 h-[36rem] w-[36rem] rounded-full bg-gold-light/30 blur-3xl" />
+        <div className="pointer-events-none absolute -top-40 -right-40 h-[36rem] w-[36rem] rounded-full bg-sky-light/30 blur-3xl" />
         <WindingRoad className="pointer-events-none absolute bottom-0 left-0 w-[70%] max-w-3xl opacity-10" />
         <div className="container-x relative">
           <div className="max-w-3xl">

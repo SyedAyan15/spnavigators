@@ -346,7 +346,7 @@ export default function RecoveryCoachingPage() {
                   ["Support Coordinator", "Implementing your NDIS plan and coordinating providers and services."],
                   ["Life coach", "General personal development goals. Not specific to psychosocial disability or the NDIS."],
                 ].map(([a, b], i) => (
-                  <tr key={a} className={i === 0 ? "bg-gold-light/20" : ""}>
+                  <tr key={a} className={i === 0 ? "bg-sky-light/25" : ""}>
                     <th scope="row" className="p-4 font-semibold text-navy">{a}</th>
                     <td className="p-4 text-muted">{b}</td>
                   </tr>
@@ -370,7 +370,7 @@ export default function RecoveryCoachingPage() {
                 </>
               }
             />
-            <Reveal delay={0.3} className="mt-8 rounded-[2rem] bg-gold-light/30 p-6 text-sm leading-relaxed text-navy">
+            <Reveal delay={0.3} className="mt-8 rounded-[2rem] bg-sky-light/30 p-6 text-sm leading-relaxed text-navy">
               <strong>Need help right now?</strong> Our services are not crisis services. If you are in immediate danger,
               call 000. For 24/7 crisis support, call Lifeline on 13 11 14 or the Suicide Call Back Service on 1300 659 467.
             </Reveal>

@@ -101,7 +101,7 @@ export default function LacVsScPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden pt-8 pb-16 sm:pb-24">
-        <div className="pointer-events-none absolute -top-40 -right-40 h-[36rem] w-[36rem] rounded-full bg-gold-light/30 blur-3xl" />
+        <div className="pointer-events-none absolute -top-40 -right-40 h-[36rem] w-[36rem] rounded-full bg-sky-light/30 blur-3xl" />
         <div className="pointer-events-none absolute top-60 -left-40 h-[28rem] w-[28rem] rounded-full bg-ochre-light/30 blur-3xl" />
         <WindingRoad className="pointer-events-none absolute bottom-0 left-0 w-[70%] max-w-3xl opacity-[0.1]" />
         <div className="container-x relative">

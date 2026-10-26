@@ -111,7 +111,7 @@ export function HomeHero() {
             transition={{ duration: 0.8, delay: 0.6, ease }}
           >
             <Magnetic>
-              <ButtonLink href="/contact">Book a free chat</ButtonLink>
+              <ButtonLink href="/make-a-referral">Make a Referral</ButtonLink>
             </Magnetic>
             <Magnetic>
               <ButtonLink href="#services" variant="outline">

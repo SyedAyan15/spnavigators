@@ -31,9 +31,9 @@ export function OranaRegion() {
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-6 text-lg leading-relaxed text-white/85 sm:text-xl">
-              Support Plan Navigators provides NDIS Support Coordination and Psychosocial Recovery Coaching across the Orana
-              region of NSW, including Dubbo, Narromine, Wellington, Gilgandra, Coonamble and the surrounding Aboriginal
-              communities.
+              Support Plan Navigators is a local NDIS Support Coordinator and Psychosocial Recovery Coach based in the Orana
+              region of NSW. We support participants in Dubbo, Wellington, Narromine, Gilgandra, Coonamble, Nyngan, Bourke
+              and surrounding Aboriginal communities, with face-to-face visits and phone or video support.
             </p>
           </Reveal>
         </div>

@@ -14,7 +14,7 @@ import { faqJsonLd, type FaqItem } from "@/lib/seo";
 export const metadata: Metadata = {
   title: { absolute: "NDIS Support Coordination & Psychosocial Recovery Coaching | Support Plan Navigators" },
   description:
-    "NDIS Support Coordination and Psychosocial Recovery Coaching across the Orana region of NSW. We help NDIS participants understand their plan, connect with the right providers and build a life they value. Book a free chat.",
+    "Local NDIS Support Coordinator and Psychosocial Recovery Coach in the Orana region of NSW, supporting Dubbo, Wellington, Narromine, Gilgandra, Coonamble, Nyngan, Bourke and surrounding communities.",
   alternates: { canonical: "/" },
 };
 

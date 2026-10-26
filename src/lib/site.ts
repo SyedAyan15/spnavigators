@@ -5,7 +5,7 @@ export const site = {
   legalName: "Support Plan Navigators Pty Ltd",
   tagline: "Connecting Plans to Possibilities.",
   description:
-    "NDIS Support Coordination and Psychosocial Recovery Coaching that puts you in control. Support Plan Navigators helps NDIS participants understand their plan, connect with the right providers and build a life they value.",
+    "Support Plan Navigators is a local NDIS Support Coordinator and Psychosocial Recovery Coach based in the Orana region of NSW. We support participants in Dubbo, Wellington, Narromine, Gilgandra, Coonamble, Nyngan, Bourke and surrounding Aboriginal communities, with face-to-face visits and phone or video support.",
   url: "https://www.spnavigators.com.au",
   email: "admin@spnav.com.au",
   phone: "0439 953 767",

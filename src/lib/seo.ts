@@ -65,11 +65,22 @@ export function serviceJsonLd({ name, description, path, serviceType }: { name: 
     description,
     serviceType,
     url: `${site.url}${path}`,
-    areaServed: { "@type": "AdministrativeArea", name: "Orana region, New South Wales, Australia" },
+    areaServed: ORANA_AREA,
     audience: { "@type": "Audience", audienceType: "NDIS participants, families, carers and referrers" },
     provider: { "@id": `${site.url}/#organization` },
   };
 }
+
+const ORANA_AREA = [
+    { "@type": "AdministrativeArea", name: "Orana region, New South Wales, Australia" },
+    { "@type": "City", name: "Dubbo, NSW" },
+    { "@type": "City", name: "Wellington, NSW" },
+    { "@type": "City", name: "Narromine, NSW" },
+    { "@type": "City", name: "Gilgandra, NSW" },
+    { "@type": "City", name: "Coonamble, NSW" },
+    { "@type": "City", name: "Nyngan, NSW" },
+    { "@type": "City", name: "Bourke, NSW" },
+  ];
 
 export const organizationJsonLd = {
   "@context": "https://schema.org",
@@ -84,7 +95,7 @@ export const organizationJsonLd = {
   description: site.description,
   email: site.email,
   telephone: "+61 439 953 767",
-  areaServed: { "@type": "AdministrativeArea", name: "Orana region, New South Wales, Australia" },
+  areaServed: ORANA_AREA,
   address: { "@type": "PostalAddress", addressRegion: "NSW", addressCountry: "AU" },
   knowsAbout: [
     "NDIS Support Coordination",

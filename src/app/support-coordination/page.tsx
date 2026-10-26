@@ -11,14 +11,13 @@ import {
 import Image from "next/image";
 import { Checklist } from "@/components/Checklist";
 import { CtaBand } from "@/components/CtaBand";
-import { Faq } from "@/components/Faq";
 import { FeatureGrid, type Feature } from "@/components/FeatureGrid";
 import { Journey } from "@/components/Journey";
 import { Parallax, Reveal } from "@/components/motion";
 import { PageHero } from "@/components/PageHero";
 import { Tabs, type TabItem } from "@/components/Tabs";
 import { ButtonLink, JsonLd, SectionHeading } from "@/components/ui";
-import { faqJsonLd, pageMetadata, serviceJsonLd, type FaqItem } from "@/lib/seo";
+import { pageMetadata, serviceJsonLd } from "@/lib/seo";
 
 const description =
   "NDIS Support Coordination that helps you understand your NDIS plan, choose the right providers, set up service agreements and prepare for plan reassessments. Talk to a Support Coordinator today.";
@@ -93,33 +92,6 @@ const steps = [
   { tag: "Looking ahead", title: "Plan reassessment ready", text: "We gather progress notes and evidence, and help you prepare for your next plan meeting so your new plan reflects your needs." },
 ];
 
-const faqs: FaqItem[] = [
-  {
-    q: "What does an NDIS Support Coordinator do?",
-    a: "A Support Coordinator helps you understand and use your NDIS plan. They connect you with providers and community services, help with service agreements, monitor your budget, help resolve problems and build your ability to manage your own supports over time.",
-  },
-  {
-    q: "How is Support Coordination funded?",
-    a: "Support Coordination is funded in the Capacity Building – Support Coordination budget of your NDIS plan. It can only be used for Support Coordination, and the NDIA decides whether it is included and at what level. If it is funded, you don’t pay out of pocket.",
-  },
-  {
-    q: "How do you choose which providers to recommend?",
-    a: "We recommend providers based on your goals, needs, location and preferences, and we share honest pros and cons so you can choose. We focus on Support Coordination and Psychosocial Recovery Coaching, so our recommendations are always about what suits you best.",
-  },
-  {
-    q: "How many hours of Support Coordination will I get?",
-    a: "It depends on the funding in your plan. We’ll work with you to plan how hours are used across the year, prioritising set-up early on, regular check-ins, and time to prepare for your plan reassessment.",
-  },
-  {
-    q: "Can a Support Coordinator help if I self-manage or am plan-managed?",
-    a: "Yes. Support Coordination works with any plan management type: self-managed, plan-managed or NDIA-managed. We work alongside your plan manager if you have one.",
-  },
-  {
-    q: "What if I don’t have Support Coordination in my plan?",
-    a: "If you think you need it, you can ask the NDIA to include it at your next plan reassessment, or request a reassessment if your circumstances have changed. We can talk you through what kind of evidence may help.",
-  },
-];
-
 export default function SupportCoordinationPage() {
   return (
     <>
@@ -131,7 +103,6 @@ export default function SupportCoordinationPage() {
           serviceType: "NDIS Support Coordination",
         })}
       />
-      <JsonLd data={faqJsonLd(faqs)} />
 
       <PageHero
         eyebrow="NDIS Support Coordination"
@@ -327,24 +298,6 @@ export default function SupportCoordinationPage() {
             </p>
           </div>
         </Reveal>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-16 sm:py-24 lg:py-32">
-        <div className="container-x grid gap-14 lg:grid-cols-[1fr_1.5fr]">
-          <SectionHeading
-            align="left"
-            eyebrow="Support Coordination FAQs"
-            title={
-              <>
-                Common questions about <span className="text-teal italic">Support Coordination.</span>
-              </>
-            }
-          />
-          <Reveal direction="left">
-            <Faq items={faqs} />
-          </Reveal>
-        </div>
       </section>
 
       <CtaBand title="Ready to make your NDIS plan work harder for you?" />

@@ -11,14 +11,13 @@ import {
 import Image from "next/image";
 import { CompareRoles } from "@/components/CompareRoles";
 import { CtaBand } from "@/components/CtaBand";
-import { Faq } from "@/components/Faq";
 import { FeatureGrid, type Feature } from "@/components/FeatureGrid";
 import { Journey } from "@/components/Journey";
 import { Parallax, Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { PageHero } from "@/components/PageHero";
 import { RecoveryWheel } from "@/components/RecoveryWheel";
 import { ButtonLink, JsonLd, SectionHeading } from "@/components/ui";
-import { faqJsonLd, pageMetadata, serviceJsonLd, type FaqItem } from "@/lib/seo";
+import { pageMetadata, serviceJsonLd } from "@/lib/seo";
 
 const description =
   "NDIS Psychosocial Recovery Coaching for people living with psychosocial disability. Our recovery coaches take a person-centred, trauma-informed approach to help you build skills, confidence and connection. Book a free chat.";
@@ -66,41 +65,6 @@ const principles = [
   { title: "Person-led", text: "You set the direction and the pace. Your coach walks alongside you, never ahead of you." },
 ];
 
-const faqs: FaqItem[] = [
-  {
-    q: "What is psychosocial disability?",
-    a: "Psychosocial disability is the term used to describe a disability that may arise from a mental health condition. Not everyone with a mental health condition has a psychosocial disability, but for those who do, the impact can be significant and long-lasting, affecting daily activities, relationships, work and community participation.",
-  },
-  {
-    q: "What is a Psychosocial Recovery Coach?",
-    a: "A Psychosocial Recovery Coach is an NDIS-funded support worker who specialises in working with people living with psychosocial disability. They bring knowledge of mental health recovery, and sometimes their own lived experience, to help you build capacity, plan for your recovery and coordinate your NDIS supports.",
-  },
-  {
-    q: "How is Psychosocial Recovery Coaching funded?",
-    a: "Recovery coaching is funded through your NDIS plan, commonly under the Capacity Building – Support Coordination budget. How much coaching you can access depends on the funding in your plan. We’ll go through this with you before we start, and there’s no out-of-pocket cost when it’s funded.",
-  },
-  {
-    q: "Is recovery coaching the same as counselling or therapy?",
-    a: "No. Recovery coaching doesn’t replace clinical care from a GP, psychologist or psychiatrist. Instead, it complements it, focusing on practical, everyday steps toward your goals, building skills and connecting you with the right supports.",
-  },
-  {
-    q: "Can I have a Support Coordinator and a Recovery Coach?",
-    a: "Some participants have funding for both. When that happens, it’s important that the roles are clearly defined so there is no doubling up. We can help you work out what makes sense for your situation and your plan.",
-  },
-  {
-    q: "What happens in a recovery coaching session?",
-    a: "Every session is different and shaped by you. You might work on your recovery plan, practise a new skill, attend an appointment together, explore a community group, or simply check in on how things are going and what you need next.",
-  },
-  {
-    q: "Where do sessions take place?",
-    a: "Wherever suits you best. Sessions can happen at home, out in the community, by phone or by video call. We’ll agree on a format and frequency that works for you.",
-  },
-  {
-    q: "What is a recovery plan?",
-    a: "A recovery plan is a personal document you create with your coach. It captures your goals, strengths, supports, early warning signs and strategies that help, and it’s reviewed regularly as your life and goals change.",
-  },
-];
-
 export default function RecoveryCoachingPage() {
   return (
     <>
@@ -112,7 +76,6 @@ export default function RecoveryCoachingPage() {
           serviceType: "NDIS Psychosocial Recovery Coaching",
         })}
       />
-      <JsonLd data={faqJsonLd(faqs)} />
 
       <PageHero
         eyebrow="NDIS Psychosocial Recovery Coaching"
@@ -353,30 +316,6 @@ export default function RecoveryCoachingPage() {
                 ))}
               </tbody>
             </table>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-16 sm:py-24 lg:py-32">
-        <div className="container-x grid gap-14 lg:grid-cols-[1fr_1.5fr]">
-          <div>
-            <SectionHeading
-              align="left"
-              eyebrow="Recovery coaching FAQs"
-              title={
-                <>
-                  Questions about <span className="text-teal italic">recovery coaching.</span>
-                </>
-              }
-            />
-            <Reveal delay={0.3} className="mt-8 rounded-[2rem] bg-sky-light/30 p-6 text-sm leading-relaxed text-navy">
-              <strong>Need help right now?</strong> Our services are not crisis services. If you are in immediate danger,
-              call 000. For 24/7 crisis support, call Lifeline on 13 11 14 or the Suicide Call Back Service on 1300 659 467.
-            </Reveal>
-          </div>
-          <Reveal direction="left">
-            <Faq items={faqs} />
           </Reveal>
         </div>
       </section>

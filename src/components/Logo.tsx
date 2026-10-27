@@ -12,8 +12,8 @@ export function Logo({ variant = "full", compact = false }: { variant?: "full" |
         <Image
           src="/logo-stacked.png"
           alt="Support Plan Navigators Pty Ltd"
-          width={764}
-          height={900}
+          width={122}
+          height={144}
           className={`w-auto ${compact ? "h-16" : "h-36"}`}
         />
       </Link>
@@ -24,8 +24,8 @@ export function Logo({ variant = "full", compact = false }: { variant?: "full" |
       <Image
         src="/logo-full.png"
         alt="Support Plan Navigators Pty Ltd – Connecting Plans to Possibilities. NDIS Support Coordination & Navigation"
-        width={1400}
-        height={676}
+        width={259}
+        height={125}
         priority
         className={`w-auto transition-all duration-500 ${compact ? "h-16" : "h-16 sm:h-20 lg:h-[6.25rem]"}`}
       />

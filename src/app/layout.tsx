@@ -13,7 +13,8 @@ const heading = Fraunces({
   variable: "--font-heading",
   subsets: ["latin"],
   style: ["normal", "italic"],
-  axes: ["SOFT", "opsz"],
+  // Only the weights the design uses; the extra SOFT/opsz axes roughly doubled the font download.
+  weight: ["600", "700"],
 });
 
 const body = Plus_Jakarta_Sans({

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Reveal } from "./motion";
 
 /**
  * Title banner shown at the top of inner pages. The artwork is the dot-art panel from the
@@ -33,15 +32,9 @@ export function PageBanner({
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-deep via-navy-deep/85 to-navy-deep/10" aria-hidden />
 
       <div className="container-x py-14 sm:py-20">
-        <Reveal>
-          <p className="text-xs font-bold tracking-[0.2em] text-gold-light uppercase sm:text-sm">Orana region · NSW</p>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <p className="mt-3 max-w-2xl font-display text-4xl leading-tight font-semibold sm:text-5xl lg:text-6xl">{title}</p>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">{subtitle}</p>
-        </Reveal>
+        <p className="anim-rise text-xs font-bold tracking-[0.2em] text-gold-light uppercase sm:text-sm">Orana region · NSW</p>
+        <h1 style={{ animationDelay: "0.1s" }} className="anim-rise mt-3 max-w-3xl font-display text-4xl leading-tight font-semibold sm:text-5xl lg:text-6xl">{title}</h1>
+        <p style={{ animationDelay: "0.2s" }} className="anim-rise mt-4 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">{subtitle}</p>
       </div>
     </section>
   );

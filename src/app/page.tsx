@@ -7,9 +7,10 @@ import { Faq } from "@/components/Faq";
 import { Acknowledgement } from "@/components/home/Acknowledgement";
 import { HomeHero } from "@/components/home/HomeHero";
 import { OranaRegion } from "@/components/home/OranaRegion";
-import { Counter, Parallax, Reveal, Stagger, StaggerItem, TiltCard } from "@/components/motion";
+import { Parallax, Reveal, Stagger, StaggerItem, TiltCard } from "@/components/motion";
 import { ButtonLink, JsonLd, SectionHeading } from "@/components/ui";
-import { faqJsonLd, type FaqItem } from "@/lib/seo";
+import { homeFaqs as faqs } from "@/lib/faqs";
+import { faqJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: { absolute: "NDIS Support Coordinator Dubbo & Orana | Support Plan Navigators" },
@@ -54,32 +55,6 @@ const whyChoose = [
   { icon: Users, title: "Personalised Support", text: "You are not a case number. We take the time to understand your story, your goals and your family, and we’re with you every step of the way." },
 ];
 
-const faqs: FaqItem[] = [
-  {
-    q: "What is NDIS Support Coordination?",
-    a: "Support Coordination is a capacity building support funded through your NDIS plan. A Support Coordinator helps you understand and use your plan, connect with providers and community supports, set up service agreements, and build your ability to coordinate your own supports over time.",
-  },
-  {
-    q: "What does a Psychosocial Recovery Coach do?",
-    a: "A Psychosocial Recovery Coach works one-on-one with people living with psychosocial disability. They help you design a recovery plan, build everyday skills and routines, manage ups and downs, connect with mental health and community services, and coordinate your NDIS supports with a recovery focus.",
-  },
-  {
-    q: "Does it cost me anything?",
-    a: "If Support Coordination or Psychosocial Recovery Coaching is funded in your NDIS plan, our services are paid from that funding, so there are no out-of-pocket costs to you. We’ll always explain how your funding is used and agree on everything with you before we start.",
-  },
-  {
-    q: "How do I know if these supports are in my NDIS plan?",
-    a: "Look in your plan for funding under the Capacity Building – Support Coordination budget, or for a stated recovery coaching support. If you’re not sure, send us a copy or call us and we’ll go through it with you for free.",
-  },
-  {
-    q: "Can I change Support Coordinators?",
-    a: "Yes. You have choice and control over who provides your supports. If your current provider isn’t the right fit, you can change. We’ll help make the handover smooth, with notice given in line with your existing service agreement.",
-  },
-  {
-    q: "Who can make a referral?",
-    a: "Anyone, with the participant’s consent. Participants can self-refer, and families, carers, LACs, NDIA planners, GPs, psychologists, hospitals and community organisations can refer through our online referral form.",
-  },
-];
 
 export default function Home() {
   return (
@@ -212,7 +187,7 @@ export default function Home() {
               className="absolute -right-3 -bottom-8 w-56 rounded-3xl bg-navy p-6 text-white shadow-2xl sm:-right-8 sm:w-64"
             >
               <p className="font-display text-5xl font-semibold text-gold">
-                <Counter to={100} suffix="%" />
+                100%
               </p>
               <p className="mt-2 text-sm leading-snug text-white/80">focused on your goals, your choices and your pace.</p>
             </Reveal>
@@ -244,7 +219,7 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.3} className="mt-8">
               <Link href="/about" className="group inline-flex items-center gap-2 text-lg font-bold text-teal">
-                Learn more <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" aria-hidden />
+                Learn more about us <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" aria-hidden />
               </Link>
             </Reveal>
           </div>

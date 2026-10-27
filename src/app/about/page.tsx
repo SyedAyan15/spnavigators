@@ -13,6 +13,7 @@ export const metadata = pageMetadata({
     "Support Plan Navigators provides NDIS Support Coordination and Psychosocial Recovery Coaching across the Orana region of NSW. Learn about our story, our values and our commitment to person-centred support.",
   path: "/about",
   image: "/images/joy-together.jpg",
+  imageAlt: "An older man and a young man sharing a joyful laugh outdoors",
   keywords: ["about Support Plan Navigators", "NDIS support coordination Orana region"],
 });
 
@@ -38,6 +39,7 @@ export default function AboutPage() {
         image="/images/joy-together.jpg"
         imageAlt="An older man and a young man sharing a joyful laugh outdoors"
         crumbs={[{ name: "About Us", path: "/about" }]}
+        bannerTitle="About Support Plan Navigators – Local NDIS Provider, Dubbo & Orana"
       >
         <ButtonLink href="/contact">Get in touch</ButtonLink>
       </PageHero>

@@ -14,6 +14,7 @@ export const metadata = pageMetadata({
     "Plain-language NDIS resources: understand your NDIS plan and budgets, prepare for your plan reassessment, learn common NDIS terms and find trusted disability and mental health support services.",
   path: "/ndis-resources",
   image: "/images/planning-notes.jpg",
+  imageAlt: "A notebook, pen and coffee ready for NDIS plan preparation",
   keywords: ["understanding my NDIS plan", "NDIS budgets explained", "NDIS plan reassessment checklist", "NDIS glossary"],
 });
 
@@ -53,6 +54,7 @@ export default function ResourcesPage() {
         image="/images/planning-notes.jpg"
         imageAlt="A notebook, pen and coffee on a table, ready for planning"
         crumbs={[{ name: "NDIS Resources", path: "/ndis-resources" }]}
+        bannerTitle="NDIS Resources & Plan Guides"
       />
 
       <section id="understanding-your-plan" className="bg-white py-16 sm:py-24 lg:py-32">

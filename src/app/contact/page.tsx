@@ -25,7 +25,7 @@ const cards = [
 export default function ContactPage() {
   return (
     <>
-      <PageBanner title="Contact Us" />
+      <PageBanner title="Contact Support Plan Navigators – Dubbo & Orana" />
       <JsonLd data={breadcrumbJsonLd([{ name: "Contact", path: "/contact" }])} />
       <section className="relative overflow-hidden pt-12 pb-24 sm:pb-32">
         <div className="pointer-events-none absolute -top-40 -right-40 h-[36rem] w-[36rem] rounded-full bg-sky-light/30 blur-3xl" />
@@ -37,9 +37,9 @@ export default function ContactPage() {
                 <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Contact us
               </span>
             </Reveal>
-            <h1 className="mt-6 font-display text-5xl leading-[1.05] font-semibold tracking-tight text-navy sm:text-6xl">
+            <p className="mt-6 font-display text-5xl leading-[1.05] font-semibold tracking-tight text-navy sm:text-6xl">
               <WordReveal text="Let’s have a chat about what you need." highlight={["chat"]} />
-            </h1>
+            </p>
             <Reveal delay={0.4}>
               <p className="mt-6 text-xl leading-relaxed text-muted">
                 Whether you have a quick question about your NDIS plan or you’re ready to get started, we’re here to help.

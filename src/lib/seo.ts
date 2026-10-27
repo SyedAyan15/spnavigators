@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
-import { site } from "./site";
+import { site, socialProfiles } from "./site";
 
 export type FaqItem = { q: string; a: string };
+
+/** Logo share card used by pages that don't have their own photo (see src/app/opengraph-image.jpg). */
+const DEFAULT_SHARE_IMAGE = {
+  url: "/opengraph-image.jpg",
+  width: 1200,
+  height: 630,
+  alt: "Support Plan Navigators logo: a circle of people around Aboriginal dot art, mountains and a golden path. Connecting Plans to Possibilities.",
+};
 
 export function pageMetadata({
   title,
@@ -9,12 +17,15 @@ export function pageMetadata({
   path,
   keywords = [],
   image,
+  imageAlt,
 }: {
   title: string;
   description: string;
   path: string;
   keywords?: string[];
   image?: string;
+  /** Describes what is in the share image (shown to screen readers on social platforms). */
+  imageAlt?: string;
 }): Metadata {
   return {
     title,
@@ -26,9 +37,16 @@ export function pageMetadata({
       description,
       url: path,
       type: "website",
-      ...(image ? { images: [{ url: image, width: 1800, height: 1200, alt: title }] } : {}),
+      locale: "en_AU",
+      siteName: site.name,
+      images: [image ? { url: image, width: 1800, height: 1200, alt: imageAlt ?? title } : DEFAULT_SHARE_IMAGE],
     },
-    twitter: { card: "summary_large_image", title: `${title} | ${site.name}`, description },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | ${site.name}`,
+      description,
+      images: [image ? { url: image, alt: imageAlt ?? title } : DEFAULT_SHARE_IMAGE],
+    },
   };
 }
 
@@ -84,7 +102,7 @@ const ORANA_AREA = [
 
 export const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": ["Organization", "LocalBusiness"],
+  "@type": ["Organization", "ProfessionalService"],
   "@id": `${site.url}/#organization`,
   name: site.name,
   legalName: site.legalName,
@@ -96,6 +114,7 @@ export const organizationJsonLd = {
   email: site.email,
   telephone: "+61 439 953 767",
   areaServed: ORANA_AREA,
+  ...(socialProfiles.length ? { sameAs: socialProfiles } : {}),
   address: { "@type": "PostalAddress", addressRegion: "NSW", addressCountry: "AU" },
   knowsAbout: [
     "NDIS Support Coordination",

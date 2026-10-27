@@ -125,33 +125,31 @@ export function WordReveal({
         const hl = highlight.includes(w.replace(/[.,!?]/g, ""));
         return (
           <span key={i} className="inline-block overflow-hidden pb-[0.12em] align-bottom" aria-hidden>
-            <motion.span
-              className={`inline-block ${hl ? "relative italic text-teal" : ""}`}
-              initial={{ y: "110%", rotate: 4 }}
-              animate={{ y: "0%", rotate: 0 }}
-              transition={{ duration: 0.9, delay: delay + i * 0.07, ease }}
+            <span
+              className={`anim-word inline-block ${hl ? "relative italic text-teal" : ""}`}
+              style={{ animationDelay: `${delay + i * 0.07}s` }}
             >
               {w}
               {hl && (
-                <motion.svg
+                <svg
                   viewBox="0 0 200 20"
                   className="absolute -bottom-1 left-0 h-3 w-full text-gold"
                   preserveAspectRatio="none"
                   aria-hidden
                 >
-                  <motion.path
+                  <path
                     d="M2 14 C 50 4, 120 4, 198 12"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="5"
                     strokeLinecap="round"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ duration: 1, delay: delay + words.length * 0.07 + 0.3, ease }}
+                    pathLength={1}
+                    className="anim-draw"
+                    style={{ animationDelay: `${delay + words.length * 0.07 + 0.3}s` }}
                   />
-                </motion.svg>
+                </svg>
               )}
-            </motion.span>
+            </span>
             {i < words.length - 1 && " "}
           </span>
         );

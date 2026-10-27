@@ -18,7 +18,7 @@ export default function PrivacyPage() {
         <span className="eyebrow">
           <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Legal
         </span>
-        <h1 className="mt-6 font-display text-5xl font-semibold tracking-tight text-navy">Privacy Policy</h1>
+        <p className="mt-6 font-display text-5xl font-semibold tracking-tight text-navy">How we protect your information</p>
         <Reveal className="prose-brand mt-10 text-lg">
           <p>
             {site.legalName} (“we”, “us”) respects your privacy. We handle personal information in line

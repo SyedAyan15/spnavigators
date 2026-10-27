@@ -24,7 +24,7 @@ const next = [
 export default function ReferralPage() {
   return (
     <>
-      <PageBanner title="Make a Referral" />
+      <PageBanner title="Make an NDIS Referral – Dubbo & the Orana Region" />
       <JsonLd data={breadcrumbJsonLd([{ name: "Make a Referral", path: "/make-a-referral" }])} />
       <section className="relative overflow-hidden pt-12 pb-24 sm:pb-32">
         <div className="pointer-events-none absolute -top-40 -left-40 h-[36rem] w-[36rem] rounded-full bg-teal-light/25 blur-3xl" />
@@ -35,9 +35,9 @@ export default function ReferralPage() {
                 <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Referrals
               </span>
             </Reveal>
-            <h1 className="mt-6 font-display text-5xl leading-[1.05] font-semibold tracking-tight text-navy sm:text-6xl">
+            <p className="mt-6 font-display text-5xl leading-[1.05] font-semibold tracking-tight text-navy sm:text-6xl">
               <WordReveal text="Make a referral" highlight={["referral"]} />
-            </h1>
+            </p>
             <Reveal delay={0.3}>
               <p className="mt-6 text-lg leading-relaxed text-muted">
                 We welcome referrals for NDIS Support Coordination and Psychosocial Recovery Coaching from participants,

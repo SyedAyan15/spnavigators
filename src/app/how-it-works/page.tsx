@@ -4,7 +4,7 @@ import { FeatureGrid, type Feature } from "@/components/FeatureGrid";
 import { Journey } from "@/components/Journey";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { PageHero } from "@/components/PageHero";
-import { ButtonLink, SectionHeading } from "@/components/ui";
+import { ButtonLink, JsonLd, SectionHeading } from "@/components/ui";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -13,6 +13,7 @@ export const metadata = pageMetadata({
     "Getting started with Support Plan Navigators is simple. Learn what happens from your first free chat to your NDIS plan reassessment, what to have ready and how our Support Coordination and Recovery Coaching are funded.",
   path: "/how-it-works",
   image: "/images/coaching-meeting.jpg",
+  imageAlt: "A support coordinator and a participant talking in a bright, relaxed room",
   keywords: ["how NDIS support coordination works", "getting started NDIS", "NDIS service agreement", "NDIS plan reassessment"],
 });
 
@@ -44,9 +45,18 @@ const rights = [
   { icon: MessagesSquare, title: "Feedback and complaints", text: "We welcome feedback. If something isn’t right, tell us and we’ll fix it. You can also contact the NDIS Quality and Safeguards Commission." },
 ];
 
+const howToJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to get started with NDIS Support Coordination at Support Plan Navigators",
+  description: "The six steps from your first free conversation to your next NDIS plan reassessment.",
+  step: steps.map((s, i) => ({ "@type": "HowToStep", position: i + 1, name: s.title, text: s.text })),
+};
+
 export default function HowItWorksPage() {
   return (
     <>
+      <JsonLd data={howToJsonLd} />
       <PageHero
         eyebrow="How it works"
         title="Getting started is simpler than you think."
@@ -55,6 +65,7 @@ export default function HowItWorksPage() {
         image="/images/coaching-meeting.jpg"
         imageAlt="A navigator and a participant chatting in a relaxed office setting"
         crumbs={[{ name: "How It Works", path: "/how-it-works" }]}
+        bannerTitle="How NDIS Support Coordination Works"
       >
         <ButtonLink href="/make-a-referral">Make a Referral</ButtonLink>
         <ButtonLink href="/contact" variant="outline">

@@ -27,6 +27,7 @@ export const metadata = pageMetadata({
   description,
   path: "/support-coordination",
   image: "/images/planning-session.jpg",
+  imageAlt: "A support coordinator reviewing an NDIS plan with two participants",
   keywords: [
     "NDIS support coordination",
     "NDIS support coordinator",
@@ -117,7 +118,7 @@ export default function SupportCoordinationPage() {
         image="/images/planning-session.jpg"
         imageAlt="A support coordinator reviewing an NDIS plan with two participants"
         crumbs={[{ name: "Support Coordination", path: "/support-coordination" }]}
-        bannerTitle="NDIS Support Coordination"
+        bannerTitle="NDIS Support Coordination in Dubbo & the Orana Region"
         badge={
           <>
             <p className="text-xs font-bold tracking-[0.16em] text-teal uppercase">Funded by your NDIS plan</p>

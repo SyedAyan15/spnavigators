@@ -50,38 +50,26 @@ export function HomeHero() {
 
       <div className="container-x relative grid items-center gap-8 sm:gap-16 lg:grid-cols-[1.1fr_1fr]">
         <div>
-          <motion.span
-            className="eyebrow tracking-[0.08em] sm:tracking-[0.18em]"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease }}
-          >
+          <span className="eyebrow anim-rise tracking-[0.08em] sm:tracking-[0.18em]">
             <MapPin className="h-3.5 w-3.5 text-gold" aria-hidden />
             Dubbo &amp; the Orana Region, NSW
-          </motion.span>
+          </span>
 
           {/* The h1 carries the searchable phrase; the large marketing line below is a paragraph. */}
-          <motion.h1
-            className="mt-6 block text-base font-bold tracking-wide text-teal sm:text-lg"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1, ease }}
-          >
+          <h1 className="anim-rise mt-6 block text-base font-bold tracking-wide text-teal sm:text-lg" style={{ animationDelay: "0.1s" }}>
             NDIS Support Coordination &amp; Psychosocial Recovery Coaching in Dubbo &amp; the Orana Region
-          </motion.h1>
+          </h1>
           <div>
-            <motion.p
-              className="mt-4 block font-display text-[2.7rem] leading-[1.04] font-semibold tracking-tight text-navy sm:text-6xl xl:text-[4.6rem]"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.2, ease }}
+            <p
+              className="anim-rise mt-4 block font-display text-[2.7rem] leading-[1.04] font-semibold tracking-tight text-navy sm:text-6xl xl:text-[4.6rem]"
+              style={{ animationDelay: "0.2s" }}
             >
               Navigate your NDIS plan with{" "}
               <span className="relative grid h-[1.12em]">
-                <AnimatePresence mode="wait">
+                <AnimatePresence mode="wait" initial={false}>
                   <motion.span
                     key={words[i]}
-                    className="col-start-1 row-start-1 italic text-teal"
+                    className="col-start-1 row-start-1 italic text-[#0a5559]"
                     initial={{ y: "60%", opacity: 0, filter: "blur(8px)" }}
                     animate={{ y: "0%", opacity: 1, filter: "blur(0px)" }}
                     exit={{ y: "-60%", opacity: 0, filter: "blur(8px)" }}
@@ -91,26 +79,16 @@ export function HomeHero() {
                   </motion.span>
                 </AnimatePresence>
               </span>
-            </motion.p>
+            </p>
           </div>
 
-          <motion.p
-            className="mt-7 max-w-xl text-lg leading-relaxed text-muted sm:text-xl"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.45, ease }}
-          >
+          <p className="anim-rise mt-7 max-w-xl text-lg leading-relaxed text-muted sm:text-xl" style={{ animationDelay: "0.35s" }}>
             We help NDIS participants, families and carers across Dubbo and the Orana region turn a plan on paper into real supports, real
             connections and real progress, with a dedicated navigator who listens first and explains everything in
             plain language.
-          </motion.p>
+          </p>
 
-          <motion.div
-            className="mt-9 flex flex-wrap items-center gap-4"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6, ease }}
-          >
+          <div className="anim-rise mt-9 flex flex-wrap items-center gap-4" style={{ animationDelay: "0.5s" }}>
             <Magnetic>
               <ButtonLink href="/make-a-referral">Make a Referral</ButtonLink>
             </Magnetic>
@@ -119,14 +97,9 @@ export function HomeHero() {
                 Explore our services
               </ButtonLink>
             </Magnetic>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.9 }}
-          >
+          <div className="anim-rise mt-8 flex flex-wrap items-center gap-x-6 gap-y-3" style={{ animationDelay: "0.65s" }}>
             <a href={`mailto:${site.email}`} className="group inline-flex items-center gap-3 text-navy">
               <span className="relative grid h-12 w-12 shrink-0 place-items-center rounded-full bg-gold text-navy">
                 <span className="absolute inset-0 animate-ping rounded-full bg-gold/50" />
@@ -140,16 +113,14 @@ export function HomeHero() {
             <a href={site.phoneHref} className="inline-flex items-center gap-2 text-sm font-semibold text-muted hover:text-navy">
               <Phone className="h-4 w-4 text-teal" aria-hidden /> or call {site.phone}
             </a>
-          </motion.div>
+          </div>
         </div>
 
         <div className="relative mx-auto w-full max-w-[22rem] pb-6 sm:max-w-xl sm:pt-0 sm:pb-0">
+          <div className="anim-pop relative ml-auto w-[80%] sm:w-[82%]" style={{ animationDelay: "0.15s" }}>
           <motion.div
             style={isSm ? { y: imgY } : undefined}
-            initial={{ opacity: 0, scale: 0.92, borderRadius: "50%" }}
-            animate={{ opacity: 1, scale: 1, borderRadius: "999px 999px 48px 48px" }}
-            transition={{ duration: 1.2, delay: 0.2, ease }}
-            className="relative ml-auto aspect-[5/6] w-[80%] overflow-hidden sm:aspect-[4/5] sm:w-[82%] shadow-[0_40px_100px_-30px_rgba(13,49,87,0.55)]"
+            className="relative aspect-[5/6] overflow-hidden rounded-[999px_999px_48px_48px] shadow-[0_40px_100px_-30px_rgba(13,49,87,0.55)] sm:aspect-[4/5]"
           >
             <Image
               src="/images/hero-friends-park.jpg"
@@ -161,28 +132,25 @@ export function HomeHero() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
           </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.6, rotate: -12 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ duration: 1, delay: 0.7, type: "spring", bounce: 0.35 }}
-            className="absolute top-[40%] left-0 aspect-square w-[38%] overflow-hidden rounded-full border-4 sm:border-[6px] sm:w-[42%] border-cream shadow-2xl"
+          <div
+            className="anim-pop absolute top-[40%] left-0 aspect-square w-[38%] overflow-hidden rounded-full border-4 border-cream shadow-2xl sm:w-[42%] sm:border-[6px]"
+            style={{ animationDelay: "0.5s" }}
           >
             <Image
               src="/images/family-support.jpg"
               alt="A young man with family members smiling together"
               fill
-              sizes="20vw"
+              sizes="(min-width: 640px) 15rem, 9rem"
               className="object-cover"
             />
-          </motion.div>
+          </div>
 
+          <div className="anim-rise absolute right-0 -bottom-4 w-48 sm:-right-6 sm:bottom-10 sm:w-60" style={{ animationDelay: "0.8s" }}>
           <motion.div
             style={isSm ? { y: cardY } : undefined}
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, delay: 1, ease }}
-            className="absolute right-0 -bottom-4 w-48 rounded-2xl bg-white/95 p-3.5 shadow-2xl ring-1 ring-navy/5 backdrop-blur sm:-right-6 sm:bottom-10 sm:w-60 sm:rounded-3xl sm:p-5"
+            className="rounded-2xl bg-white/95 p-3.5 shadow-2xl ring-1 ring-navy/5 backdrop-blur sm:rounded-3xl sm:p-5"
           >
             <p className="text-[0.65rem] font-bold tracking-[0.16em] text-muted uppercase sm:text-xs">Your journey</p>
             <ul className="mt-2 space-y-1.5 sm:mt-3 sm:space-y-2.5">
@@ -203,12 +171,11 @@ export function HomeHero() {
               })}
             </ul>
           </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 1.1, type: "spring" }}
-            className="absolute top-0 left-[4%] h-20 w-20 sm:-top-4 sm:left-[8%] sm:h-36 sm:w-36"
+          <div
+            className="anim-pop absolute top-0 left-[4%] h-20 w-20 sm:-top-4 sm:left-[8%] sm:h-36 sm:w-36"
+            style={{ animationDelay: "0.9s" }}
             aria-hidden
           >
             <svg viewBox="0 0 200 200" className="h-full w-full animate-spin-slow">
@@ -222,10 +189,10 @@ export function HomeHero() {
             </svg>
             <span className="absolute inset-0 grid place-items-center">
               <span className="rounded-full bg-white p-1">
-                <Image src="/logo-mark.png" alt="" width={600} height={492} className="h-auto w-9 sm:w-14" />
+                <Image src="/logo-mark.png" alt="" width={112} height={92} className="h-auto w-9 sm:w-14" />
               </span>
             </span>
-          </motion.div>
+          </div>
 
           <Leaf className="absolute -right-1 top-8 h-14 w-9 sm:-right-4 sm:top-6 sm:h-24 sm:w-14" color="var(--color-ochre)" delay={1.2} />
           <Leaf className="absolute right-7 top-2 h-10 w-6 sm:right-8 sm:-top-2 sm:h-16 sm:w-10" color="var(--color-gold)" delay={1.4} />

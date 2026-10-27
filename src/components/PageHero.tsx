@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { breadcrumbJsonLd } from "@/lib/seo";
-import { Reveal, WordReveal } from "./motion";
+import { WordReveal } from "./motion";
 import { PageBanner } from "./PageBanner";
 import { JsonLd } from "./ui";
 import { Leaf, WindingRoad } from "./WindingRoad";
@@ -61,26 +61,26 @@ export function PageHero({
 
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
           <div>
-            <Reveal>
+            <div className="anim-rise">
               <span className="eyebrow">
                 <span className="h-1.5 w-1.5 rounded-full bg-gold" />
                 {eyebrow}
               </span>
-            </Reveal>
-            <h1 className="mt-6 font-display text-[2.6rem] leading-[1.05] font-semibold tracking-tight text-navy sm:text-6xl lg:text-[4.2rem]">
+            </div>
+            <p className="mt-6 font-display text-[2.6rem] leading-[1.05] font-semibold tracking-tight text-navy sm:text-6xl lg:text-[4.2rem]">
               <WordReveal text={title} highlight={highlight} delay={0.15} />
-            </h1>
-            <Reveal delay={0.5}>
+            </p>
+            <div className="anim-rise" style={{ animationDelay: "0.45s" }}>
               <div className="mt-7 max-w-xl text-lg leading-relaxed text-muted sm:text-xl">{intro}</div>
-            </Reveal>
+            </div>
             {children && (
-              <Reveal delay={0.65}>
+              <div className="anim-rise" style={{ animationDelay: "0.6s" }}>
                 <div className="mt-9 flex flex-wrap gap-4">{children}</div>
-              </Reveal>
+              </div>
             )}
           </div>
 
-          <Reveal direction="left" delay={0.2} className="relative">
+          <div className="anim-pop relative" style={{ animationDelay: "0.2s" }}>
             <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-[45%_55%_48%_52%/55%_45%_55%_45%] shadow-2xl shadow-navy/20 lg:max-w-none">
               <Image
                 src={image}
@@ -99,7 +99,7 @@ export function PageHero({
                 {badge}
               </div>
             )}
-          </Reveal>
+          </div>
         </div>
       </div>
     </section>

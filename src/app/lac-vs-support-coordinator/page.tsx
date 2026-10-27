@@ -18,6 +18,7 @@ export const metadata = pageMetadata({
     "Local Area Coordinator (LAC) vs NDIS Support Coordinator explained. Learn what each role does, who to contact for common situations, how they’re funded and whether you can have both.",
   path: "/lac-vs-support-coordinator",
   image: "/images/coaching-office.jpg",
+  imageAlt: "A support coordinator and a participant talking at a table in an office",
   keywords: [
     "LAC vs support coordinator",
     "local area coordinator vs support coordinator",
@@ -95,7 +96,7 @@ const faqs: FaqItem[] = [
 export default function LacVsScPage() {
   return (
     <>
-      <PageBanner title="LAC vs Support Coordinator" />
+      <PageBanner title="LAC vs Support Coordinator: What’s the Difference?" />
       <JsonLd data={breadcrumbJsonLd([{ name: "LAC vs Support Coordinator", path: "/lac-vs-support-coordinator" }])} />
       <JsonLd data={faqJsonLd(faqs)} />
 
@@ -133,9 +134,9 @@ export default function LacVsScPage() {
                 <span className="h-1.5 w-1.5 rounded-full bg-gold" /> NDIS roles explained
               </span>
             </Reveal>
-            <h1 className="mt-6 font-display text-[2.5rem] leading-[1.05] font-semibold tracking-tight text-navy sm:text-6xl">
+            <p className="mt-6 font-display text-[2.5rem] leading-[1.05] font-semibold tracking-tight text-navy sm:text-6xl">
               <WordReveal text="LAC vs Support Coordinator: what’s the difference?" highlight={["difference?"]} delay={0.1} />
-            </h1>
+            </p>
             <Reveal delay={0.5}>
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
                 Local Area Coordinators and Support Coordinators both help NDIS participants, but they do different jobs.

@@ -13,6 +13,9 @@ export const site = {
   country: "Australia",
 } as const;
 
+/** Official social profile URLs (Facebook, LinkedIn, Instagram). Added to structured data as sameAs. */
+export const socialProfiles: string[] = [];
+
 export type NavItem = {
   label: string;
   href: string;

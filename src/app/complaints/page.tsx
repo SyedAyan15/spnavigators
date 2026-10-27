@@ -45,9 +45,9 @@ export default function ComplaintsPage() {
                 <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Complaints &amp; feedback
               </span>
             </Reveal>
-            <h1 className="mt-6 font-display text-5xl leading-[1.05] font-semibold tracking-tight text-navy sm:text-6xl">
+            <p className="mt-6 font-display text-5xl leading-[1.05] font-semibold tracking-tight text-navy sm:text-6xl">
               <WordReveal text="Your voice helps us do better." highlight={["better."]} />
-            </h1>
+            </p>
             <Reveal delay={0.4}>
               <p className="mt-6 text-xl leading-relaxed text-muted">
                 Whether it’s a complaint, a suggestion or a compliment, we want to hear it. Telling us when something isn’t

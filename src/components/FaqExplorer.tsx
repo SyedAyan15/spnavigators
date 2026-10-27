@@ -45,7 +45,10 @@ export function FaqExplorer({ categories }: { categories: { name: string; items:
       </div>
       <div className="mt-10">
         {items.length ? (
-          <Faq key={`${cat}-${query}`} items={items} defaultOpen={null} />
+          <>
+            <h2 className="sr-only">{cat === "All" ? "All questions" : cat}</h2>
+            <Faq key={`${cat}-${query}`} items={items} defaultOpen={null} />
+          </>
         ) : (
           <p className="rounded-[2rem] bg-white p-10 text-center text-muted">
             No questions match that search. Try different words, or just ask us directly.

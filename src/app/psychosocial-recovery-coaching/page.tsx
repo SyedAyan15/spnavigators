@@ -27,6 +27,7 @@ export const metadata = pageMetadata({
   description,
   path: "/psychosocial-recovery-coaching",
   image: "/images/embrace.jpg",
+  imageAlt: "Two women sharing a warm, supportive hug on a city street",
   keywords: [
     "psychosocial recovery coaching",
     "NDIS psychosocial recovery coach",
@@ -90,6 +91,7 @@ export default function RecoveryCoachingPage() {
         image="/images/embrace.jpg"
         imageAlt="Two women sharing a warm, supportive hug on a city street"
         crumbs={[{ name: "Psychosocial Recovery Coaching", path: "/psychosocial-recovery-coaching" }]}
+        bannerTitle="Psychosocial Recovery Coaching in Dubbo & the Orana Region"
         badge={
           <>
             <p className="text-xs font-bold tracking-[0.16em] text-teal uppercase">Your way</p>

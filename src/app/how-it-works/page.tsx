@@ -12,8 +12,6 @@ export const metadata = pageMetadata({
   description:
     "Getting started with Support Plan Navigators is simple. Learn what happens from your first free chat to your NDIS plan reassessment, what to have ready and how our Support Coordination and Recovery Coaching are funded.",
   path: "/how-it-works",
-  image: "/images/coaching-meeting.jpg",
-  imageAlt: "A support coordinator and a participant talking in a bright, relaxed room",
   keywords: ["how NDIS support coordination works", "getting started NDIS", "NDIS service agreement", "NDIS plan reassessment"],
 });
 
@@ -62,8 +60,6 @@ export default function HowItWorksPage() {
         title="Getting started is simpler than you think."
         highlight={["simpler"]}
         intro={<p>From your first conversation to your next plan reassessment, here’s exactly what to expect when you work with Support Plan Navigators.</p>}
-        image="/images/coaching-meeting.jpg"
-        imageAlt="A navigator and a participant chatting in a relaxed office setting"
         crumbs={[{ name: "How It Works", path: "/how-it-works" }]}
         bannerTitle="How NDIS Support Coordination Works"
       >

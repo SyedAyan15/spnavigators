@@ -24,8 +24,9 @@ export function PageHero({
   title: string;
   highlight?: string[];
   intro: ReactNode;
-  image: string;
-  imageAlt: string;
+  /** Optional; without it the header text uses the full width. */
+  image?: string;
+  imageAlt?: string;
   crumbs: { name: string; path: string }[];
   children?: ReactNode;
   badge?: ReactNode;
@@ -59,7 +60,7 @@ export function PageHero({
           </ol>
         </nav>
 
-        <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
+        <div className={`grid items-center gap-14 ${image ? "lg:grid-cols-[1.05fr_1fr]" : ""}`}>
           <div>
             <div className="anim-rise">
               <span className="eyebrow">
@@ -80,11 +81,12 @@ export function PageHero({
             )}
           </div>
 
+          {image && (
           <div className="anim-pop relative" style={{ animationDelay: "0.2s" }}>
             <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-[45%_55%_48%_52%/55%_45%_55%_45%] shadow-2xl shadow-navy/20 lg:max-w-none">
               <Image
                 src={image}
-                alt={imageAlt}
+                alt={imageAlt ?? ""}
                 fill
                 priority
                 sizes="(min-width: 1024px) 45vw, 90vw"
@@ -100,6 +102,7 @@ export function PageHero({
               </div>
             )}
           </div>
+          )}
         </div>
       </div>
     </section>

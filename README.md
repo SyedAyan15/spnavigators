@@ -30,13 +30,13 @@ The contact and referral forms post to `/api/contact`, which emails the submissi
 | `/support-coordination` | NDIS support coordinator, support coordination levels |
 | `/psychosocial-recovery-coaching` | psychosocial recovery coach, psychosocial disability, recovery plan |
 | `/how-it-works` | getting started, service agreements, funding |
-| `/about` | company story, values, logo story, company details |
+| `/about` | company story, values, logo story |
 | `/ndis-resources` | understanding your NDIS plan, plan reassessment checklist, glossary |
 | `/faqs` | searchable FAQs (FAQPage schema) |
 | `/contact`, `/make-a-referral` | contact form and 4-step referral form |
 | `/privacy-policy` | privacy policy |
 
-SEO: per-page metadata and canonicals, Open Graph image, `sitemap.xml`, `robots.txt`, web manifest, and JSON-LD for Organization/LocalBusiness, Service, FAQPage and BreadcrumbList.
+SEO/AEO: per-page titles, descriptions and canonicals, Open Graph images, `sitemap.xml` (update `LAST_UPDATED` in `src/app/sitemap.ts` after content changes), `robots.txt` (allows search and AI answer engines), `public/llms.txt` (plain-language summary for AI assistants), web manifest, and JSON-LD for Organization/LocalBusiness, WebSite, Service, FAQPage and BreadcrumbList.
 
 ## Where to edit
 

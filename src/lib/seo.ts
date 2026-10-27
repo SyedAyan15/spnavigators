@@ -113,3 +113,14 @@ export const organizationJsonLd = {
     availableLanguage: ["English"],
   },
 };
+
+export const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${site.url}/#website`,
+  name: site.name,
+  url: site.url,
+  description: site.description,
+  inLanguage: "en-AU",
+  publisher: { "@id": `${site.url}/#organization` },
+};

@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { MobileCallBar } from "@/components/MobileCallBar";
 import { MotionProvider } from "@/components/MotionProvider";
 import { JsonLd } from "@/components/ui";
-import { organizationJsonLd } from "@/lib/seo";
+import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -62,6 +62,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en-AU" className={`${heading.variable} ${body.variable} antialiased`}>
       <body className="flex min-h-screen flex-col">
         <JsonLd data={organizationJsonLd} />
+        <JsonLd data={websiteJsonLd} />
         <MotionProvider>
           <Header />
           <main id="main" className="flex-1">

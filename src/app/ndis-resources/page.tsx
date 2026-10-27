@@ -9,7 +9,7 @@ import { SectionHeading } from "@/components/ui";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "NDIS Resources | Understanding Your NDIS Plan",
+  title: "NDIS Resources & Plan Guides",
   description:
     "Plain-language NDIS resources: understand your NDIS plan and budgets, prepare for your plan reassessment, learn common NDIS terms and find trusted disability and mental health support services.",
   path: "/ndis-resources",

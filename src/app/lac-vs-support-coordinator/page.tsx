@@ -13,7 +13,7 @@ import { WindingRoad } from "@/components/WindingRoad";
 import { breadcrumbJsonLd, faqJsonLd, pageMetadata, type FaqItem } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "LAC vs Support Coordinator: What’s the Difference?",
+  title: "LAC vs Support Coordinator: The Difference",
   description:
     "Local Area Coordinator (LAC) vs NDIS Support Coordinator explained. Learn what each role does, who to contact for common situations, how they’re funded and whether you can have both.",
   path: "/lac-vs-support-coordinator",

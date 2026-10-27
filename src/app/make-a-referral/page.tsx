@@ -7,7 +7,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: "Make a Referral | NDIS Support Coordination & Recovery Coaching",
+  title: "Make an NDIS Referral | Dubbo & Orana",
   description:
     "Refer an NDIS participant to Support Plan Navigators for Support Coordination or Psychosocial Recovery Coaching. Self-referrals, families, LACs, clinicians and organisations welcome.",
   path: "/make-a-referral",

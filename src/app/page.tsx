@@ -12,7 +12,7 @@ import { ButtonLink, JsonLd, SectionHeading } from "@/components/ui";
 import { faqJsonLd, type FaqItem } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "NDIS Support Coordination & Psychosocial Recovery Coaching | Support Plan Navigators" },
+  title: { absolute: "NDIS Support Coordinator Dubbo & Orana | Support Plan Navigators" },
   description:
     "Local NDIS Support Coordinator and Psychosocial Recovery Coach in the Orana region of NSW, supporting Dubbo, Wellington, Narromine, Gilgandra, Coonamble, Nyngan, Bourke and surrounding communities.",
   alternates: { canonical: "/" },

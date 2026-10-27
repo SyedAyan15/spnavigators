@@ -8,7 +8,7 @@ import { allFaqs, faqCategories } from "@/lib/faqs";
 import { breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "FAQs | NDIS Support Coordination & Recovery Coaching Questions",
+  title: "NDIS Support Coordination FAQs",
   description:
     "Answers to common questions about NDIS Support Coordination, Psychosocial Recovery Coaching, NDIS funding, plan reassessments and getting started with Support Plan Navigators.",
   path: "/faqs",

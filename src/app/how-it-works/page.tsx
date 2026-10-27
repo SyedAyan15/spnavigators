@@ -8,7 +8,7 @@ import { ButtonLink, SectionHeading } from "@/components/ui";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "How It Works | Getting Started with NDIS Support Coordination",
+  title: "How NDIS Support Coordination Works",
   description:
     "Getting started with Support Plan Navigators is simple. Learn what happens from your first free chat to your NDIS plan reassessment, what to have ready and how our Support Coordination and Recovery Coaching are funded.",
   path: "/how-it-works",
@@ -56,9 +56,9 @@ export default function HowItWorksPage() {
         imageAlt="A navigator and a participant chatting in a relaxed office setting"
         crumbs={[{ name: "How It Works", path: "/how-it-works" }]}
       >
-        <ButtonLink href="/contact">Book a free chat</ButtonLink>
-        <ButtonLink href="/make-a-referral" variant="outline">
-          Make a referral
+        <ButtonLink href="/make-a-referral">Make a Referral</ButtonLink>
+        <ButtonLink href="/contact" variant="outline">
+          Contact us
         </ButtonLink>
       </PageHero>
 

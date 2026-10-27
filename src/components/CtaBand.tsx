@@ -29,8 +29,8 @@ export function CtaBand({
             </div>
             <div className="flex flex-col gap-4 sm:flex-row lg:flex-col lg:items-end">
               <Magnetic>
-                <ButtonLink href="/contact" variant="gold">
-                  Book a free chat
+                <ButtonLink href="/make-a-referral" variant="gold">
+                  Make a Referral
                 </ButtonLink>
               </Magnetic>
               <Magnetic>

@@ -23,7 +23,7 @@ const description =
   "NDIS Support Coordination that helps you understand your NDIS plan, choose the right providers, set up service agreements and prepare for plan reassessments. Talk to a Support Coordinator today.";
 
 export const metadata = pageMetadata({
-  title: "NDIS Support Coordination | Support Coordinators",
+  title: "NDIS Support Coordination | Dubbo & Orana",
   description,
   path: "/support-coordination",
   image: "/images/planning-session.jpg",
@@ -127,9 +127,9 @@ export default function SupportCoordinationPage() {
           </>
         }
       >
-        <ButtonLink href="/contact">Book a free chat</ButtonLink>
-        <ButtonLink href="/make-a-referral" variant="outline">
-          Make a referral
+        <ButtonLink href="/make-a-referral">Make a Referral</ButtonLink>
+        <ButtonLink href="/contact" variant="outline">
+          Contact us
         </ButtonLink>
       </PageHero>
 

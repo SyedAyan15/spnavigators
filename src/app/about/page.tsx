@@ -8,7 +8,7 @@ import { ButtonLink, SectionHeading } from "@/components/ui";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "About Us | NDIS Support Coordination Provider",
+  title: "About Us | Local NDIS Support in the Orana",
   description:
     "Support Plan Navigators provides NDIS Support Coordination and Psychosocial Recovery Coaching across the Orana region of NSW. Learn about our story, our values and our commitment to person-centred support.",
   path: "/about",

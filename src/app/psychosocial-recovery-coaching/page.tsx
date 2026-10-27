@@ -20,10 +20,10 @@ import { ButtonLink, JsonLd, SectionHeading } from "@/components/ui";
 import { pageMetadata, serviceJsonLd } from "@/lib/seo";
 
 const description =
-  "NDIS Psychosocial Recovery Coaching for people living with psychosocial disability. Our recovery coaches take a person-centred, trauma-informed approach to help you build skills, confidence and connection. Book a free chat.";
+  "NDIS Psychosocial Recovery Coaching for people living with psychosocial disability. Our recovery coaches take a person-centred, trauma-informed approach to help you build skills, confidence and connection. Make a referral today.";
 
 export const metadata = pageMetadata({
-  title: "NDIS Psychosocial Recovery Coaching | Recovery Coach",
+  title: "Psychosocial Recovery Coach | Dubbo & Orana",
   description,
   path: "/psychosocial-recovery-coaching",
   image: "/images/embrace.jpg",
@@ -97,9 +97,9 @@ export default function RecoveryCoachingPage() {
           </>
         }
       >
-        <ButtonLink href="/contact">Book a free chat</ButtonLink>
-        <ButtonLink href="/make-a-referral" variant="outline">
-          Make a referral
+        <ButtonLink href="/make-a-referral">Make a Referral</ButtonLink>
+        <ButtonLink href="/contact" variant="outline">
+          Contact us
         </ButtonLink>
       </PageHero>
 

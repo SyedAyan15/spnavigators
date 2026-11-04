@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "Contact Us | Dubbo & Orana NSW",
   description:
-    "Contact Support Plan Navigators about NDIS Support Coordination or Psychosocial Recovery Coaching. Call 0439 953 767, email admin@spnav.com.au or send us a message for a free, no-obligation chat.",
+    "Contact Support Plan Navigators about NDIS Support Coordination or Psychosocial Recovery Coaching. Call 0439 953 767, email admin@spnavigators.com.au or send us a message for a free, no-obligation chat.",
   path: "/contact",
   keywords: ["contact NDIS support coordinator", "book recovery coach", "NDIS support coordination enquiry"],
 });

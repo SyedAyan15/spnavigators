@@ -7,7 +7,7 @@ export const site = {
   description:
     "Support Plan Navigators is a local NDIS Support Coordinator and Psychosocial Recovery Coach based in the Orana region of NSW. We support participants in Dubbo, Wellington, Narromine, Gilgandra, Coonamble, Nyngan, Bourke and surrounding Aboriginal communities, with face-to-face visits and phone or video support.",
   url: "https://www.spnavigators.com.au",
-  email: "admin@spnav.com.au",
+  email: "admin@spnavigators.com.au",
   phone: "0439 953 767",
   phoneHref: "tel:+61439953767",
   country: "Australia",

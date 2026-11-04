@@ -6,7 +6,7 @@ export const faqCategories: { name: string; items: FaqItem[] }[] = [
     items: [
       {
         q: "How do I get started with Support Plan Navigators?",
-        a: "Call us on 0439 953 767, email admin@spnav.com.au, send a message through our contact form, or ask someone to refer you. We’ll arrange a free, no-obligation chat to understand your needs and check your NDIS plan.",
+        a: "Call us on 0439 953 767, email admin@spnavigators.com.au, send a message through our contact form, or ask someone to refer you. We’ll arrange a free, no-obligation chat to understand your needs and check your NDIS plan.",
       },
       {
         q: "Who can make a referral?",

@@ -19,8 +19,8 @@ The contact and referral forms post to `/api/contact`, which emails the submissi
 | Variable | Required | Purpose |
 | --- | --- | --- |
 | `RESEND_API_KEY` | Yes, in production | Resend API key. Without it, dev logs submissions to the console and production returns a friendly error with the phone and email. |
-| `CONTACT_TO_EMAIL` | No | Inbox that receives submissions (default `zara@spnavigators.com.au`). |
-| `CONTACT_FROM_EMAIL` | No | Sender address (default Resend's `onboarding@resend.dev`, which only delivers to the Resend account's own email, so sign up to Resend as zara@spnavigators.com.au). To send to anyone else, verify `spnavigators.com.au` in Resend and set e.g. `Support Plan Navigators <noreply@spnavigators.com.au>`. |
+| `CONTACT_TO_EMAIL` (or `RESEND_TO_EMAIL`) | No | Inbox that receives submissions (default `zara@spnavigators.com.au`). |
+| `CONTACT_FROM_EMAIL` (or `RESEND_FROM_EMAIL`) | No | Sender address (default Resend's `onboarding@resend.dev`, which only delivers to the Resend account's own email, so sign up to Resend as zara@spnavigators.com.au). To send to anyone else, verify `spnavigators.com.au` in Resend and set e.g. `Support Plan Navigators <noreply@spnavigators.com.au>`. |
 
 ## Pages
 

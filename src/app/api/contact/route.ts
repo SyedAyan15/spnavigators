@@ -187,8 +187,8 @@ export async function POST(request: Request) {
     headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
     body: JSON.stringify({
       // Resend's shared test sender; it can only deliver to the email the Resend account was created with.
-      from: process.env.CONTACT_FROM_EMAIL ?? "Support Plan Navigators <onboarding@resend.dev>",
-      to: [process.env.CONTACT_TO_EMAIL ?? "zara@spnavigators.com.au"],
+      from: process.env.CONTACT_FROM_EMAIL || process.env.RESEND_FROM_EMAIL || "Support Plan Navigators <onboarding@resend.dev>",
+      to: [process.env.CONTACT_TO_EMAIL || process.env.RESEND_TO_EMAIL || "zara@spnavigators.com.au"],
       reply_to: email,
       subject,
       html,

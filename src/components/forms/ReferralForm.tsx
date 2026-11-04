@@ -16,11 +16,14 @@ export function ReferralForm() {
   const [self, setSelf] = useState(false);
   const sections = useRef<(HTMLFieldSetElement | null)[]>([]);
 
-  const valid = () => {
-    const els = sections.current[step]?.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>("input, select, textarea");
-    for (const el of els ?? []) if (!el.reportValidity()) return false;
-    return true;
-  };
+  const fields = (i: number) =>
+    Array.from(sections.current[i]?.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>("input, select, textarea") ?? []);
+
+  // Only the visible step can show validation bubbles, so each step is checked on its own.
+  const valid = () => fields(step).every((el) => el.reportValidity());
+
+  // On submit, send the user back to the first step that still has a missing or invalid answer.
+  const firstInvalidStep = () => stepNames.findIndex((_, i) => fields(i).some((el) => !el.checkValidity()));
 
   if (status.state === "sent") {
     return (
@@ -37,10 +40,19 @@ export function ReferralForm() {
 
   return (
     <form
+      // The browser's own check would also look at the hidden steps and silently block the button.
+      noValidate
       onSubmit={(e) => {
         if (step < stepNames.length - 1) {
           e.preventDefault();
           if (valid()) setStep((s) => s + 1);
+          return;
+        }
+        const bad = firstInvalidStep();
+        if (bad !== -1) {
+          e.preventDefault();
+          setStep(bad);
+          setTimeout(() => fields(bad).find((el) => !el.checkValidity())?.reportValidity(), 50);
           return;
         }
         onSubmit(e);

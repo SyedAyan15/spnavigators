@@ -11,8 +11,8 @@ export function useSubmit(kind: "contact" | "referral" | "complaint") {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    const company = String(data.get("company") ?? "");
-    data.delete("company");
+    const trap = String(data.get("hp_x7") ?? "");
+    data.delete("hp_x7");
     const fields: Record<string, string> = {};
     for (const [k, v] of data.entries()) {
       fields[k] = fields[k] ? `${fields[k]}, ${v}` : String(v);
@@ -22,7 +22,7 @@ export function useSubmit(kind: "contact" | "referral" | "complaint") {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ kind, fields, company }),
+        body: JSON.stringify({ kind, fields, trap }),
       });
       const json = (await res.json()) as { ok: boolean; error?: string };
       if (!json.ok) throw new Error(json.error ?? "Something went wrong.");

@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 type Payload = {
   kind?: "contact" | "referral" | "complaint";
   fields?: Record<string, unknown>;
-  company?: string; // honeypot
+  trap?: string; // honeypot
 };
 
 const escape = (s: string) =>
@@ -139,7 +139,10 @@ export async function POST(request: Request) {
   }
 
   // Bots fill the hidden field; pretend success so they move on.
-  if (body.company) return Response.json({ ok: true });
+  if (body.trap) {
+    console.warn("[contact] honeypot filled; submission dropped", body.kind);
+    return Response.json({ ok: true });
+  }
 
   const kind = body.kind === "referral" || body.kind === "complaint" ? body.kind : "contact";
   const fields = Object.fromEntries(
@@ -203,5 +206,6 @@ export async function POST(request: Request) {
       { status: 502 },
     );
   }
+  console.info(`[contact] ${kind} emailed`, await res.text());
   return Response.json({ ok: true });
 }

@@ -52,8 +52,9 @@ export function Honeypot() {
   return (
     <div aria-hidden className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
       <label>
-        Company
-        <input name="company" tabIndex={-1} autoComplete="off" />
+        Leave this empty
+        {/* A meaningless name so browser autofill never fills it in. */}
+        <input name="hp_x7" tabIndex={-1} autoComplete="new-password" defaultValue="" />
       </label>
     </div>
   );
